@@ -1,27 +1,16 @@
 package com.jedijoe.alchemistinfusion;
 
-import com.jedijoe.alchemistinfusion.registries.RegistryController;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
+import com.jedijoe.alchemistinfusion.Registries.RegistryController;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.util.WeightedRandom;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
-import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
-import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import java.util.stream.Collectors;
 
 
 @Mod("alchemistinfusion")
@@ -53,7 +42,7 @@ public class AlchemistInfusion
         LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().gameSettings);
     }
 
-    ItemGroup TAB = new ItemGroup("Alchemist Infusion") {
+    public static final ItemGroup TAB = new ItemGroup("AlchemistInfusion") {
         @Override
         public ItemStack createIcon() {
             return new ItemStack(Items.POTION);
