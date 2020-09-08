@@ -7,6 +7,6 @@ import net.minecraftforge.common.ToolType;
 
 public class PrimedPavement extends Block {
     public PrimedPavement() {
-        super(Block.Properties.create(Material.ROCK).hardnessAndResistance(1).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE).harvestLevel(0).func_235861_h_());
+        super(Block.Properties.create(Material.ROCK).hardnessAndResistance(1).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE).harvestLevel(0).setRequiresTool());
     }
 }
