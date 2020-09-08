@@ -1,5 +1,10 @@
 {
   "block.alchemistinfusion.primed_pavement": "Primed Pavement",
   "block.alchemistinfusion.quickstep_stone": "Quick Step Stone",
+  "block.alchemistinfusion.light_stone": "Light Stone",
+  "block.alchemistinfusion.digging_stone": "Digging Stone",
+  "block.alchemistinfusion.hop_stone": "Hopping Stone",
+  "block.alchemistinfusion.slowstep_stone": "Slow Step Stone",
+  "block.alchemistinfusion.slowdigging_stone": "Slow Digging Stone",
   "itemGroup.AlchemistInfusion": "Alchemist Infusion"
 }
