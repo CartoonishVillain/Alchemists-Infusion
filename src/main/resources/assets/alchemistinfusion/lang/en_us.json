@@ -6,5 +6,14 @@
   "block.alchemistinfusion.hop_stone": "Hopping Stone",
   "block.alchemistinfusion.slowstep_stone": "Slow Step Stone",
   "block.alchemistinfusion.slowdigging_stone": "Slow Digging Stone",
+  "block.alchemistinfusion.pavement_stone": "Pavement Stone",
+  "item.alchemistinfusion.quickstep_dust": "Quick Step Dust",
+  "item.alchemistinfusion.hop_dust": "Hop Dust",
+  "item.alchemistinfusion.light_dust": "Light Dust",
+  "item.alchemistinfusion.digging_dust": "Digging Dust",
+  "item.alchemistinfusion.slowdigging_dust": "Slow Digging Dust",
+  "item.alchemistinfusion.slowstep_dust": "Slow Step Dust",
+  "item.alchemistinfusion.pavement_carver": "Pavement Carver",
+
   "itemGroup.AlchemistInfusion": "Alchemist Infusion"
 }

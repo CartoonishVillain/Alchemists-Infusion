@@ -21,6 +21,7 @@ public class BlockRegistry {
 
     //No tier stones
     public static final RegistryObject<Block> PRIMEDPAVEMENT = BLOCKS.register("primed_pavement", PrimedPavement::new);
+    public static final RegistryObject<Block> PAVEMENTSTONE = BLOCKS.register("pavement_stone", PrimedPavement::new);
 
     //tier 1 stones
     public static final RegistryObject<Block> QUICKSTEPSTONE = BLOCKS.register("quickstep_stone", QuickStepStone::new);

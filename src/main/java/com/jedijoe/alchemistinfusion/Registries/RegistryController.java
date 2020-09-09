@@ -6,5 +6,6 @@ public class RegistryController {
         //list all registries here with their .init functions
         BlockRegistry.init();
         BlockItemRegistry.init();
+        ItemRegistry.init();
     }
 }

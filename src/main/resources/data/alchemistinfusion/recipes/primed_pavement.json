@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#L#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "alchemistinfusion:pavement_stone"
+    },
+    "L": {
+      "item": "alchemistinfusion:pavement_carver"
+    }
+  },
+  "result": {
+    "item": "alchemistinfusion:primed_pavement",
+    "count": 8
+  }
+}
