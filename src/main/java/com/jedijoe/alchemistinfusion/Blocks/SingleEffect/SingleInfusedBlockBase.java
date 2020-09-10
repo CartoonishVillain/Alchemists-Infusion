@@ -11,7 +11,7 @@ import net.minecraftforge.common.ToolType;
 
 public class SingleInfusedBlockBase extends Block {
     public SingleInfusedBlockBase(Properties properties) {
-        super(Block.Properties.create(Material.ROCK).hardnessAndResistance(1).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE).harvestLevel(0).setRequiresTool());
+        super(properties);
     }
 
 

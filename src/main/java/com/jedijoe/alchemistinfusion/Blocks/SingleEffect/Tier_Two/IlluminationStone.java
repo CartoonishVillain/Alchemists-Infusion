@@ -16,7 +16,7 @@ public class IlluminationStone extends SingleInfusedBlockBase {
     protected static int AMPLIFIER = 1;
 
     public IlluminationStone() {
-        super(Properties.create(Material.ROCK).hardnessAndResistance(1).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE).harvestLevel(0).setRequiresTool().setLightLevel(value -> 11));
+        super(Properties.create(Material.ROCK).hardnessAndResistance(1).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE).harvestLevel(0).setLightLevel(value -> 11).setRequiresTool());
     }
 
     @Override

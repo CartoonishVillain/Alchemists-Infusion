@@ -2,6 +2,8 @@ package com.jedijoe.alchemistinfusion.Blocks.SingleEffect.Tier_One;
 
 import com.jedijoe.alchemistinfusion.Blocks.SingleEffect.SingleInfusedBlockBase;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
@@ -18,11 +20,12 @@ public class LightStone extends SingleInfusedBlockBase {
     protected static int AMPLIFIER = 1;
 
     public LightStone() {
-        super(Block.Properties.create(Material.ROCK).hardnessAndResistance(1).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE).harvestLevel(0).setRequiresTool().setLightLevel(value -> 9));
+        super(Block.Properties.create(Material.ROCK).hardnessAndResistance(1).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE).setLightLevel(value -> 9).harvestLevel(0).setRequiresTool());
     }
 
     @Override
     public void onEntityWalk(World world, BlockPos blockpos, Entity entity) {
         ApplyEffect(EFFECTTYPE, DURATION, AMPLIFIER, entity);
+       // Blocks.REDSTONE_LAMP
     }
 }
