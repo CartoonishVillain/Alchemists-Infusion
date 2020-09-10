@@ -2,6 +2,7 @@ package com.jedijoe.alchemistinfusion.Registries;
 
 import com.jedijoe.alchemistinfusion.AlchemistInfusion;
 import com.jedijoe.alchemistinfusion.Blocks.BlockItemBase;
+import com.jedijoe.alchemistinfusion.Blocks.SingleEffect.Tier_Two.*;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -24,6 +25,17 @@ public class BlockItemRegistry {
     public static final RegistryObject<Item> DIGGINGSTONE_ITEM = BLOCKITEMS.register("digging_stone", ()-> new BlockItemBase(BlockRegistry.DIGGINGSTONE.get()));
     public static final RegistryObject<Item> SLOWDIGGINGSTONE_ITEM = BLOCKITEMS.register("slowdigging_stone", ()-> new BlockItemBase(BlockRegistry.SLOWDIGGINGSTONE.get()));
     public static final RegistryObject<Item> SLOWSTEPSTONE_ITEM = BLOCKITEMS.register("slowstep_stone", () -> new BlockItemBase(BlockRegistry.SLOWSTEPSTONE.get()));
+
+    public static final RegistryObject<Item> COWARDLYSTONE_ITEM = BLOCKITEMS.register("cowardly_stone",  ()-> new BlockItemBase(BlockRegistry.COWARDLYSTONE.get()));
+    public static final RegistryObject<Item> DAZEDSTONE_ITEM = BLOCKITEMS.register("dazed_stone",  ()-> new BlockItemBase(BlockRegistry.DAZEDSTONE.get()));
+    public static final RegistryObject<Item> FASTSTEPSTONE_ITEM = BLOCKITEMS.register("faststep_stone",  ()-> new BlockItemBase(BlockRegistry.FASTSTEPSTONE.get()));
+    public static final RegistryObject<Item> HUNGERSTONE_ITEM = BLOCKITEMS.register("hunger_stone",  ()-> new BlockItemBase(BlockRegistry.HUNGERSTONE.get()));
+    public static final RegistryObject<Item> ILLUMINATIONSTONE_ITEM = BLOCKITEMS.register("illumination_stone",  ()-> new BlockItemBase(BlockRegistry.ILLUMINATIONSTONE.get()));
+    public static final RegistryObject<Item> JUMPSTONE_ITEM = BLOCKITEMS.register("jump_stone",  ()-> new BlockItemBase(BlockRegistry.JUMPSTONE.get()));
+    public static final RegistryObject<Item> REDUCEDVISIBILITYSTONE_ITEM = BLOCKITEMS.register("reducedvisibility_stone",  ()-> new BlockItemBase(BlockRegistry.REDUCEDVISIBILITYSTONE.get()));
+    public static final RegistryObject<Item> RESTRICTIVESTONE_ITEM = BLOCKITEMS.register("restrictive_stone",  ()-> new BlockItemBase(BlockRegistry.RESTRICTIVESTONE.get()));
+    public static final RegistryObject<Item> SHIELDSTONE_ITEM = BLOCKITEMS.register("shield_stone",  ()-> new BlockItemBase(BlockRegistry.SHIELDSTONE.get()));
+    public static final RegistryObject<Item> SNAILSTEPSTONE_ITEM = BLOCKITEMS.register("snailstep_stone", ()-> new BlockItemBase(BlockRegistry.SNAILSTEPSTONE.get()));
 
 
 }

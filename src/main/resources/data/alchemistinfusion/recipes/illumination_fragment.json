@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##D",
+    "#GP",
+    "/PP"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:glowstone"
+    },
+    "D": {
+      "item": "alchemistinfusion:base_shard"
+    },
+    "G": {
+      "item": "alchemistinfusion:light_dust"
+    },
+    "P": {
+      "item": "minecraft:redstone_lamp"
+    },
+    "/": {
+      "item": "alchemistinfusion:infusion_rod"
+    }
+  },
+  "result": {
+    "item": "alchemistinfusion:illumination_fragment",
+    "count": 1
+  }
+}

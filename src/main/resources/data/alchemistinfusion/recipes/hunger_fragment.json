@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##D",
+    "##P",
+    "/PP"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:rotten_flesh"
+    },
+    "D": {
+      "item": "alchemistinfusion:base_shard"
+    },
+    "P": {
+      "item": "minecraft:chicken"
+    },
+    "/": {
+      "item": "alchemistinfusion:infusion_rod"
+    }
+  },
+  "result": {
+    "item": "alchemistinfusion:hunger_fragment",
+    "count": 1
+  }
+}

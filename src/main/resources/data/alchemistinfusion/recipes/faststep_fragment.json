@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##D",
+    "#GP",
+    "/PP"
+  ],
+  "key": {
+    "#": {
+      "item": "alchemistinfusion:bag_of_sugar"
+    },
+    "D": {
+      "item": "alchemistinfusion:base_shard"
+    },
+    "G": {
+      "item": "alchemistinfusion:quickstep_dust"
+    },
+    "P": {
+      "item": "minecraft:redstone_block"
+    },
+    "/": {
+      "item": "alchemistinfusion:infusion_rod"
+    }
+  },
+  "result": {
+    "item": "alchemistinfusion:faststep_fragment",
+    "count": 1
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##D",
+    "#GP",
+    "/PP"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:wheat"
+    },
+    "D": {
+      "item": "alchemistinfusion:base_shard"
+    },
+    "G": {
+      "item": "minecraft:water_bucket"
+    },
+    "P": {
+      "item": "minecraft:nether_wart"
+    },
+    "/": {
+      "item": "alchemistinfusion:infusion_rod"
+    }
+  },
+  "result": {
+    "item": "alchemistinfusion:dazed_fragment",
+    "count": 1
+  }
+}

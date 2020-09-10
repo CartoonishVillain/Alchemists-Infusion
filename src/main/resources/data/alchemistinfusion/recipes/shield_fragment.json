@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##D",
+    "#GP",
+    "/PP"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:iron_block"
+    },
+    "D": {
+      "item": "alchemistinfusion:base_shard"
+    },
+    "G": {
+      "item": "minecraft:shield"
+    },
+    "P": {
+      "item": "minecraft:armor_stand"
+    },
+    "/": {
+      "item": "alchemistinfusion:infusion_rod"
+    }
+  },
+  "result": {
+    "item": "alchemistinfusion:shield_fragment",
+    "count": 1
+  }
+}

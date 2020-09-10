@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "LLL"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:sugar"
+    },
+    "L": {
+      "item": "minecraft:leather"
+    }
+  },
+  "result": {
+    "item": "alchemistinfusion:bag_of_sugar",
+    "count": 1
+  }
+}
+
