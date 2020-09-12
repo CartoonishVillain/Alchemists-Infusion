@@ -12,7 +12,7 @@ import net.minecraftforge.common.ToolType;
 
 public class VisibilityStone extends SingleInfusedBlockBase {
     protected static Effect EFFECTTYPE = Effects.NIGHT_VISION;
-    protected static int DURATION = 2;
+    protected static int DURATION = 11;
     protected static int AMPLIFIER = 1;
 
     public VisibilityStone() {
