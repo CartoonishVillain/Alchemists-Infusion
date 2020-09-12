@@ -39,4 +39,22 @@ public class ItemRegistry {
     public static final RegistryObject<Item> SHIELDFRAGMENT = ITEMS.register("shield_fragment", ItemBase::new);
     public static final RegistryObject<Item> SNAILSTEPFRAGMENT = ITEMS.register("snailstep_fragment", ItemBase::new);
 
+    //Potion Gems
+    public static final RegistryObject<Item> BLINDNESSSSTONE_GEM  = ITEMS.register("blindness_gem", ItemBase::new);
+    public static final RegistryObject<Item> BRAVESTONE_GEM = ITEMS.register("brave_gem", ItemBase::new);
+    public static final RegistryObject<Item> CHICKENSTONE_GEM  = ITEMS.register("chicken_gem", ItemBase::new);
+    public static final RegistryObject<Item> CLOAKSTONE_GEM = ITEMS.register("cloak_gem", ItemBase::new);
+    public static final RegistryObject<Item> FIREPROOFSTONE_GEM = ITEMS.register("fire_proof_gem", ItemBase::new);
+    public static final RegistryObject<Item> FISHSTONE_GEM  = ITEMS.register("fish_gem", ItemBase::new);
+    public static final RegistryObject<Item> GLOWINGSTONE_GEM  = ITEMS.register("glowing_gem", ItemBase::new);
+    public static final RegistryObject<Item> HASTESTONE_GEM  = ITEMS.register("haste_gem", ItemBase::new);
+    public static final RegistryObject<Item> LEAPSTONE_GEM  = ITEMS.register("leap_gem", ItemBase::new);
+    public static final RegistryObject<Item> POISONSTONE_GEM = ITEMS.register("poison_gem", ItemBase::new);
+    public static final RegistryObject<Item> RESISTANCESTONE_GEM  = ITEMS.register("resistance_gem", ItemBase::new);
+    public static final RegistryObject<Item> SPEEDSTEPSTONE_GEM  = ITEMS.register("speed_step_stone", ItemBase::new);
+    public static final RegistryObject<Item> VISIBILITYSTONE_GEM  = ITEMS.register("visibility_stone", ItemBase::new);
+    public static final RegistryObject<Item> BASE_GEM  = ITEMS.register("base_gem", ItemBase::new);
+
+
+
 }
