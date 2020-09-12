@@ -3,6 +3,7 @@ package com.jedijoe.alchemistinfusion.Registries;
 import com.jedijoe.alchemistinfusion.AlchemistInfusion;
 import com.jedijoe.alchemistinfusion.Blocks.PrimedPavement;
 import com.jedijoe.alchemistinfusion.Blocks.SingleEffect.Tier_One.*;
+import com.jedijoe.alchemistinfusion.Blocks.SingleEffect.Tier_Three.*;
 import com.jedijoe.alchemistinfusion.Blocks.SingleEffect.Tier_Two.*;
 import net.minecraft.block.Block;
 import net.minecraft.entity.LivingEntity;
@@ -43,6 +44,21 @@ public class BlockRegistry {
     public static final RegistryObject<Block> RESTRICTIVESTONE = BLOCKS.register("restrictive_stone", RestrictiveStone::new);
     public static final RegistryObject<Block> SHIELDSTONE = BLOCKS.register("shield_stone", ShieldStone::new);
     public static final RegistryObject<Block> SNAILSTEPSTONE = BLOCKS.register("snailstep_stone", SnailStepStone::new);
+
+    //tier 3 stones
+    public static final RegistryObject<Block> BLINDNESSSSTONE = BLOCKS.register("blindness_stone", BlindnessStone::new);
+    public static final RegistryObject<Block> BRAVESTONE = BLOCKS.register("brave_stone", BraveStone::new);
+    public static final RegistryObject<Block> CHICKENSTONE = BLOCKS.register("chicken_stone", ChickenStone::new);
+    public static final RegistryObject<Block> CLOAKSTONE = BLOCKS.register("cloak_stone", CloakStone::new);
+    public static final RegistryObject<Block> FIREPROOFSTONE = BLOCKS.register("fire_proof_stone", FireProofStone::new);
+    public static final RegistryObject<Block> FISHSTONE = BLOCKS.register("fish_stone", FishStone::new);
+    public static final RegistryObject<Block> GLOWINGSTONE = BLOCKS.register("glowing_stone", GlowingStone::new);
+    public static final RegistryObject<Block> HASTESTONE = BLOCKS.register("haste_stone", HasteStone::new);
+    public static final RegistryObject<Block> LEAPSTONE = BLOCKS.register("leap_stone", LeapStone::new);
+    public static final RegistryObject<Block> POISONSTONE = BLOCKS.register("poison_stone", PoisonStone::new);
+    public static final RegistryObject<Block> RESISTANCESTONE = BLOCKS.register("resistance_stone", ResistanceStone::new);
+    public static final RegistryObject<Block> SPEEDSTEPSTONE = BLOCKS.register("speed_step_stone", SpeedStepStone::new);
+    public static final RegistryObject<Block> VISIBILITYSTONE = BLOCKS.register("visibility_stone", VisibilityStone::new);
 
 
 

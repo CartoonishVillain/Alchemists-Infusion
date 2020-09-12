@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "alchemistinfusion:blocks/blindness_stone"
+  }
+}
