@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "W!D",
+    "!G!",
+    "C!#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:piston"
+    },
+    "!": {
+      "item": "minecraft:redstone_block"
+    },
+    "W": {
+      "item": "minecraft:diamond_pickaxe"
+    },
+    "D": {
+      "item": "alchemistinfusion:infusion_rod"
+    },
+    "G": {
+      "item": "alchemistinfusion:digging_dust"
+    },
+    "C": {
+      "item": "alchemistinfusion:base_gem"
+    }
+  },
+  "result": {
+    "item": "alchemistinfusion:haste_gem",
+    "count": 1
+  }
+}

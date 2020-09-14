@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "W!D",
+    "!G!",
+    "C!#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:fermented_spider_eye"
+    },
+    "!": {
+      "item": "minecraft:pufferfish"
+    },
+    "W": {
+      "item": "minecraft:golden_apple"
+    },
+    "D": {
+      "item": "alchemistinfusion:infusion_rod"
+    },
+    "G": {
+      "item": "alchemistinfusion:dazed_fragment"
+    },
+    "C": {
+      "item": "alchemistinfusion:base_gem"
+    }
+  },
+  "result": {
+    "item": "alchemistinfusion:poison_gem",
+    "count": 1
+  }
+}

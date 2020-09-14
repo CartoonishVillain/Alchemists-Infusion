@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "!#D",
+    "#G#",
+    "C#!"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:fermented_spider_eye"
+    },
+    "!": {
+      "item": "minecraft:golden_carrot"
+    },
+    "D": {
+      "item": "alchemistinfusion:infusion_rod"
+    },
+    "G": {
+      "item": "minecraft:diamond_boots"
+    },
+    "C": {
+      "item": "alchemistinfusion:base_gem"
+    }
+  },
+  "result": {
+    "item": "alchemistinfusion:cloak_gem",
+    "count": 1
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#!D",
+    "!G!",
+    "C!#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:end_rod"
+    },
+    "!": {
+      "item": "minecraft:sea_lantern"
+    },
+    "D": {
+      "item": "alchemistinfusion:infusion_rod"
+    },
+    "G": {
+      "item": "alchemistinfusion:illumination_fragment"
+    },
+    "C": {
+      "item": "alchemistinfusion:base_gem"
+    }
+  },
+  "result": {
+    "item": "alchemistinfusion:glowing_gem",
+    "count": 1
+  }
+}

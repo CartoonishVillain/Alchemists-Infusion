@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#N#",
+    "FFF"
+  ],
+  "key": {
+    "#": {
+      "item": "alchemistinfusion:base_shard"
+    },
+    "N": {
+      "item": "minecraft:nether_wart_block"
+    },
+    "F": {
+      "item": "minecraft:nether_wart"
+    }
+  },
+  "result": {
+    "item": "alchemistinfusion:base_gem",
+    "count": 1
+  }
+}

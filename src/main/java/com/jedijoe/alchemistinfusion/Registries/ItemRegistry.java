@@ -18,6 +18,8 @@ public class ItemRegistry {
     public static final RegistryObject<Item> INFUSIONROD = ITEMS.register("infusion_rod", PersistentItem::new);
     public static final RegistryObject<Item> BASEFRAGMENT = ITEMS.register("base_shard", ItemBase::new);
     public static final RegistryObject<Item> BAGOFSUGAR = ITEMS.register("bag_of_sugar", ItemBase::new);
+    public static final RegistryObject<Item> BASE_GEM  = ITEMS.register("base_gem", ItemBase::new);
+    public static final RegistryObject<Item> PILEOFFEATHERS = ITEMS.register("pile_of_feathers", ItemBase::new);
 
     //Potion Dust
     public static final RegistryObject<Item> SLOWSTEPDUST = ITEMS.register("slowstep_dust", ItemBase::new);
@@ -51,10 +53,8 @@ public class ItemRegistry {
     public static final RegistryObject<Item> LEAPSTONE_GEM  = ITEMS.register("leap_gem", ItemBase::new);
     public static final RegistryObject<Item> POISONSTONE_GEM = ITEMS.register("poison_gem", ItemBase::new);
     public static final RegistryObject<Item> RESISTANCESTONE_GEM  = ITEMS.register("resistance_gem", ItemBase::new);
-    public static final RegistryObject<Item> SPEEDSTEPSTONE_GEM  = ITEMS.register("speed_step_stone", ItemBase::new);
-    public static final RegistryObject<Item> VISIBILITYSTONE_GEM  = ITEMS.register("visibility_stone", ItemBase::new);
-    public static final RegistryObject<Item> BASE_GEM  = ITEMS.register("base_gem", ItemBase::new);
-
+    public static final RegistryObject<Item> SPEEDSTEPSTONE_GEM  = ITEMS.register("speed_step_gem", ItemBase::new);
+    public static final RegistryObject<Item> VISIBILITYSTONE_GEM  = ITEMS.register("visibility_gem", ItemBase::new);
 
 
 }

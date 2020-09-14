@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##D",
+    "#G#",
+    "C##"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:slime_block"
+    },
+    "D": {
+      "item": "alchemistinfusion:infusion_rod"
+    },
+    "G": {
+      "item": "alchemistinfusion:jump_fragment"
+    },
+    "C": {
+      "item": "alchemistinfusion:base_gem"
+    }
+  },
+  "result": {
+    "item": "alchemistinfusion:leap_gem",
+    "count": 1
+  }
+}

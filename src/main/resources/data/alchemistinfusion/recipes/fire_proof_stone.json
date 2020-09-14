@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#L#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "alchemistinfusion:primed_pavement"
+    },
+    "L": {
+      "item": "alchemistinfusion:fire_proof_gem"
+    }
+  },
+  "result": {
+    "item": "alchemistinfusion:fire_proof_stone",
+    "count": 4
+  }
+}

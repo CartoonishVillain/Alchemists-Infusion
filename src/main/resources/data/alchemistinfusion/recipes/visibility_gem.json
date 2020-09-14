@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##D",
+    "#G#",
+    "C##"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:golden_carrot"
+    },
+    "D": {
+      "item": "alchemistinfusion:infusion_rod"
+    },
+    "G": {
+      "item": "alchemistinfusion:glowing_gem"
+    },
+    "C": {
+      "item": "alchemistinfusion:base_gem"
+    }
+  },
+  "result": {
+    "item": "alchemistinfusion:visibility_gem",
+    "count": 1
+  }
+}
