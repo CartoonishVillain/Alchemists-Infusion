@@ -7,13 +7,13 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:slime_block"
+      "item": "minecraft:ink_sac"
     },
     "D": {
       "item": "alchemistinfusion:infusion_rod"
     },
     "G": {
-      "item": "alchemistinfusion:jump_fragment"
+      "item": "alchemistinfusion:reducedvisibility_fragment"
     },
     "C": {
       "item": "alchemistinfusion:base_gem"

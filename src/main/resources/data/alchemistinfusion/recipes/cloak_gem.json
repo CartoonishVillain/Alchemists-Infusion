@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "!#D",
-    "#G#",
+    "#!#",
     "C#!"
   ],
   "key": {
@@ -14,9 +14,6 @@
     },
     "D": {
       "item": "alchemistinfusion:infusion_rod"
-    },
-    "G": {
-      "item": "minecraft:diamond_boots"
     },
     "C": {
       "item": "alchemistinfusion:base_gem"
