@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#DY",
+    "ENL",
+    "OnS"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:slime_block"
+    },
+    "D": {
+      "item": "minecraft:diamond_block"
+    },
+    "Y": {
+      "item": "alchemistinfusion:speed_step_stone"
+    },
+    "E": {
+      "item": "minecraft:emerald_block"
+    },
+    "N": {
+      "item": "minecraft:nether_star"
+    },
+    "L": {
+      "item": "minecraft:lapis_block"
+    },
+    "O": {
+      "item": "alchemistinfusion:leap_stone"
+    },
+    "n": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "S": {
+      "item": "alchemistinfusion:bag_of_sugar"
+    }
+  },
+  "result": {
+    "item": "alchemistinfusion:mobility_stone",
+    "count": 4
+  }
+}

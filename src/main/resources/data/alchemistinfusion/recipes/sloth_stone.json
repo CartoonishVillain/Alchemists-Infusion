@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#DY",
+    "ENL",
+    "OnS"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:soul_campfire"
+    },
+    "D": {
+      "item": "minecraft:diamond_block"
+    },
+    "Y": {
+      "item": "alchemistinfusion:snailstep_stone"
+    },
+    "E": {
+      "item": "minecraft:emerald_block"
+    },
+    "N": {
+      "item": "minecraft:nether_star"
+    },
+    "L": {
+      "item": "minecraft:lapis_block"
+    },
+    "O": {
+      "item": "alchemistinfusion:restrictive_stone"
+    },
+    "n": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "S": {
+      "item": "minecraft:sticky_piston"
+    }
+  },
+  "result": {
+    "item": "alchemistinfusion:sloth_stone",
+    "count": 4
+  }
+}
