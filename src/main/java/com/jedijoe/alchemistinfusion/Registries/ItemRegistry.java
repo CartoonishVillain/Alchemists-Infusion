@@ -1,8 +1,11 @@
 package com.jedijoe.alchemistinfusion.Registries;
 
 import com.jedijoe.alchemistinfusion.AlchemistInfusion;
+import com.jedijoe.alchemistinfusion.Armor.ModArmor;
 import com.jedijoe.alchemistinfusion.Items.ItemBase;
 import com.jedijoe.alchemistinfusion.Items.PersistentItem;
+import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -55,6 +58,11 @@ public class ItemRegistry {
     public static final RegistryObject<Item> RESISTANCESTONE_GEM  = ITEMS.register("resistance_gem", ItemBase::new);
     public static final RegistryObject<Item> SPEEDSTEPSTONE_GEM  = ITEMS.register("speed_step_gem", ItemBase::new);
     public static final RegistryObject<Item> VISIBILITYSTONE_GEM  = ITEMS.register("visibility_gem", ItemBase::new);
+
+
+
+    public static final RegistryObject<ArmorItem> LEAP_BOOTS = ITEMS.register("leap_boots", () -> new ArmorItem(ModArmor.LEAP, EquipmentSlotType.FEET, new Item.Properties().group(AlchemistInfusion.TAB)));
+
 
 
 }
