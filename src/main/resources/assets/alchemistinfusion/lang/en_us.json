@@ -63,7 +63,9 @@
   "item.alchemistinfusion.resistance_gem": "Resistance Gem",
   "item.alchemistinfusion.speed_step_gem": "Speed Step Gem",
   "item.alchemistinfusion.visibility_gem": "Visibility Gem",
-
+  "item.alchemistinfusion.leap_boots": "Boots of Leaping",
+  "item.alchemistinfusion.unluck_boots": "Unlucky Boots",
+  "item.alchemistinfusion.luck_boots": "Lucky Boots",
   "item.alchemistinfusion.infusion_rod": "Infusion Rod",
   "item.alchemistinfusion.base_shard": "Base Fragment",
   "item.alchemistinfusion.base_gem": "Base Gem",

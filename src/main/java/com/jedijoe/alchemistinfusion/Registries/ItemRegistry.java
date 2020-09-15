@@ -62,6 +62,9 @@ public class ItemRegistry {
 
 
     public static final RegistryObject<ArmorItem> LEAP_BOOTS = ITEMS.register("leap_boots", () -> new ArmorItem(ModArmor.LEAP, EquipmentSlotType.FEET, new Item.Properties().group(AlchemistInfusion.TAB)));
+    public static final RegistryObject<ArmorItem> LUCK_BOOTS = ITEMS.register("luck_boots", () -> new ArmorItem(ModArmor.LUCK, EquipmentSlotType.FEET, new Item.Properties().group(AlchemistInfusion.TAB)));
+    public static final RegistryObject<ArmorItem> UNLUCK_BOOTS = ITEMS.register("unluck_boots", () -> new ArmorItem(ModArmor.UNLUCK, EquipmentSlotType.FEET, new Item.Properties().group(AlchemistInfusion.TAB)));
+
 
 
 
