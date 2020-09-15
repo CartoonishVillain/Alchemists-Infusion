@@ -1,14 +1,15 @@
 package com.jedijoe.alchemistinfusion.Registries;
 
 import com.jedijoe.alchemistinfusion.AlchemistInfusion;
+import com.jedijoe.alchemistinfusion.Blocks.MultiEffect.MobilityStone;
+import com.jedijoe.alchemistinfusion.Blocks.MultiEffect.SlothStone;
 import com.jedijoe.alchemistinfusion.Blocks.PrimedPavement;
+import com.jedijoe.alchemistinfusion.Blocks.SingleEffect.DolphinStone;
 import com.jedijoe.alchemistinfusion.Blocks.SingleEffect.Tier_One.*;
 import com.jedijoe.alchemistinfusion.Blocks.SingleEffect.Tier_Three.*;
 import com.jedijoe.alchemistinfusion.Blocks.SingleEffect.Tier_Two.*;
 import net.minecraft.block.Block;
-import net.minecraft.entity.LivingEntity;
 import net.minecraftforge.fml.RegistryObject;
-import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -59,6 +60,13 @@ public class BlockRegistry {
     public static final RegistryObject<Block> RESISTANCESTONE = BLOCKS.register("resistance_stone", ResistanceStone::new);
     public static final RegistryObject<Block> SPEEDSTEPSTONE = BLOCKS.register("speed_step_stone", SpeedStepStone::new);
     public static final RegistryObject<Block> VISIBILITYSTONE = BLOCKS.register("visibility_stone", VisibilityStone::new);
+
+    //tier 4 stones
+    public static final RegistryObject<Block> MOBILITYSTONE = BLOCKS.register("mobility_stone", MobilityStone::new);
+    public static final RegistryObject<Block> DOLPHINSTONE = BLOCKS.register("dolphin_stone", DolphinStone::new);
+    public static final RegistryObject<Block> SLOTHSTONE = BLOCKS.register("sloth_stone", SlothStone::new);
+
+
 
 
 

@@ -2,6 +2,7 @@ package com.jedijoe.alchemistinfusion.Registries;
 
 import com.jedijoe.alchemistinfusion.AlchemistInfusion;
 import com.jedijoe.alchemistinfusion.Blocks.BlockItemBase;
+import com.jedijoe.alchemistinfusion.Blocks.MultiEffect.MobilityStone;
 import com.jedijoe.alchemistinfusion.Blocks.SingleEffect.Tier_Three.*;
 import com.jedijoe.alchemistinfusion.Blocks.SingleEffect.Tier_Two.*;
 import net.minecraft.block.Block;
@@ -51,6 +52,11 @@ public class BlockItemRegistry {
     public static final RegistryObject<Item> RESISTANCESTONE_ITEM  = BLOCKITEMS.register("resistance_stone", ()-> new BlockItemBase(BlockRegistry.RESISTANCESTONE.get()));
     public static final RegistryObject<Item> SPEEDSTEPSTONE_ITEM  = BLOCKITEMS.register("speed_step_stone", ()-> new BlockItemBase(BlockRegistry.SPEEDSTEPSTONE.get()));
     public static final RegistryObject<Item> VISIBILITYSTONE_ITEM  = BLOCKITEMS.register("visibility_stone", ()-> new BlockItemBase(BlockRegistry.VISIBILITYSTONE.get()));
+
+    public static final RegistryObject<Item> MOBILITYSTONE_ITEM = BLOCKITEMS.register("mobility_stone", ()-> new BlockItemBase(BlockRegistry.MOBILITYSTONE.get()));
+    public static final RegistryObject<Item> DOLPHINSTONE = BLOCKITEMS.register("dolphin_stone", ()-> new BlockItemBase(BlockRegistry.DOLPHINSTONE.get()));
+    public static final RegistryObject<Item> SLOTHSTONE = BLOCKITEMS.register("sloth_stone", ()-> new BlockItemBase(BlockRegistry.SLOTHSTONE.get()));
+
 
 
 }
