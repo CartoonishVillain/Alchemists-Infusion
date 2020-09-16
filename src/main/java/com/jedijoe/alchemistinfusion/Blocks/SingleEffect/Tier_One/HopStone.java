@@ -8,6 +8,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.potion.Effect;
 import net.minecraft.potion.Effects;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ToolType;
 
@@ -18,6 +19,9 @@ public class HopStone extends SingleInfusedBlockBase {
 
     public HopStone() {
         super(Block.Properties.create(Material.ROCK).hardnessAndResistance(1).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE).harvestLevel(0).setRequiresTool());
+        SetEffect(TextFormatting.BLUE + "Jump Boost");
+        SetAmplifier(TextFormatting.BLUE + "II");
+        SetDuration(TextFormatting.BLUE + "(0:01)");
     }
 
     @Override

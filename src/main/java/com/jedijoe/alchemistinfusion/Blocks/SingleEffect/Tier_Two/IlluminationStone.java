@@ -7,6 +7,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.potion.Effect;
 import net.minecraft.potion.Effects;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ToolType;
 
@@ -17,6 +18,9 @@ public class IlluminationStone extends SingleInfusedBlockBase {
 
     public IlluminationStone() {
         super(Properties.create(Material.ROCK).hardnessAndResistance(1).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE).harvestLevel(0).setLightLevel(value -> 11).setRequiresTool());
+        SetEffect(TextFormatting.WHITE + "Glowing");
+        SetAmplifier(TextFormatting.WHITE + "I");
+        SetDuration(TextFormatting.WHITE + "(0:07)");
     }
 
     @Override

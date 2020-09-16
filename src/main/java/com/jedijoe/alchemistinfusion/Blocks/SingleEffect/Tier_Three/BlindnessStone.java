@@ -7,6 +7,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.potion.Effect;
 import net.minecraft.potion.Effects;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ToolType;
 
@@ -17,6 +18,9 @@ public class BlindnessStone extends SingleInfusedBlockBase {
 
     public BlindnessStone() {
         super(Properties.create(Material.ROCK).hardnessAndResistance(2).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE).harvestLevel(0).setRequiresTool());
+        SetEffect(TextFormatting.RED + "Blindness");
+        SetAmplifier(TextFormatting.RED + "II");
+        SetDuration(TextFormatting.RED + "(0:12)");
     }
 
     @Override

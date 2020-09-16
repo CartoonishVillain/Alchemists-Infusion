@@ -7,6 +7,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.potion.Effect;
 import net.minecraft.potion.Effects;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ToolType;
 
@@ -17,6 +18,9 @@ public class CloakStone extends SingleInfusedBlockBase {
 
     public CloakStone() {
         super(Properties.create(Material.ROCK).hardnessAndResistance(2).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE).harvestLevel(0).setRequiresTool());
+        SetEffect(TextFormatting.BLUE + "Invisibility");
+        SetAmplifier(TextFormatting.BLUE + "I");
+        SetDuration(TextFormatting.BLUE + "(0:06)");
     }
 
     @Override
