@@ -33,17 +33,17 @@ import net.minecraftforge.fml.common.Mod;
 import com.jedijoe.alchemistinfusion.AlchemistInfusion;
 
 
-@Mod.EventBusSubscriber(modid = AlchemistInfusion.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
+@Mod.EventBusSubscriber(modid = AlchemistInfusion.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class ModClientEvents {
 
     @SubscribeEvent
     public static void playerEffects(TickEvent.PlayerTickEvent event){
         PlayerEntity jumper = event.player;
-        if(jumper.isCrouching() && jumper.inventory.armorItemInSlot(0).getItem() == (ItemRegistry.LEAP_BOOTS.get()).getItem()) {
+        if(jumper.isCrouching() && jumper.getItemStackFromSlot(EquipmentSlotType.FEET).getItem().equals(ItemRegistry.LEAP_BOOTS.get().getItem())) {
             jumper.addPotionEffect(new EffectInstance(Effects.JUMP_BOOST, 5, 1, true, false));
-        } else if(jumper.inventory.armorItemInSlot(0).getItem() == (ItemRegistry.LUCK_BOOTS.get()).getItem()){
+        } else if(jumper.getItemStackFromSlot(EquipmentSlotType.FEET).getItem().equals(ItemRegistry.LUCK_BOOTS.get().getItem())){
             jumper.addPotionEffect(new EffectInstance(Effects.LUCK, 5, 0, true, false));
-        }else if(jumper.inventory.armorItemInSlot(0).getItem() == (ItemRegistry.UNLUCK_BOOTS.get()).getItem()){
+        }else if(jumper.getItemStackFromSlot(EquipmentSlotType.FEET).getItem().equals(ItemRegistry.UNLUCK_BOOTS.get().getItem())){
             jumper.addPotionEffect(new EffectInstance(Effects.UNLUCK, 5, 0, true, false));
         }
 

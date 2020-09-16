@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#N#",
+    "DIP",
+    "VEV"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:nether_wart"
+    },
+    "N": {
+      "item": "alchemistinfusion:leap_gem"
+    },
+    "D": {
+      "item": "alchemistinfusion:pavement_carver"
+    },
+    "I": {
+      "item": "minecraft:iron_boots"
+    },
+    "P": {
+      "item": "alchemistinfusion:infusion_rod"
+    },
+    "V": {
+      "item": "minecraft:nether_wart_block"
+    },
+    "E": {
+      "item": "minecraft:emerald_block"
+    }
+  },
+  "result": {
+    "item": "alchemistinfusion:leap_boots",
+    "count": 1
+  }
+}

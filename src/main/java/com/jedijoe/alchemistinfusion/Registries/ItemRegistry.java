@@ -4,6 +4,8 @@ import com.jedijoe.alchemistinfusion.AlchemistInfusion;
 import com.jedijoe.alchemistinfusion.Armor.ModArmor;
 import com.jedijoe.alchemistinfusion.Items.ItemBase;
 import com.jedijoe.alchemistinfusion.Items.PersistentItem;
+import com.jedijoe.alchemistinfusion.Items.foods.ProductivePotato;
+import com.jedijoe.alchemistinfusion.Items.foods.VisionCarrot;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
@@ -59,8 +61,11 @@ public class ItemRegistry {
     public static final RegistryObject<Item> SPEEDSTEPSTONE_GEM  = ITEMS.register("speed_step_gem", ItemBase::new);
     public static final RegistryObject<Item> VISIBILITYSTONE_GEM  = ITEMS.register("visibility_gem", ItemBase::new);
 
+    //Infused Food
+    public static final RegistryObject<VisionCarrot> VISIONCARROT  = ITEMS.register("vision_carrot", VisionCarrot::new);
+    public static final RegistryObject<ProductivePotato> PRODUCTIVEPOTATO  = ITEMS.register("productive_potato", ProductivePotato::new);
 
-
+    //Infused Armor
     public static final RegistryObject<ArmorItem> LEAP_BOOTS = ITEMS.register("leap_boots", () -> new ArmorItem(ModArmor.LEAP, EquipmentSlotType.FEET, new Item.Properties().group(AlchemistInfusion.TAB)));
     public static final RegistryObject<ArmorItem> LUCK_BOOTS = ITEMS.register("luck_boots", () -> new ArmorItem(ModArmor.LUCK, EquipmentSlotType.FEET, new Item.Properties().group(AlchemistInfusion.TAB)));
     public static final RegistryObject<ArmorItem> UNLUCK_BOOTS = ITEMS.register("unluck_boots", () -> new ArmorItem(ModArmor.UNLUCK, EquipmentSlotType.FEET, new Item.Properties().group(AlchemistInfusion.TAB)));

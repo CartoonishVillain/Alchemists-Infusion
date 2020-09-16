@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#N#",
+    "DIP",
+    "VEV"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:nether_wart"
+    },
+    "N": {
+      "item": "minecraft:coal"
+    },
+    "D": {
+      "item": "alchemistinfusion:pavement_carver"
+    },
+    "I": {
+      "item": "minecraft:iron_boots"
+    },
+    "P": {
+      "item": "alchemistinfusion:infusion_rod"
+    },
+    "V": {
+      "item": "minecraft:nether_wart_block"
+    },
+    "E": {
+      "item": "minecraft:iron_block"
+    }
+  },
+  "result": {
+    "item": "alchemistinfusion:unluck_boots",
+    "count": 1
+  }
+}
