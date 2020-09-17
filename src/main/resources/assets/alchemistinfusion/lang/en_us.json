@@ -66,6 +66,7 @@
   "item.alchemistinfusion.leap_boots": "Boots of Leaping",
   "item.alchemistinfusion.unluck_boots": "Unlucky Boots",
   "item.alchemistinfusion.luck_boots": "Lucky Boots",
+  "item.alchemistinfusion.ice_boots": "Ice Boots",
   "item.alchemistinfusion.infusion_rod": "Infusion Rod",
   "item.alchemistinfusion.base_shard": "Base Fragment",
   "item.alchemistinfusion.base_gem": "Base Gem",
@@ -73,5 +74,9 @@
   "item.alchemistinfusion.pile_of_feathers": "Pile Of Feathers",
   "item.alchemistinfusion.productive_potato": "Productive Potato",
   "item.alchemistinfusion.vision_carrot": "Vision Carrot",
+  "item.alchemistinfusion.sugar_stick": "Sugar Stick",
+  "item.alchemistinfusion.spicy_beetroot": "Spicy Beetroot",
+
+
   "itemGroup.AlchemistInfusion": "Alchemist Infusion"
 }

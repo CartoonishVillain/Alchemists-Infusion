@@ -18,6 +18,8 @@ public enum ModArmor implements IArmorMaterial {
 
     LUCK(AlchemistInfusion.MOD_ID + ":luck",  23, new int[] {1, 0, 0, 1}, 8, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0, ()->{return Ingredient.fromItems(ItemRegistry.LEAPSTONE_GEM.get());}, 0.0f),
 
+     ICE(AlchemistInfusion.MOD_ID + ":ice",  15, new int[] {1, 0, 0, 1}, 8, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0, ()->{return Ingredient.fromItems(ItemRegistry.LEAPSTONE_GEM.get());}, 0.0f),
+
     UNLUCK(AlchemistInfusion.MOD_ID + ":unluck",  23, new int[] {1, 0, 0, 1}, 8, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0, ()->{return Ingredient.fromItems(ItemRegistry.LEAPSTONE_GEM.get());}, 0.0f);
 
 

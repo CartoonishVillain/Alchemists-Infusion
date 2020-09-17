@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#G#",
+    "EWZ",
+    "#G#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:sugar"
+    },
+    "G": {
+      "item": "minecraft:paper"
+    },
+    "E": {
+      "item": "alchemistinfusion:pavement_carver"
+    },
+    "W": {
+      "item": "alchemistinfusion:bag_of_sugar"
+    },
+    "Z": {
+      "item": "alchemistinfusion:infusion_rod"
+    }
+  },
+  "result": {
+    "item": "alchemistinfusion:sugar_stick",
+    "count": 1
+  }
+}

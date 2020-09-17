@@ -1,6 +1,7 @@
 package com.jedijoe.alchemistinfusion.events;
 
 import com.jedijoe.alchemistinfusion.Registries.ItemRegistry;
+import com.sun.javafx.geom.Vec3d;
 import com.sun.scenario.effect.Effect;
 import net.minecraft.client.gui.screen.inventory.InventoryScreen;
 import net.minecraft.entity.Entity;
@@ -12,12 +13,14 @@ import net.minecraft.entity.item.TNTEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.inventory.Inventory;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.EffectType;
 import net.minecraft.potion.Effects;
 import net.minecraft.util.Direction;
+import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.Explosion;
@@ -45,6 +48,14 @@ public class ModClientEvents {
             jumper.addPotionEffect(new EffectInstance(Effects.LUCK, 5, 0, true, false));
         }else if(jumper.getItemStackFromSlot(EquipmentSlotType.FEET).getItem().equals(ItemRegistry.UNLUCK_BOOTS.get().getItem())){
             jumper.addPotionEffect(new EffectInstance(Effects.UNLUCK, 5, 0, true, false));
+        }else if(jumper.getItemStackFromSlot(EquipmentSlotType.FEET).getItem().equals(ItemRegistry.ICE_BOOTS.get().getItem())){
+            if(jumper.isOnGround()){
+                if(jumper.isSprinting()){
+                    jumper.moveRelative(1f, new Vector3d(0, 0, 0.0225));
+                }else if (jumper.isCrouching()){
+                    jumper.moveRelative(1f, new Vector3d(0, 0, 0.005));
+                }else{
+                    jumper.moveRelative(1f, new Vector3d(0, 0, 0.01));}}
         }
 
     }

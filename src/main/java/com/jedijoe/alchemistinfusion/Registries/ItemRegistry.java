@@ -1,13 +1,12 @@
 package com.jedijoe.alchemistinfusion.Registries;
 
 import com.jedijoe.alchemistinfusion.AlchemistInfusion;
-import com.jedijoe.alchemistinfusion.Armor.Leap;
-import com.jedijoe.alchemistinfusion.Armor.Luck;
-import com.jedijoe.alchemistinfusion.Armor.ModArmor;
-import com.jedijoe.alchemistinfusion.Armor.Unluck;
+import com.jedijoe.alchemistinfusion.Armor.*;
 import com.jedijoe.alchemistinfusion.Items.ItemBase;
 import com.jedijoe.alchemistinfusion.Items.PersistentItem;
 import com.jedijoe.alchemistinfusion.Items.foods.ProductivePotato;
+import com.jedijoe.alchemistinfusion.Items.foods.SpicyBeetroot;
+import com.jedijoe.alchemistinfusion.Items.foods.SugarStick;
 import com.jedijoe.alchemistinfusion.Items.foods.VisionCarrot;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
@@ -67,11 +66,14 @@ public class ItemRegistry {
     //Infused Food
     public static final RegistryObject<VisionCarrot> VISIONCARROT  = ITEMS.register("vision_carrot", VisionCarrot::new);
     public static final RegistryObject<ProductivePotato> PRODUCTIVEPOTATO  = ITEMS.register("productive_potato", ProductivePotato::new);
+    public static final RegistryObject<SugarStick> SUGARSTICK  = ITEMS.register("sugar_stick", SugarStick::new);
+    public static final RegistryObject<SpicyBeetroot> SPICYBEETROOT  = ITEMS.register("spicy_beetroot", SpicyBeetroot::new);
 
     //Infused Armor
     public static final RegistryObject<ArmorItem> LEAP_BOOTS = ITEMS.register("leap_boots", () -> new Leap(ModArmor.LEAP, EquipmentSlotType.FEET, new Item.Properties().group(AlchemistInfusion.TAB)));
     public static final RegistryObject<ArmorItem> LUCK_BOOTS = ITEMS.register("luck_boots", () -> new Luck(ModArmor.LUCK, EquipmentSlotType.FEET, new Item.Properties().group(AlchemistInfusion.TAB)));
     public static final RegistryObject<ArmorItem> UNLUCK_BOOTS = ITEMS.register("unluck_boots", () -> new Unluck(ModArmor.UNLUCK, EquipmentSlotType.FEET, new Item.Properties().group(AlchemistInfusion.TAB)));
+    public static final RegistryObject<ArmorItem> ICE_BOOTS = ITEMS.register("ice_boots", () -> new Ice(ModArmor.ICE, EquipmentSlotType.FEET, new Item.Properties().group(AlchemistInfusion.TAB)));
 
 
 
