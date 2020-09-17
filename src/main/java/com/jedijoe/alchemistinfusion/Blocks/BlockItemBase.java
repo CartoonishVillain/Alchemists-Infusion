@@ -26,14 +26,14 @@ public class BlockItemBase extends BlockItem {
         super(block, new Item.Properties().group(AlchemistInfusion.TAB)); //basically a constructor for block items
         blocktype = block;
     }
-//        if(blocktype instanceof DiggingStone){ msg = TextFormatting.BLUE + "Haste I (0:01)"; }
+
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
         if(blocktype instanceof SingleInfusedBlockBase){
             String effect = ((SingleInfusedBlockBase) blocktype).GetEffect();
             String amplifier = ((SingleInfusedBlockBase) blocktype).GetAmplifier();
             String duration = ((SingleInfusedBlockBase) blocktype).GetDuration();
-            msg = effect + " " + amplifier + " " + duration + " when stepped on"; }
+            msg = effect + " " + amplifier + " " + duration; }
         else{msg = TextFormatting.GRAY + "No Effect";}
         tooltip.add(new StringTextComponent(msg));
         super.addInformation(stack, worldIn, tooltip, flagIn);

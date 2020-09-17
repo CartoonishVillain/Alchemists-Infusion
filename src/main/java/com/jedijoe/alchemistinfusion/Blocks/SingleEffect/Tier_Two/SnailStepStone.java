@@ -1,6 +1,7 @@
 package com.jedijoe.alchemistinfusion.Blocks.SingleEffect.Tier_Two;
 
 import com.jedijoe.alchemistinfusion.Blocks.SingleEffect.SingleInfusedBlockBase;
+import com.jedijoe.alchemistinfusion.Configuration;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
@@ -18,10 +19,11 @@ public class SnailStepStone extends SingleInfusedBlockBase {
 
     public SnailStepStone() {
         super(Properties.create(Material.ROCK).hardnessAndResistance(1).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE).harvestLevel(0).setRequiresTool());
+        if(Configuration.ENABLET2STONES.get()){
         SetEffect(TextFormatting.RED + "Slowness");
         SetAmplifier(TextFormatting.RED + "II");
         SetDuration(TextFormatting.RED + "(0:07)");
-    }
+    }else {SetEffect(TextFormatting.GRAY + "No Effect- Disabled in configuration");}}
 
     @Override
     protected void ApplyEffect(Effect effectIn, int durationIn, int amplifierIn, Entity entityIn) {
@@ -30,6 +32,7 @@ public class SnailStepStone extends SingleInfusedBlockBase {
 
     @Override
     public void onEntityWalk(World world, BlockPos blockpos, Entity entity) {
+        if(Configuration.ENABLET2STONES.get()){
         ApplyEffect(EFFECTTYPE, DURATION, AMPLIFIER, entity);
-    }
+    }}
 }

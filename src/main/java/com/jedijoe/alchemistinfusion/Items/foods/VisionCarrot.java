@@ -1,5 +1,6 @@
 package com.jedijoe.alchemistinfusion.Items.foods;
 import com.jedijoe.alchemistinfusion.AlchemistInfusion;
+import com.jedijoe.alchemistinfusion.Configuration;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
@@ -20,17 +21,36 @@ public class VisionCarrot extends Item {
         super(new Item.Properties().group(AlchemistInfusion.TAB).food(new Food.Builder()
                 .hunger(6)
                 .saturation(14.4f)
-                .effect(() -> new EffectInstance(Effects.NIGHT_VISION, 20*20, 0), 1.0f)
-                .effect(() -> new EffectInstance(Effects.INVISIBILITY, 20*15, 0), 0.2f)
-                .effect(() -> new EffectInstance(Effects.GLOWING, 20*20, 0), 0.1f)
+                .effect(() -> new EffectInstance(Effects.NIGHT_VISION, 20*Configuration.VISIONCARROTDURATION.get(), 0), 1.0f)
+                .effect(() -> new EffectInstance(Effects.INVISIBILITY, 20*Configuration.VISIONCARROTDURATION2.get(), 0), 0.2f)
+                .effect(() -> new EffectInstance(Effects.GLOWING, 20*Configuration.VISIONCARROTDURATION3.get(), 0), 0.1f)
                 .build()));
     }
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
-        String msg = TextFormatting.BLUE + "Night Vision (0:20)";
-        String msg2 = TextFormatting.DARK_GRAY + "??? (0:15)";
-        String msg3 = TextFormatting.DARK_GRAY + "??? (0:20)";
-        tooltip.add(new StringTextComponent(msg)); tooltip.add(new StringTextComponent(msg2)); tooltip.add(new StringTextComponent(msg3));
+        String msg = TextFormatting.BLUE + "Night Vision (" + TimeBuilder();
+        tooltip.add(new StringTextComponent(msg));
         super.addInformation(stack, worldIn, tooltip, flagIn);
+    }
+
+    private String TimeBuilder(){
+        String timer = "";
+        int timermath = Configuration.VISIONCARROTDURATION.get();
+        if (timermath > 60){
+            timer += Integer.toString(timermath/60);
+            while(timermath > 60){timermath -= 60;}
+            timer += ":";
+        }else{
+            timer += "00:";
+        }
+        if (timermath > 9){
+            timer += Integer.toString(timermath);
+            timer += ")";
+        } else{
+            timer += "0";
+            timer += Integer.toString(timermath);
+            timer += ")";
+        }
+        return timer;
     }
 }

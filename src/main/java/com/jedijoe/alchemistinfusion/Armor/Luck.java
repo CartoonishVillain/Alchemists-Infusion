@@ -1,5 +1,6 @@
 package com.jedijoe.alchemistinfusion.Armor;
 
+import com.jedijoe.alchemistinfusion.Configuration;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
@@ -21,8 +22,9 @@ public class Luck extends ArmorItem {
 
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
+        if(Configuration.ENABLEINFUSEDBOOTS.get()){
         String msg = TextFormatting.BLUE + "Luck I for the duration of wearing";
-        tooltip.add(new StringTextComponent(msg));
+        tooltip.add(new StringTextComponent(msg));} else {String msg = (TextFormatting.GRAY + "No Effect- Disabled in configuration"); tooltip.add(new StringTextComponent(msg));}
         super.addInformation(stack, worldIn, tooltip, flagIn);
     }
 }

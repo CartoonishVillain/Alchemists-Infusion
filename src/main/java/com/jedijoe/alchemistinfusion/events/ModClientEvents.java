@@ -1,5 +1,6 @@
 package com.jedijoe.alchemistinfusion.events;
 
+import com.jedijoe.alchemistinfusion.Configuration;
 import com.jedijoe.alchemistinfusion.Registries.ItemRegistry;
 import com.sun.javafx.geom.Vec3d;
 import com.sun.scenario.effect.Effect;
@@ -42,20 +43,20 @@ public class ModClientEvents {
     @SubscribeEvent
     public static void playerEffects(TickEvent.PlayerTickEvent event){
         PlayerEntity jumper = event.player;
-        if(jumper.isCrouching() && jumper.getItemStackFromSlot(EquipmentSlotType.FEET).getItem().equals(ItemRegistry.LEAP_BOOTS.get().getItem())) {
-            jumper.addPotionEffect(new EffectInstance(Effects.JUMP_BOOST, 5, 1, true, false));
-        } else if(jumper.getItemStackFromSlot(EquipmentSlotType.FEET).getItem().equals(ItemRegistry.LUCK_BOOTS.get().getItem())){
-            jumper.addPotionEffect(new EffectInstance(Effects.LUCK, 5, 0, true, false));
-        }else if(jumper.getItemStackFromSlot(EquipmentSlotType.FEET).getItem().equals(ItemRegistry.UNLUCK_BOOTS.get().getItem())){
-            jumper.addPotionEffect(new EffectInstance(Effects.UNLUCK, 5, 0, true, false));
-        }else if(jumper.getItemStackFromSlot(EquipmentSlotType.FEET).getItem().equals(ItemRegistry.ICE_BOOTS.get().getItem())){
+        if(jumper.isCrouching() && jumper.getItemStackFromSlot(EquipmentSlotType.FEET).getItem().equals(ItemRegistry.LEAP_BOOTS.get().getItem()) && Configuration.ENABLEINFUSEDBOOTS.get()) {
+            jumper.addPotionEffect(new EffectInstance(Effects.JUMP_BOOST, 5, Configuration.LEAPBOOTPOWER.get()-1, true, false));
+        } else if(jumper.getItemStackFromSlot(EquipmentSlotType.FEET).getItem().equals(ItemRegistry.LUCK_BOOTS.get().getItem()) && Configuration.ENABLEINFUSEDBOOTS.get()){
+            jumper.addPotionEffect(new EffectInstance(Effects.LUCK, 5, Configuration.LUCKSTRENGTH.get()-1, true, false));
+        }else if(jumper.getItemStackFromSlot(EquipmentSlotType.FEET).getItem().equals(ItemRegistry.UNLUCK_BOOTS.get().getItem()) && Configuration.ENABLEINFUSEDBOOTS.get()){
+            jumper.addPotionEffect(new EffectInstance(Effects.UNLUCK, 5, Configuration.UNLUCKSTRENGTH.get()-1, true, false));
+        }else if(jumper.getItemStackFromSlot(EquipmentSlotType.FEET).getItem().equals(ItemRegistry.ICE_BOOTS.get().getItem()) && Configuration.ENABLEINFUSEDBOOTS.get()){
             if(jumper.isOnGround()){
                 if(jumper.isSprinting()){
-                    jumper.moveRelative(1f, new Vector3d(0, 0, 0.0225));
+                    jumper.moveRelative(1f, new Vector3d(0, 0, Configuration.ICEBOOTSTRENGTHSPRINT.get()));
                 }else if (jumper.isCrouching()){
-                    jumper.moveRelative(1f, new Vector3d(0, 0, 0.005));
+                    jumper.moveRelative(1f, new Vector3d(0, 0, Configuration.ICEBOOTSTRENGTHSNEAK.get()));
                 }else{
-                    jumper.moveRelative(1f, new Vector3d(0, 0, 0.01));}}
+                    jumper.moveRelative(1f, new Vector3d(0, 0, Configuration.ICEBOOTSTRENGTHDEFAULT.get()));}}
         }
 
     }
@@ -65,7 +66,7 @@ public class ModClientEvents {
         LivingEntity jumper = event.getEntityLiving();
         if(jumper.getType() == EntityType.PLAYER && jumper.isCrouching() && jumper.isPotionActive(Effects.JUMP_BOOST)){
             PlayerEntity player = (PlayerEntity)jumper;
-            player.addExhaustion(0.15F);
+            player.addExhaustion(0.5F * (Configuration.LEAPBOOTEXHAUSTION.get() - 1));
         }
     }
 }

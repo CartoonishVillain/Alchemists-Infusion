@@ -1,5 +1,6 @@
 package com.jedijoe.alchemistinfusion.Items.foods;
 import com.jedijoe.alchemistinfusion.AlchemistInfusion;
+import com.jedijoe.alchemistinfusion.Configuration;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
@@ -21,17 +22,38 @@ public class SugarStick extends Item {
                 .hunger(1)
                 .saturation(1)
                 .fastToEat()
-                .effect(() -> new EffectInstance(Effects.SPEED, 20*10, 0), 1.0f)
-                .effect(()-> new EffectInstance(Effects.NAUSEA, 20*5, 1), 0.15f)
+                .effect(() -> new EffectInstance(Effects.SPEED, 20*Configuration.SUGARSTICKDURATION.get(), 0), 1.0f)
+                .effect(()-> new EffectInstance(Effects.NAUSEA, 20*Configuration.SUGARSTICKDURATION2.get(), 1), 0.15f)
                 .build()));
     }
 
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
-        String msg = TextFormatting.BLUE + "Speed I (0:10)";
+        String msg = TextFormatting.BLUE + "Speed I (" + TimeBuilder();
         tooltip.add(new StringTextComponent(msg));
         String msg2 = TextFormatting.RED + "May make you sick";
         tooltip.add(new StringTextComponent(msg2));
         super.addInformation(stack, worldIn, tooltip, flagIn);
+    }
+
+    private String TimeBuilder(){
+        String timer = "";
+        int timermath = Configuration.SUGARSTICKDURATION.get();
+        if (timermath > 60){
+            timer += Integer.toString(timermath/60);
+            while(timermath > 60){timermath -= 60;}
+            timer += ":";
+        }else{
+            timer += "00:";
+        }
+        if (timermath > 9){
+            timer += Integer.toString(timermath);
+            timer += ")";
+        } else{
+            timer += "0";
+            timer += Integer.toString(timermath);
+            timer += ")";
+        }
+        return timer;
     }
 }

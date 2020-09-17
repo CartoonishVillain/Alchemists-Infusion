@@ -1,6 +1,7 @@
 package com.jedijoe.alchemistinfusion.Blocks.SingleEffect.Tier_Three;
 
 import com.jedijoe.alchemistinfusion.Blocks.SingleEffect.SingleInfusedBlockBase;
+import com.jedijoe.alchemistinfusion.Configuration;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
@@ -18,10 +19,11 @@ public class GlowingStone extends SingleInfusedBlockBase {
 
     public GlowingStone() {
         super(Properties.create(Material.ROCK).hardnessAndResistance(2).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE).harvestLevel(0).setLightLevel(value -> 13).setRequiresTool());
+        if(Configuration.ENABLET3STONES.get()){
         SetEffect(TextFormatting.WHITE + "Glowing");
         SetAmplifier(TextFormatting.WHITE + "I");
         SetDuration(TextFormatting.WHITE + "(0:15)");
-    }
+    }else {SetEffect(TextFormatting.GRAY + "No Effect- Disabled in configuration");}}
 
     @Override
     protected void ApplyEffect(Effect effectIn, int durationIn, int amplifierIn, Entity entityIn) {
@@ -30,6 +32,7 @@ public class GlowingStone extends SingleInfusedBlockBase {
 
     @Override
     public void onEntityWalk(World world, BlockPos blockpos, Entity entity) {
+        if(Configuration.ENABLET3STONES.get()){
         ApplyEffect(EFFECTTYPE, DURATION, AMPLIFIER, entity);
-    }
+    }}
 }

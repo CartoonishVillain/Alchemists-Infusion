@@ -1,6 +1,7 @@
 package com.jedijoe.alchemistinfusion.Blocks.SingleEffect.Tier_One;
 
 import com.jedijoe.alchemistinfusion.Blocks.SingleEffect.SingleInfusedBlockBase;
+import com.jedijoe.alchemistinfusion.Configuration;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -19,10 +20,11 @@ public class HopStone extends SingleInfusedBlockBase {
 
     public HopStone() {
         super(Block.Properties.create(Material.ROCK).hardnessAndResistance(1).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE).harvestLevel(0).setRequiresTool());
-        SetEffect(TextFormatting.BLUE + "Jump Boost");
+        if(Configuration.ENABLET1STONES.get()){
+            SetEffect(TextFormatting.BLUE + "Jump Boost");
         SetAmplifier(TextFormatting.BLUE + "II");
         SetDuration(TextFormatting.BLUE + "(0:01)");
-    }
+    }else {SetEffect(TextFormatting.GRAY + "No Effect- Disabled in configuration");}}
 
     @Override
     protected void ApplyEffect(Effect effectIn, int durationIn, int amplifierIn, Entity entityIn) {
@@ -31,6 +33,7 @@ public class HopStone extends SingleInfusedBlockBase {
 
     @Override
     public void onEntityWalk(World world, BlockPos blockpos, Entity entity) {
+        if(Configuration.ENABLET1STONES.get()){
         ApplyEffect(EFFECTTYPE, DURATION, AMPLIFIER, entity);
-    }
+    }}
 }
