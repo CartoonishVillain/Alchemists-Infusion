@@ -27,7 +27,7 @@ displayURL="https://github.com/jedijoe93/Alchemists-Infusion" #optional
 # A file name (in the root of the mod JAR) containing a logo for display
 logoFile="examplemod.png" #optional
 # A text field displayed in the mod UI
-credits="Mojang, and the Forge Team" #optional
+credits="Mojang, Blusunrize (and the folks behind Immersive Engineering),  and the Forge Team" #optional
 # A text field displayed in the mod UI
 authors="jedijoe_" #optional
 # The description text for the mod (multi line!) (#mandatory)
