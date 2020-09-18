@@ -1,6 +1,7 @@
 package com.jedijoe.alchemistinfusion;
 
 import com.jedijoe.alchemistinfusion.Registries.RegistryController;
+import com.jedijoe.alchemistinfusion.Sync.ConfigHelper;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -21,15 +22,18 @@ public class AlchemistInfusion
 {
     private static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "alchemistinfusion";
+    public static Configuration config;
     public AlchemistInfusion() {
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Configuration.COMMON_CONFIG);
+        config = ConfigHelper.register(ModConfig.Type.SERVER, Configuration::new);
+
+
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
 //        // Register the enqueueIMC method for modloading
 //        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
 //        // Register the processIMC method for modloading
 //        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
         // Register the doClientStuff method for modloading
-        Configuration.loadConfig(Configuration.COMMON_CONFIG, FMLPaths.CONFIGDIR.get().resolve("alchemistInfusion-common.toml"));
+
         RegistryController.LaunchItems();
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 

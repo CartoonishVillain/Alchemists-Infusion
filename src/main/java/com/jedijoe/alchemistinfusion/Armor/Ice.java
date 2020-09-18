@@ -1,5 +1,6 @@
 package com.jedijoe.alchemistinfusion.Armor;
 
+import com.jedijoe.alchemistinfusion.AlchemistInfusion;
 import com.jedijoe.alchemistinfusion.Configuration;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -22,7 +23,7 @@ public class Ice extends ArmorItem {
 
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
-        if(Configuration.ENABLEINFUSEDBOOTS.get()){
+        if(AlchemistInfusion.config.ENABLEINFUSEDBOOTS.get()){
         String msg = TextFormatting.BLUE + "Increased forward movement speed while wearing";
         tooltip.add(new StringTextComponent(msg));
         String msg2 = TextFormatting.RED + "You will be constantly be pushed forward while wearing";

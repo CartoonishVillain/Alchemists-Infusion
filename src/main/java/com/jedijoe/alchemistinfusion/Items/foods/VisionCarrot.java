@@ -21,9 +21,9 @@ public class VisionCarrot extends Item {
         super(new Item.Properties().group(AlchemistInfusion.TAB).food(new Food.Builder()
                 .hunger(6)
                 .saturation(14.4f)
-                .effect(() -> new EffectInstance(Effects.NIGHT_VISION, 20*Configuration.VISIONCARROTDURATION.get(), 0), 1.0f)
-                .effect(() -> new EffectInstance(Effects.INVISIBILITY, 20*Configuration.VISIONCARROTDURATION2.get(), 0), 0.2f)
-                .effect(() -> new EffectInstance(Effects.GLOWING, 20*Configuration.VISIONCARROTDURATION3.get(), 0), 0.1f)
+                .effect(() -> new EffectInstance(Effects.NIGHT_VISION, 20*AlchemistInfusion.config.VISIONCARROTDURATION.get(), 0), 1.0f)
+                .effect(() -> new EffectInstance(Effects.INVISIBILITY, 20*AlchemistInfusion.config.VISIONCARROTDURATION2.get(), 0), 0.2f)
+                .effect(() -> new EffectInstance(Effects.GLOWING, 20*AlchemistInfusion.config.VISIONCARROTDURATION3.get(), 0), 0.1f)
                 .build()));
     }
     @Override
@@ -35,7 +35,7 @@ public class VisionCarrot extends Item {
 
     private String TimeBuilder(){
         String timer = "";
-        int timermath = Configuration.VISIONCARROTDURATION.get();
+        int timermath = AlchemistInfusion.config.VISIONCARROTDURATION.get();
         if (timermath > 60){
             timer += Integer.toString(timermath/60);
             while(timermath > 60){timermath -= 60;}

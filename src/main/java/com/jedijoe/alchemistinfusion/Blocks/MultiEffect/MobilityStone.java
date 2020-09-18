@@ -1,5 +1,6 @@
 package com.jedijoe.alchemistinfusion.Blocks.MultiEffect;
 
+import com.jedijoe.alchemistinfusion.AlchemistInfusion;
 import com.jedijoe.alchemistinfusion.Blocks.SingleEffect.SingleInfusedBlockBase;
 import com.jedijoe.alchemistinfusion.Configuration;
 import net.minecraft.block.SoundType;
@@ -18,7 +19,7 @@ public class MobilityStone extends SingleInfusedBlockBase {
 
     public MobilityStone() {
         super(Properties.create(Material.ROCK).hardnessAndResistance(2).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE).harvestLevel(0).setRequiresTool());
-        if(Configuration.ENABLET4STONES.get()){
+        if(AlchemistInfusion.config.ENABLET4STONES.get()){
         SetEffect(TextFormatting.BLUE + "Speed/Jump Boost");
         SetAmplifier(TextFormatting.BLUE + "III/IV");
         SetDuration(TextFormatting.BLUE + "(0:02)");
@@ -26,7 +27,7 @@ public class MobilityStone extends SingleInfusedBlockBase {
 
     @Override
     public void onEntityWalk(World world, BlockPos blockpos, Entity entity) {
-        if(Configuration.ENABLET4STONES.get()){
+        if(AlchemistInfusion.config.ENABLET4STONES.get()){
         ApplyEffect(Effects.SPEED, 2, 3, entity);
         ApplyEffect(Effects.JUMP_BOOST, 2, 4, entity);
     }}

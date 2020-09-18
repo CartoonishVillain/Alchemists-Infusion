@@ -1,5 +1,6 @@
 package com.jedijoe.alchemistinfusion.Blocks.SingleEffect;
 
+import com.jedijoe.alchemistinfusion.AlchemistInfusion;
 import com.jedijoe.alchemistinfusion.Blocks.SingleEffect.SingleInfusedBlockBase;
 import com.jedijoe.alchemistinfusion.Configuration;
 import net.minecraft.block.SoundType;
@@ -22,7 +23,7 @@ public class DolphinStone extends SingleInfusedBlockBase {
 
     public DolphinStone() {
         super(Properties.create(Material.ROCK).hardnessAndResistance(2).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE).harvestLevel(0).setRequiresTool());
-        if(Configuration.ENABLET4STONES.get()){
+        if(AlchemistInfusion.config.ENABLET4STONES.get()){
         SetEffect(TextFormatting.BLUE + "Dolphins Grace");
         SetAmplifier(TextFormatting.BLUE + "I");
         SetDuration(TextFormatting.BLUE + "(0:10)");
@@ -30,7 +31,7 @@ public class DolphinStone extends SingleInfusedBlockBase {
 
     @Override
     public void onEntityWalk(World world, BlockPos blockpos, Entity entity) {
-        if(Configuration.ENABLET4STONES.get()){
+        if(AlchemistInfusion.config.ENABLET4STONES.get()){
         ApplyEffect(Effects.DOLPHINS_GRACE, 10, 1, entity);
     }}
 }

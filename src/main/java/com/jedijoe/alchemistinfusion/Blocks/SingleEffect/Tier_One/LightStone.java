@@ -1,5 +1,6 @@
 package com.jedijoe.alchemistinfusion.Blocks.SingleEffect.Tier_One;
 
+import com.jedijoe.alchemistinfusion.AlchemistInfusion;
 import com.jedijoe.alchemistinfusion.Blocks.SingleEffect.SingleInfusedBlockBase;
 import com.jedijoe.alchemistinfusion.Configuration;
 import net.minecraft.block.Block;
@@ -23,14 +24,14 @@ public class LightStone extends SingleInfusedBlockBase {
 
     public LightStone() {
         super(Block.Properties.create(Material.ROCK).hardnessAndResistance(1).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE).setLightLevel(value -> 9).harvestLevel(0).setRequiresTool());
-        if(Configuration.ENABLET1STONES.get()){ SetEffect(TextFormatting.WHITE + "Glowing");
+        if(AlchemistInfusion.config.ENABLET1STONES.get()){ SetEffect(TextFormatting.WHITE + "Glowing");
         SetAmplifier(TextFormatting.WHITE + "I");
         SetDuration(TextFormatting.WHITE + "(0:03)");
     }else {SetEffect(TextFormatting.GRAY + "No Effect- Disabled in configuration");}}
 
     @Override
     public void onEntityWalk(World world, BlockPos blockpos, Entity entity) {
-        if(Configuration.ENABLET1STONES.get()){
+        if(AlchemistInfusion.config.ENABLET1STONES.get()){
         ApplyEffect(EFFECTTYPE, DURATION, AMPLIFIER, entity);
     }}
 }

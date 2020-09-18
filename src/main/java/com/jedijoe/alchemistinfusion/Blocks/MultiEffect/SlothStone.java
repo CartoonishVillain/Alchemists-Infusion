@@ -1,5 +1,6 @@
 package com.jedijoe.alchemistinfusion.Blocks.MultiEffect;
 
+import com.jedijoe.alchemistinfusion.AlchemistInfusion;
 import com.jedijoe.alchemistinfusion.Blocks.SingleEffect.SingleInfusedBlockBase;
 import com.jedijoe.alchemistinfusion.Configuration;
 import net.minecraft.block.SoundType;
@@ -15,7 +16,7 @@ public class SlothStone extends SingleInfusedBlockBase {
 
     public SlothStone() {
         super(Properties.create(Material.ROCK).hardnessAndResistance(2).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE).harvestLevel(0).setRequiresTool());
-        if(Configuration.ENABLET4STONES.get()){
+        if(AlchemistInfusion.config.ENABLET4STONES.get()){
         SetEffect(TextFormatting.RED + "Mining Fatigue/Slowness");
         SetAmplifier(TextFormatting.RED + "III");
         SetDuration(TextFormatting.RED + "(0:15)");
@@ -23,7 +24,7 @@ public class SlothStone extends SingleInfusedBlockBase {
 
     @Override
     public void onEntityWalk(World world, BlockPos blockpos, Entity entity) {
-        if(Configuration.ENABLET4STONES.get()){
+        if(AlchemistInfusion.config.ENABLET4STONES.get()){
         ApplyEffect(Effects.SLOWNESS, 15, 3, entity);
         ApplyEffect(Effects.MINING_FATIGUE, 15, 3, entity);
     }}

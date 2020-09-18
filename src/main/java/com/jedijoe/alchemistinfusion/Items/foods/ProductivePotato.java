@@ -21,7 +21,7 @@ public class ProductivePotato extends Item {
         super(new Item.Properties().group(AlchemistInfusion.TAB).food(new Food.Builder()
                 .hunger(5)
                 .saturation(6)
-                .effect(() -> new EffectInstance(Effects.HASTE, 20*Configuration.PRODUCTIVEPOTATODURATION.get(), 0), 1.0f)
+                .effect(() -> new EffectInstance(Effects.HASTE, 20*AlchemistInfusion.config.PRODUCTIVEPOTATODURATION.get(), 0), 1.0f)
                 .build()));
     }
 
@@ -34,7 +34,7 @@ public class ProductivePotato extends Item {
 
     private String TimeBuilder(){
         String timer = "";
-        int timermath = Configuration.PRODUCTIVEPOTATODURATION.get();
+        int timermath = AlchemistInfusion.config.PRODUCTIVEPOTATODURATION.get();
         if (timermath > 60){
             timer += Integer.toString(timermath/60);
             while(timermath > 60){timermath -= 60;}

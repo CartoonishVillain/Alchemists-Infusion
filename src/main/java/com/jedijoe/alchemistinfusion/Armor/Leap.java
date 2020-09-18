@@ -1,5 +1,6 @@
 package com.jedijoe.alchemistinfusion.Armor;
 
+import com.jedijoe.alchemistinfusion.AlchemistInfusion;
 import com.jedijoe.alchemistinfusion.Configuration;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -22,7 +23,7 @@ public class Leap extends ArmorItem {
 
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
-        if(Configuration.ENABLEINFUSEDBOOTS.get()){
+        if(AlchemistInfusion.config.ENABLEINFUSEDBOOTS.get()){
         String msg = TextFormatting.BLUE + "When worn, gives jump boost II while crouching.";
         tooltip.add(new StringTextComponent(msg));
         String msg2 = TextFormatting.RED + "Using this effect incurs a 4x exhaustion penalty";

@@ -22,8 +22,8 @@ public class SugarStick extends Item {
                 .hunger(1)
                 .saturation(1)
                 .fastToEat()
-                .effect(() -> new EffectInstance(Effects.SPEED, 20*Configuration.SUGARSTICKDURATION.get(), 0), 1.0f)
-                .effect(()-> new EffectInstance(Effects.NAUSEA, 20*Configuration.SUGARSTICKDURATION2.get(), 1), 0.15f)
+                .effect(() -> new EffectInstance(Effects.SPEED, 20*AlchemistInfusion.config.SUGARSTICKDURATION.get(), 0), 1.0f)
+                .effect(()-> new EffectInstance(Effects.NAUSEA, 20*AlchemistInfusion.config.SUGARSTICKDURATION2.get(), 1), 0.15f)
                 .build()));
     }
 
@@ -38,7 +38,7 @@ public class SugarStick extends Item {
 
     private String TimeBuilder(){
         String timer = "";
-        int timermath = Configuration.SUGARSTICKDURATION.get();
+        int timermath = AlchemistInfusion.config.SUGARSTICKDURATION.get();
         if (timermath > 60){
             timer += Integer.toString(timermath/60);
             while(timermath > 60){timermath -= 60;}

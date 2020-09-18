@@ -8,7 +8,6 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.potion.Effect;
 import net.minecraft.potion.EffectInstance;
 import net.minecraftforge.common.ToolType;
-import sun.dc.pr.PRError;
 
 public class SingleInfusedBlockBase extends Block {
     public SingleInfusedBlockBase(Properties properties) {

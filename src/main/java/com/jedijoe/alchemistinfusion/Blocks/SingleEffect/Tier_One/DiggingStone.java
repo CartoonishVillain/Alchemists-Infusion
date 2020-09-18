@@ -1,5 +1,6 @@
 package com.jedijoe.alchemistinfusion.Blocks.SingleEffect.Tier_One;
 
+import com.jedijoe.alchemistinfusion.AlchemistInfusion;
 import com.jedijoe.alchemistinfusion.Blocks.SingleEffect.SingleInfusedBlockBase;
 import com.jedijoe.alchemistinfusion.Configuration;
 import net.minecraft.block.SoundType;
@@ -10,6 +11,7 @@ import net.minecraft.potion.Effects;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.ToolType;
 
 public class DiggingStone extends SingleInfusedBlockBase {
@@ -19,7 +21,7 @@ public class DiggingStone extends SingleInfusedBlockBase {
 
     public DiggingStone() {
         super(Properties.create(Material.ROCK).hardnessAndResistance(1).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE).harvestLevel(0).setRequiresTool());
-        if(Configuration.ENABLET1STONES.get()){
+        if(AlchemistInfusion.config.ENABLET1STONES.get()){
         SetEffect(TextFormatting.BLUE + "Haste");
         SetAmplifier(TextFormatting.BLUE + "I");
         SetDuration(TextFormatting.BLUE + "(0:01)");
@@ -32,8 +34,8 @@ public class DiggingStone extends SingleInfusedBlockBase {
 
     @Override
     public void onEntityWalk(World world, BlockPos blockpos, Entity entity) {
-        if(Configuration.ENABLET1STONES.get()){
+        if(AlchemistInfusion.config.ENABLET1STONES.get()){
         ApplyEffect(EFFECTTYPE, DURATION, AMPLIFIER, entity);
-    }}
-
+        }
+    }
 }

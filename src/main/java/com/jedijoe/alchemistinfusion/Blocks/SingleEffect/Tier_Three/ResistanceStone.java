@@ -1,5 +1,6 @@
 package com.jedijoe.alchemistinfusion.Blocks.SingleEffect.Tier_Three;
 
+import com.jedijoe.alchemistinfusion.AlchemistInfusion;
 import com.jedijoe.alchemistinfusion.Blocks.SingleEffect.SingleInfusedBlockBase;
 import com.jedijoe.alchemistinfusion.Configuration;
 import net.minecraft.block.SoundType;
@@ -19,7 +20,7 @@ public class ResistanceStone extends SingleInfusedBlockBase {
 
     public ResistanceStone() {
         super(Properties.create(Material.ROCK).hardnessAndResistance(2).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE).harvestLevel(0).setRequiresTool());
-        if(Configuration.ENABLET3STONES.get()){
+        if(AlchemistInfusion.config.ENABLET3STONES.get()){
         SetEffect(TextFormatting.BLUE + "Resistance");
         SetAmplifier(TextFormatting.BLUE + "II");
         SetDuration(TextFormatting.BLUE + "(0:02)");
@@ -32,7 +33,7 @@ public class ResistanceStone extends SingleInfusedBlockBase {
 
     @Override
     public void onEntityWalk(World world, BlockPos blockpos, Entity entity) {
-        if(Configuration.ENABLET3STONES.get()){
+        if(AlchemistInfusion.config.ENABLET3STONES.get()){
         ApplyEffect(EFFECTTYPE, DURATION, AMPLIFIER, entity);
     }}
 }

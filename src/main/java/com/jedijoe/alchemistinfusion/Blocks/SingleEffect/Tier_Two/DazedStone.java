@@ -1,5 +1,6 @@
 package com.jedijoe.alchemistinfusion.Blocks.SingleEffect.Tier_Two;
 
+import com.jedijoe.alchemistinfusion.AlchemistInfusion;
 import com.jedijoe.alchemistinfusion.Blocks.SingleEffect.SingleInfusedBlockBase;
 import com.jedijoe.alchemistinfusion.Configuration;
 import net.minecraft.block.SoundType;
@@ -19,7 +20,7 @@ public class DazedStone extends SingleInfusedBlockBase {
 
     public DazedStone() {
         super(Properties.create(Material.ROCK).hardnessAndResistance(1).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE).harvestLevel(0).setRequiresTool());
-        if(Configuration.ENABLET2STONES.get()){
+        if(AlchemistInfusion.config.ENABLET2STONES.get()){
         SetEffect(TextFormatting.RED + "Nausea");
         SetAmplifier(TextFormatting.RED + "I");
         SetDuration(TextFormatting.RED + "(0:07)");
@@ -32,7 +33,7 @@ public class DazedStone extends SingleInfusedBlockBase {
 
     @Override
     public void onEntityWalk(World world, BlockPos blockpos, Entity entity) {
-        if(Configuration.ENABLET2STONES.get()){
+        if(AlchemistInfusion.config.ENABLET2STONES.get()){
         ApplyEffect(EFFECTTYPE, DURATION, AMPLIFIER, entity);
     }}
 }
