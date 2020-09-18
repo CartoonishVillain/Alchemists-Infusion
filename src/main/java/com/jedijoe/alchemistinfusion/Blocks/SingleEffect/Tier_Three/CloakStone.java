@@ -2,7 +2,7 @@ package com.jedijoe.alchemistinfusion.Blocks.SingleEffect.Tier_Three;
 
 import com.jedijoe.alchemistinfusion.AlchemistInfusion;
 import com.jedijoe.alchemistinfusion.Blocks.SingleEffect.SingleInfusedBlockBase;
-import com.jedijoe.alchemistinfusion.Configuration;
+import com.jedijoe.alchemistinfusion.Blocks.SingleEffect.TierThreeBlocks;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
@@ -13,7 +13,7 @@ import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ToolType;
 
-public class CloakStone extends SingleInfusedBlockBase {
+public class CloakStone extends TierThreeBlocks {
     protected static Effect EFFECTTYPE = Effects.INVISIBILITY;
     protected static int DURATION = 6;
     protected static int AMPLIFIER = 1;

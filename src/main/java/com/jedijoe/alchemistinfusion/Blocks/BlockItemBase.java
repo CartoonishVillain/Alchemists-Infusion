@@ -1,7 +1,7 @@
 package com.jedijoe.alchemistinfusion.Blocks;
 
 import com.jedijoe.alchemistinfusion.AlchemistInfusion;
-import com.jedijoe.alchemistinfusion.Blocks.SingleEffect.SingleInfusedBlockBase;
+import com.jedijoe.alchemistinfusion.Blocks.SingleEffect.*;
 import com.jedijoe.alchemistinfusion.Blocks.SingleEffect.Tier_One.DiggingStone;
 import javafx.scene.effect.Effect;
 import net.minecraft.block.Block;
@@ -29,13 +29,47 @@ public class BlockItemBase extends BlockItem {
 
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
-        if(blocktype instanceof SingleInfusedBlockBase){
+        if(blocktype instanceof TierOneBlocks && AlchemistInfusion.config.ENABLET1STONES.get()){
             String effect = ((SingleInfusedBlockBase) blocktype).GetEffect();
             String amplifier = ((SingleInfusedBlockBase) blocktype).GetAmplifier();
             String duration = ((SingleInfusedBlockBase) blocktype).GetDuration();
             msg = effect + " " + amplifier + " " + duration; }
+
+        else if (blocktype instanceof TierOneBlocks && !AlchemistInfusion.config.ENABLET1STONES.get()){
+            msg = TextFormatting.GRAY + "No Effect - Block disabled by server config";
+        }
+        else if(blocktype instanceof TierTwoBlocks && AlchemistInfusion.config.ENABLET2STONES.get()){
+            String effect = ((SingleInfusedBlockBase) blocktype).GetEffect();
+            String amplifier = ((SingleInfusedBlockBase) blocktype).GetAmplifier();
+            String duration = ((SingleInfusedBlockBase) blocktype).GetDuration();
+            msg = effect + " " + amplifier + " " + duration; }
+
+        else if (blocktype instanceof TierTwoBlocks && !AlchemistInfusion.config.ENABLET2STONES.get()){
+            msg = TextFormatting.GRAY + "No Effect - Block disabled by server config";
+        }
+
+        else if(blocktype instanceof TierThreeBlocks && AlchemistInfusion.config.ENABLET3STONES.get()){
+            String effect = ((SingleInfusedBlockBase) blocktype).GetEffect();
+            String amplifier = ((SingleInfusedBlockBase) blocktype).GetAmplifier();
+            String duration = ((SingleInfusedBlockBase) blocktype).GetDuration();
+            msg = effect + " " + amplifier + " " + duration; }
+
+        else if (blocktype instanceof TierThreeBlocks && !AlchemistInfusion.config.ENABLET3STONES.get()){
+            msg = TextFormatting.GRAY + "No Effect - Block disabled by server config";
+        }
+
+        else if(blocktype instanceof TierFourBlocks && AlchemistInfusion.config.ENABLET4STONES.get()){
+            String effect = ((SingleInfusedBlockBase) blocktype).GetEffect();
+            String amplifier = ((SingleInfusedBlockBase) blocktype).GetAmplifier();
+            String duration = ((SingleInfusedBlockBase) blocktype).GetDuration();
+            msg = effect + " " + amplifier + " " + duration; }
+
+        else if (blocktype instanceof TierFourBlocks && !AlchemistInfusion.config.ENABLET4STONES.get()){
+            msg = TextFormatting.GRAY + "No Effect - Block disabled by server config";
+        }
         else{msg = TextFormatting.GRAY + "No Effect";}
         tooltip.add(new StringTextComponent(msg));
         super.addInformation(stack, worldIn, tooltip, flagIn);
     }
+
 }

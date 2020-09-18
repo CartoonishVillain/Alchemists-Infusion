@@ -2,7 +2,7 @@ package com.jedijoe.alchemistinfusion.Blocks.SingleEffect.Tier_Two;
 
 import com.jedijoe.alchemistinfusion.AlchemistInfusion;
 import com.jedijoe.alchemistinfusion.Blocks.SingleEffect.SingleInfusedBlockBase;
-import com.jedijoe.alchemistinfusion.Configuration;
+import com.jedijoe.alchemistinfusion.Blocks.SingleEffect.TierTwoBlocks;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
@@ -13,7 +13,7 @@ import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ToolType;
 
-public class HungerStone extends SingleInfusedBlockBase {
+public class HungerStone extends TierTwoBlocks {
     protected static Effect EFFECTTYPE = Effects.HUNGER;
     protected static int DURATION = 7;
     protected static int AMPLIFIER = 1;

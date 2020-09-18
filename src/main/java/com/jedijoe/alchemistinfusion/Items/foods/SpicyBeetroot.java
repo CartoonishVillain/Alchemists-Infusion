@@ -1,6 +1,5 @@
 package com.jedijoe.alchemistinfusion.Items.foods;
 import com.jedijoe.alchemistinfusion.AlchemistInfusion;
-import com.jedijoe.alchemistinfusion.Configuration;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
@@ -34,9 +33,9 @@ public class SpicyBeetroot extends Item {
     private String TimeBuilder(){
         String timer = "";
         int timermath = AlchemistInfusion.config.SPICYBEETROOTDURATION.get();
-        if (timermath > 60){
+        if (timermath >= 60){
             timer += Integer.toString(timermath/60);
-            while(timermath > 60){timermath -= 60;}
+            while(timermath >= 60){timermath -= 60;}
             timer += ":";
         }else{
             timer += "00:";

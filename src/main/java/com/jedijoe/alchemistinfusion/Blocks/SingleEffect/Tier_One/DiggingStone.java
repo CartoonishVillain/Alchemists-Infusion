@@ -2,7 +2,7 @@ package com.jedijoe.alchemistinfusion.Blocks.SingleEffect.Tier_One;
 
 import com.jedijoe.alchemistinfusion.AlchemistInfusion;
 import com.jedijoe.alchemistinfusion.Blocks.SingleEffect.SingleInfusedBlockBase;
-import com.jedijoe.alchemistinfusion.Configuration;
+import com.jedijoe.alchemistinfusion.Blocks.SingleEffect.TierOneBlocks;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
@@ -11,10 +11,9 @@ import net.minecraft.potion.Effects;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
-import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.ToolType;
 
-public class DiggingStone extends SingleInfusedBlockBase {
+public class DiggingStone extends TierOneBlocks {
     protected static Effect EFFECTTYPE = Effects.HASTE;
     protected static int DURATION = 1;
     protected static int AMPLIFIER = 1;

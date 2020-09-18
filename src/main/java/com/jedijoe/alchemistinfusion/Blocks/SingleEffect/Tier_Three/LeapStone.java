@@ -2,7 +2,7 @@ package com.jedijoe.alchemistinfusion.Blocks.SingleEffect.Tier_Three;
 
 import com.jedijoe.alchemistinfusion.AlchemistInfusion;
 import com.jedijoe.alchemistinfusion.Blocks.SingleEffect.SingleInfusedBlockBase;
-import com.jedijoe.alchemistinfusion.Configuration;
+import com.jedijoe.alchemistinfusion.Blocks.SingleEffect.TierThreeBlocks;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
@@ -13,7 +13,7 @@ import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ToolType;
 
-public class LeapStone extends SingleInfusedBlockBase {
+public class LeapStone extends TierThreeBlocks {
     protected static Effect EFFECTTYPE = Effects.JUMP_BOOST;
     protected static int DURATION = 2;
     protected static int AMPLIFIER = 4;

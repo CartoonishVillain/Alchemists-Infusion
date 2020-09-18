@@ -1,11 +1,9 @@
 package com.jedijoe.alchemistinfusion.Items.foods;
 import com.jedijoe.alchemistinfusion.AlchemistInfusion;
-import com.jedijoe.alchemistinfusion.Configuration;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.potion.Effect;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 import net.minecraft.util.text.ITextComponent;
@@ -39,9 +37,9 @@ public class SugarStick extends Item {
     private String TimeBuilder(){
         String timer = "";
         int timermath = AlchemistInfusion.config.SUGARSTICKDURATION.get();
-        if (timermath > 60){
+        if (timermath >= 60){
             timer += Integer.toString(timermath/60);
-            while(timermath > 60){timermath -= 60;}
+            while(timermath >= 60){timermath -= 60;}
             timer += ":";
         }else{
             timer += "00:";
