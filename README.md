@@ -1,7 +1,8 @@
 # Alchemists-Infusion
 A mod by jedijoe to make effects more viable
 
-Special credits to:
+Special thanks to:
+
 Supermegazord567 - guinea pig for testing before I launch updates
 
 Blusunrize and the immersive engineering team - Their code has taught me a lot and I use small, modified snippits of it. Thanks to their neat license  
