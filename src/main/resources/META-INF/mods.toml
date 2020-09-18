@@ -17,7 +17,7 @@ issueTrackerURL="https://github.com/jedijoe93/Alchemists-Infusion" #optional
 # The modid of the mod
 modId="alchemistinfusion" #mandatory
 # The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
-version="0.6.2" #mandatory
+version="0.6.5" #mandatory
  # A display name for the mod
 displayName="Alchemist Infusion" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification <here>
@@ -27,7 +27,7 @@ displayURL="https://github.com/jedijoe93/Alchemists-Infusion" #optional
 # A file name (in the root of the mod JAR) containing a logo for display
 logoFile="examplemod.png" #optional
 # A text field displayed in the mod UI
-credits="Mojang, Blusunrize (and the folks behind Immersive Engineering), Commoble  and the Forge Team" #optional
+credits="Mojang, Blusunrize (and the folks behind Immersive Engineering), Commoble, and the Forge Team" #optional
 # A text field displayed in the mod UI
 authors="jedijoe_" #optional
 # The description text for the mod (multi line!) (#mandatory)

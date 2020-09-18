@@ -6,6 +6,8 @@ Supermegazord567 - guinea pig for testing before I launch updates
 
 Blusunrize and the immersive engineering team - Their code has taught me a lot and I use small, modified snippits of it. Thanks to their neat license  
 
+Commoble - Provided the ConfigHelper class that made syncing configuration files much easier.
+
 Mojang - A lot of textures are just modified versions of their base textures. It'd be rude not to credit them.
 
 Forge team - I am using their huge modding api, after all.
