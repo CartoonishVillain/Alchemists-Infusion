@@ -1,8 +1,7 @@
-package com.jedijoe.alchemistinfusion;
+package com.jedijoe.alchemistinfusion.Configs;
 
 import com.electronwill.nightconfig.core.file.CommentedFileConfig;
 import com.electronwill.nightconfig.core.io.WritingMode;
-import com.jedijoe.alchemistinfusion.Sync.ConfigHelper;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.fml.common.Mod;
 

@@ -16,7 +16,7 @@ import com.jedijoe.alchemistinfusion.AlchemistInfusion;
 
 
 @Mod.EventBusSubscriber(modid = AlchemistInfusion.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
-public class ModClientEvents {
+public class ModEvents {
 
     @SubscribeEvent
     public static void playerEffects(TickEvent.PlayerTickEvent event){
