@@ -23,7 +23,7 @@ public class Luck extends ArmorItem {
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
         if(AlchemistInfusion.config.ENABLEINFUSEDBOOTS.get()){
-        String msg = TextFormatting.BLUE + "Luck I for the duration of wearing";
+        String msg = TextFormatting.BLUE + "Luck for the duration of wearing";
         tooltip.add(new StringTextComponent(msg));} else {String msg = (TextFormatting.GRAY + "No Effect- Disabled in configuration"); tooltip.add(new StringTextComponent(msg));}
         super.addInformation(stack, worldIn, tooltip, flagIn);
     }

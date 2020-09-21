@@ -37,6 +37,11 @@ public class Configuration {
     public ConfigHelper.ConfigValueListener<Integer> VISIONCARROTDURATION2;
     public ConfigHelper.ConfigValueListener<Integer> VISIONCARROTDURATION3;
 
+    public ConfigHelper.ConfigValueListener<Double> MOMENTUMCONVERTERPASSTHROUGH;
+
+    public ConfigHelper.ConfigValueListener<Boolean> ENABLEFALLBREAKER;
+    public ConfigHelper.ConfigValueListener<Boolean> ENABLEMOMENTUMCONVERTER;
+
     public Configuration(ForgeConfigSpec.Builder builder, ConfigHelper.Subscriber subscriber){
         builder.comment("Enable/Disable").push(SCATEGORY_ENABLE);
         this.ENABLET1STONES = subscriber.subscribe(builder.comment("Enables or Disables the first tier of potion stones, made with dust materials.").define("enableTierOnePotionStones", true));
@@ -44,6 +49,9 @@ public class Configuration {
         this.ENABLET3STONES = subscriber.subscribe(builder.comment("Enables or Disables the third tier of potion stones, made with gem materials.").define("enableTierThreePotionStones", true));
         this.ENABLET4STONES = subscriber.subscribe(builder.comment("Enables or Disables the fourth tier of potion stones, made by combining third tier stones.").define("enableTierFourPotionStones", true));
         this.ENABLEINFUSEDBOOTS = subscriber.subscribe(builder.comment("Enables or Disables boots infused with special properties").define("enableInfusedBoots", true));
+        this.ENABLEFALLBREAKER = subscriber.subscribe(builder.comment("Enables or disables the fall damage reduction of fall breakers").define("enableFallBreakers", true));
+        this.ENABLEMOMENTUMCONVERTER = subscriber.subscribe(builder.comment("Enables or disables the effect of the momentum converter (horizontal momentum converted to vertical momentum)").define("enableMomentumConverters", true));
+
 
 
         builder.pop();
@@ -65,6 +73,8 @@ public class Configuration {
         this.VISIONCARROTDURATION = subscriber.subscribe(builder.comment("Defines how long in seconds a vision carrot will give the night vision effect").defineInRange("visionCarrotTime", 20, 0, Integer.MAX_VALUE));
         this.VISIONCARROTDURATION2 = subscriber.subscribe(builder.comment("Defines how long in seconds a vision carrot will give the invisibility effect").defineInRange("visionCarrotTime2", 15, 0, Integer.MAX_VALUE));
         this.VISIONCARROTDURATION3 = subscriber.subscribe(builder.comment("Defines how long in seconds a vision carrot will give the glowing effect").defineInRange("visionCarrotTime3", 20, 0, Integer.MAX_VALUE));
+
+        this.MOMENTUMCONVERTERPASSTHROUGH = subscriber.subscribe(builder.comment("Defines how much horizontal momentum players keep when running on a momentum converter. 1 is 100%, 0.5 is 50%, etc.").defineInRange("momentumConverterPassthrough", 0.5f, 0, 1));
 
         builder.pop();
     }

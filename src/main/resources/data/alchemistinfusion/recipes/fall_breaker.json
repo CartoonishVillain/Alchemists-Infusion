@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "FFF",
+    "HHH"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:phantom_membrane"
+    },
+    "F": {
+      "item": "alchemistinfusion:pile_of_feathers"
+    },
+    "H": {
+      "item": "minecraft:hay_block"
+    }
+  },
+  "result": {
+    "item": "alchemistinfusion:fall_breaker",
+    "count": 1
+  }
+}

@@ -1,13 +1,16 @@
 package com.jedijoe.alchemistinfusion.Registries;
 
 import com.jedijoe.alchemistinfusion.AlchemistInfusion;
-import com.jedijoe.alchemistinfusion.Blocks.MultiEffect.MobilityStone;
-import com.jedijoe.alchemistinfusion.Blocks.MultiEffect.SlothStone;
-import com.jedijoe.alchemistinfusion.Blocks.PrimedPavement;
-import com.jedijoe.alchemistinfusion.Blocks.SingleEffect.DolphinStone;
-import com.jedijoe.alchemistinfusion.Blocks.SingleEffect.Tier_One.*;
-import com.jedijoe.alchemistinfusion.Blocks.SingleEffect.Tier_Three.*;
-import com.jedijoe.alchemistinfusion.Blocks.SingleEffect.Tier_Two.*;
+import com.jedijoe.alchemistinfusion.Blocks.Momentum.FallBreaker;
+import com.jedijoe.alchemistinfusion.Blocks.Momentum.MomentumConverter;
+import com.jedijoe.alchemistinfusion.Blocks.Momentum.ParticleIce;
+import com.jedijoe.alchemistinfusion.Blocks.Potioned.MultiEffect.MobilityStone;
+import com.jedijoe.alchemistinfusion.Blocks.Potioned.MultiEffect.SlothStone;
+import com.jedijoe.alchemistinfusion.Blocks.Potioned.PrimedPavement;
+import com.jedijoe.alchemistinfusion.Blocks.Potioned.SingleEffect.DolphinStone;
+import com.jedijoe.alchemistinfusion.Blocks.Potioned.SingleEffect.Tier_One.*;
+import com.jedijoe.alchemistinfusion.Blocks.Potioned.SingleEffect.Tier_Three.*;
+import com.jedijoe.alchemistinfusion.Blocks.Potioned.SingleEffect.Tier_Two.*;
 import net.minecraft.block.Block;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -21,6 +24,11 @@ public class BlockRegistry {
     public static void init(){
     BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
+
+    //Non-Potion Blocks
+    public static final RegistryObject<Block> FALLBREAKER = BLOCKS.register("fall_breaker", FallBreaker::new);
+    public static final RegistryObject<Block> PARTICLEICE = BLOCKS.register("particle_ice", ParticleIce::new);
+    public static final RegistryObject<Block> MOMENTUMCONVERTER = BLOCKS.register("momentum_converter", MomentumConverter::new);
 
     //No tier stones
     public static final RegistryObject<Block> PRIMEDPAVEMENT = BLOCKS.register("primed_pavement", PrimedPavement::new);

@@ -20,6 +20,7 @@ public class ProductivePotato extends Item {
                 .hunger(5)
                 .saturation(6)
                 .effect(() -> new EffectInstance(Effects.HASTE, 20*AlchemistInfusion.config.PRODUCTIVEPOTATODURATION.get(), 0), 1.0f)
+                .setAlwaysEdible()
                 .build()));
     }
 

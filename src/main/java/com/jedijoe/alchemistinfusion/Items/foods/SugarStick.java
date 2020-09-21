@@ -22,6 +22,7 @@ public class SugarStick extends Item {
                 .fastToEat()
                 .effect(() -> new EffectInstance(Effects.SPEED, 20*AlchemistInfusion.config.SUGARSTICKDURATION.get(), 0), 1.0f)
                 .effect(()-> new EffectInstance(Effects.NAUSEA, 20*AlchemistInfusion.config.SUGARSTICKDURATION2.get(), 1), 0.15f)
+                .setAlwaysEdible()
                 .build()));
     }
 

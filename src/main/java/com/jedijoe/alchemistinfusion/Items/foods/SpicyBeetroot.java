@@ -20,6 +20,7 @@ public class SpicyBeetroot extends Item {
                 .hunger(1)
                 .saturation(1.2f)
                 .effect(() -> new EffectInstance(Effects.FIRE_RESISTANCE, 20*AlchemistInfusion.config.SPICYBEETROOTDURATION.get(), 0), 1.0f)
+                .setAlwaysEdible()
                 .build()));
     }
 

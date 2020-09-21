@@ -22,6 +22,7 @@ public class VisionCarrot extends Item {
                 .effect(() -> new EffectInstance(Effects.NIGHT_VISION, 20*AlchemistInfusion.config.VISIONCARROTDURATION.get(), 0), 1.0f)
                 .effect(() -> new EffectInstance(Effects.INVISIBILITY, 20*AlchemistInfusion.config.VISIONCARROTDURATION2.get(), 0), 0.2f)
                 .effect(() -> new EffectInstance(Effects.GLOWING, 20*AlchemistInfusion.config.VISIONCARROTDURATION3.get(), 0), 0.1f)
+                .setAlwaysEdible()
                 .build()));
     }
     @Override
