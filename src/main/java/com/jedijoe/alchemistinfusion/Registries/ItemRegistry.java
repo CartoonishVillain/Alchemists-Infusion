@@ -4,10 +4,7 @@ import com.jedijoe.alchemistinfusion.AlchemistInfusion;
 import com.jedijoe.alchemistinfusion.Armor.*;
 import com.jedijoe.alchemistinfusion.Items.ItemBase;
 import com.jedijoe.alchemistinfusion.Items.PersistentItem;
-import com.jedijoe.alchemistinfusion.Items.foods.ProductivePotato;
-import com.jedijoe.alchemistinfusion.Items.foods.SpicyBeetroot;
-import com.jedijoe.alchemistinfusion.Items.foods.SugarStick;
-import com.jedijoe.alchemistinfusion.Items.foods.VisionCarrot;
+import com.jedijoe.alchemistinfusion.Items.foods.*;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
@@ -68,6 +65,7 @@ public class ItemRegistry {
     public static final RegistryObject<ProductivePotato> PRODUCTIVEPOTATO  = ITEMS.register("productive_potato", ProductivePotato::new);
     public static final RegistryObject<SugarStick> SUGARSTICK  = ITEMS.register("sugar_stick", SugarStick::new);
     public static final RegistryObject<SpicyBeetroot> SPICYBEETROOT  = ITEMS.register("spicy_beetroot", SpicyBeetroot::new);
+    public static final RegistryObject<IronSteak> IRONSTEAK = ITEMS.register("iron_steak", IronSteak::new);
 
     //Infused Armor
     public static final RegistryObject<ArmorItem> LEAP_BOOTS = ITEMS.register("leap_boots", () -> new Leap(ModArmor.LEAP, EquipmentSlotType.FEET, new Item.Properties().group(AlchemistInfusion.TAB)));

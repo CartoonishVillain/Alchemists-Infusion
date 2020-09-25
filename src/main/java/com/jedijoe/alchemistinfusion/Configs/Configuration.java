@@ -36,6 +36,8 @@ public class Configuration {
     public ConfigHelper.ConfigValueListener<Integer> VISIONCARROTDURATION;
     public ConfigHelper.ConfigValueListener<Integer> VISIONCARROTDURATION2;
     public ConfigHelper.ConfigValueListener<Integer> VISIONCARROTDURATION3;
+    public ConfigHelper.ConfigValueListener<Integer> IRONSTEAKDURATION;
+    public ConfigHelper.ConfigValueListener<Integer> IRONSTEAKDURATION2;
 
     public ConfigHelper.ConfigValueListener<Double> MOMENTUMCONVERTERPASSTHROUGH;
 
@@ -73,6 +75,8 @@ public class Configuration {
         this.VISIONCARROTDURATION = subscriber.subscribe(builder.comment("Defines how long in seconds a vision carrot will give the night vision effect").defineInRange("visionCarrotTime", 20, 0, Integer.MAX_VALUE));
         this.VISIONCARROTDURATION2 = subscriber.subscribe(builder.comment("Defines how long in seconds a vision carrot will give the invisibility effect").defineInRange("visionCarrotTime2", 15, 0, Integer.MAX_VALUE));
         this.VISIONCARROTDURATION3 = subscriber.subscribe(builder.comment("Defines how long in seconds a vision carrot will give the glowing effect").defineInRange("visionCarrotTime3", 20, 0, Integer.MAX_VALUE));
+        this.IRONSTEAKDURATION = subscriber.subscribe(builder.comment("Defines how long in seconds an iron steak will give the resistance effect").defineInRange("ironSteakTime", 60, 0, Integer.MAX_VALUE));
+        this.IRONSTEAKDURATION2 = subscriber.subscribe(builder.comment("Defines how long in seconds a iron steak will give the slowness effect").defineInRange("ironSteakTime2", 75, 0, Integer.MAX_VALUE));
 
         this.MOMENTUMCONVERTERPASSTHROUGH = subscriber.subscribe(builder.comment("Defines how much horizontal momentum players keep when running on a momentum converter. 1 is 100%, 0.5 is 50%, etc.").defineInRange("momentumConverterPassthrough", 0.5f, 0, 1));
 
