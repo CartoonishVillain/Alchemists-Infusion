@@ -14,29 +14,27 @@ import net.minecraft.world.World;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class VisionCarrot extends Item {
-    public VisionCarrot() {
-        super(new Item.Properties().group(AlchemistInfusion.TAB).food(new Food.Builder()
-                .hunger(6)
-                .saturation(14.4f)
-                .effect(() -> new EffectInstance(Effects.NIGHT_VISION, 20*AlchemistInfusion.config.VISIONCARROTDURATION.get(), 0), 1.0f)
-                .effect(() -> new EffectInstance(Effects.INVISIBILITY, 20*AlchemistInfusion.config.VISIONCARROTDURATION2.get(), 0), 0.2f)
-                .effect(() -> new EffectInstance(Effects.GLOWING, 20*AlchemistInfusion.config.VISIONCARROTDURATION3.get(), 0), 0.1f)
+public class HoppingRabbit extends Item {
+    public HoppingRabbit() {
+        super(new Properties().group(AlchemistInfusion.TAB).food(new Food.Builder()
+                .hunger(5)
+                .saturation(6)
+                .effect(() -> new EffectInstance(Effects.JUMP_BOOST, 20*AlchemistInfusion.config.PRODUCTIVEPOTATODURATION.get(), 2), 1.0f)
+                .meat()
                 .setAlwaysEdible()
                 .build()));
     }
+
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
-        String msg = TextFormatting.BLUE + "Night Vision (" + TimeBuilder();
+        String msg = TextFormatting.BLUE + "Jump Boost III (" + TimeBuilder();
         tooltip.add(new StringTextComponent(msg));
-        String msg1 = TextFormatting.GRAY + "May cause visual anomalies";
-        tooltip.add(new StringTextComponent(msg1));
         super.addInformation(stack, worldIn, tooltip, flagIn);
     }
 
     private String TimeBuilder(){
         String timer = "";
-        int timermath = AlchemistInfusion.config.VISIONCARROTDURATION.get();
+        int timermath = AlchemistInfusion.config.PRODUCTIVEPOTATODURATION.get();
         if (timermath >= 60){
             timer += Integer.toString(timermath/60);
             while(timermath >= 60){timermath -= 60;}

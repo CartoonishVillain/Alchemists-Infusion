@@ -20,6 +20,7 @@ public class ItemRegistry {
 
     public static final RegistryObject<Item> PAVEMENTCARVER = ITEMS.register("pavement_carver", PersistentItem::new);
     public static final RegistryObject<Item> INFUSIONROD = ITEMS.register("infusion_rod", PersistentItem::new);
+    public static final RegistryObject<Item> CULINARYINFUSIONROD = ITEMS.register("culinary_infusion_rod", PersistentItem::new);
     public static final RegistryObject<Item> BASEFRAGMENT = ITEMS.register("base_shard", ItemBase::new);
     public static final RegistryObject<Item> BAGOFSUGAR = ITEMS.register("bag_of_sugar", ItemBase::new);
     public static final RegistryObject<Item> BASE_GEM  = ITEMS.register("base_gem", ItemBase::new);
@@ -66,6 +67,8 @@ public class ItemRegistry {
     public static final RegistryObject<SugarStick> SUGARSTICK  = ITEMS.register("sugar_stick", SugarStick::new);
     public static final RegistryObject<SpicyBeetroot> SPICYBEETROOT  = ITEMS.register("spicy_beetroot", SpicyBeetroot::new);
     public static final RegistryObject<IronSteak> IRONSTEAK = ITEMS.register("iron_steak", IronSteak::new);
+    public static final RegistryObject<HoppingRabbit> HOPPINGRABBIT  = ITEMS.register("hopping_rabbit", HoppingRabbit::new);
+    public static final RegistryObject<ImbuedRabbitStew> IMBUEDRABBITSTEW = ITEMS.register("imbued_rabbit_stew", ImbuedRabbitStew::new);
 
     //Infused Armor
     public static final RegistryObject<ArmorItem> LEAP_BOOTS = ITEMS.register("leap_boots", () -> new Leap(ModArmor.LEAP, EquipmentSlotType.FEET, new Item.Properties().group(AlchemistInfusion.TAB)));
