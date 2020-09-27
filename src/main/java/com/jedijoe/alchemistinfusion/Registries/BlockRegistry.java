@@ -1,6 +1,7 @@
 package com.jedijoe.alchemistinfusion.Registries;
 
 import com.jedijoe.alchemistinfusion.AlchemistInfusion;
+import com.jedijoe.alchemistinfusion.Blocks.Blocker;
 import com.jedijoe.alchemistinfusion.Blocks.Momentum.FallBreaker;
 import com.jedijoe.alchemistinfusion.Blocks.Momentum.MomentumConverter;
 import com.jedijoe.alchemistinfusion.Blocks.Momentum.ParticleIce;
@@ -30,6 +31,7 @@ public class BlockRegistry {
     public static final RegistryObject<Block> PARTICLEICE = BLOCKS.register("particle_ice", ParticleIce::new);
     public static final RegistryObject<Block> MOMENTUMCONVERTER = BLOCKS.register("momentum_converter", MomentumConverter::new);
 
+    public static final RegistryObject<Block> BLOCKER = BLOCKS.register("blocker", Blocker::new);
     //No tier stones
     public static final RegistryObject<Block> PRIMEDPAVEMENT = BLOCKS.register("primed_pavement", PrimedPavement::new);
     public static final RegistryObject<Block> PAVEMENTSTONE = BLOCKS.register("pavement_stone", PrimedPavement::new);

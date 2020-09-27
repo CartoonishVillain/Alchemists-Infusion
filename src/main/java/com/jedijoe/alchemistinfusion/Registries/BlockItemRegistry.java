@@ -1,8 +1,10 @@
 package com.jedijoe.alchemistinfusion.Registries;
 
 import com.jedijoe.alchemistinfusion.AlchemistInfusion;
+import com.jedijoe.alchemistinfusion.Blocks.Blocker;
 import com.jedijoe.alchemistinfusion.Blocks.Potioned.PotionBlockItemBase;
 import com.jedijoe.alchemistinfusion.Blocks.Momentum.MomentumBlockItemBase;
+import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -21,6 +23,7 @@ public class BlockItemRegistry {
     public static final RegistryObject<Item> PARTICLEICE_ITEM = BLOCKITEMS.register("particle_ice", () -> new MomentumBlockItemBase(BlockRegistry.PARTICLEICE.get()));
     public static final RegistryObject<Item> MOMENTUMCONVERTER_ITEM = BLOCKITEMS.register("momentum_converter", () -> new MomentumBlockItemBase(BlockRegistry.MOMENTUMCONVERTER.get()));
 
+    public static final RegistryObject<Item> BLOCKER = BLOCKITEMS.register("blocker", () -> new MomentumBlockItemBase(BlockRegistry.BLOCKER.get()));
 
 
     public static final RegistryObject<Item> QUICKSTEPSTONE_ITEM = BLOCKITEMS.register("quickstep_stone", () -> new PotionBlockItemBase(BlockRegistry.QUICKSTEPSTONE.get()));
