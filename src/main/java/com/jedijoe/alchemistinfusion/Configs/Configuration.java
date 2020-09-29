@@ -43,6 +43,7 @@ public class Configuration {
     public ConfigHelper.ConfigValueListener<Integer> IMBUEDRABBITSTEWDURATION;
     public ConfigHelper.ConfigValueListener<Integer> IMBUEDRABBITSTEWDURATION2;
     public ConfigHelper.ConfigValueListener<Integer> IMBUEDRABBITSTEWDURATION3;
+    public ConfigHelper.ConfigValueListener<Integer> IMBUEDRABBITSTEWDURATION4;
 
     public ConfigHelper.ConfigValueListener<Double> ICEBOOTSTRENGTHDEFAULT;
     public ConfigHelper.ConfigValueListener<Double> ICEBOOTSTRENGTHSPRINT;
@@ -91,7 +92,8 @@ public class Configuration {
         this.HOPPINGRABBITDURATION = subscriber.subscribe(builder.comment("Defines how long in seconds a hopping rabbit will give the jump boost effect").defineInRange("hoppingRabbitTime", 30, 0, Integer.MAX_VALUE));
         this.IMBUEDRABBITSTEWDURATION = subscriber.subscribe(builder.comment("Defines how long in seconds an imbued rabbit stew will give the jump boost effect").defineInRange("imbuedStewTime", 60, 0, Integer.MAX_VALUE));
         this.IMBUEDRABBITSTEWDURATION2 = subscriber.subscribe(builder.comment("Defines how long in seconds an imbued rabbit stew will give the haste effect").defineInRange("imbuedStewTime2", 60, 0, Integer.MAX_VALUE));
-        this.IMBUEDRABBITSTEWDURATION3 = subscriber.subscribe(builder.comment("Defines how long in seconds an imbued rabbit stew will give the strength effect- if rolled").defineInRange("imbuedStewTime3", 60, 0, Integer.MAX_VALUE));
+        this.IMBUEDRABBITSTEWDURATION3 = subscriber.subscribe(builder.comment("Defines how long in seconds an imbued rabbit stew will give the night vision effect").defineInRange("imbuedStewTime3", 60, 0, Integer.MAX_VALUE));
+        this.IMBUEDRABBITSTEWDURATION4 = subscriber.subscribe(builder.comment("Defines how long in seconds an imbued rabbit stew will give the strength effect- if rolled").defineInRange("imbuedStewTime4", 60, 0, Integer.MAX_VALUE));
 
         builder.pop();
     }

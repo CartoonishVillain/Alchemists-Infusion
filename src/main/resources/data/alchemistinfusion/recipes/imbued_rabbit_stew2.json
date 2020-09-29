@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " i ",
+    "/Cd",
+    " b "
+  ],
+  "key": {
+    "i": {
+      "item": "alchemistinfusion:hopping_rabbit"
+    },
+    "/": {
+      "item": "alchemistinfusion:vision_carrot"
+    },
+    "C": {
+      "item": "alchemistinfusion:productive_potato"
+    },
+    "d": {
+      "item": "minecraft:brown_mushroom"
+    },
+    "b": {
+      "item": "minecraft:bowl"
+    }
+  },
+  "result": {
+    "item": "alchemistinfusion:imbued_rabbit_stew",
+    "count": 1
+  }
+}

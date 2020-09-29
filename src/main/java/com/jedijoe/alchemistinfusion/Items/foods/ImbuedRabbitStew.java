@@ -20,6 +20,7 @@ public class ImbuedRabbitStew extends SoupItem {
                     .saturation(12f)
                     .effect(() -> new EffectInstance(Effects.JUMP_BOOST, 20*AlchemistInfusion.config.IMBUEDRABBITSTEWDURATION.get(), 2), 1.0f)
                     .effect(() -> new EffectInstance(Effects.HASTE, 20*AlchemistInfusion.config.IMBUEDRABBITSTEWDURATION2.get(), 0), 1.0f)
+                    .effect(() -> new EffectInstance(Effects.NIGHT_VISION, 20*AlchemistInfusion.config.IMBUEDRABBITSTEWDURATION2.get(), 0), 1.0f)
                     .effect(() -> new EffectInstance(Effects.STRENGTH, 20*AlchemistInfusion.config.IMBUEDRABBITSTEWDURATION3.get(), 0), 0.45f)
                     .meat()
                     .setAlwaysEdible()
@@ -29,11 +30,13 @@ public class ImbuedRabbitStew extends SoupItem {
         @Override
         public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
             String msg = TextFormatting.BLUE + "Jump Boost III (" + TimeBuilder(AlchemistInfusion.config.IMBUEDRABBITSTEWDURATION.get());
-            String msg1 = TextFormatting.RED + "Haste I (" + TimeBuilder(AlchemistInfusion.config.IMBUEDRABBITSTEWDURATION2.get());
-            String msg2 = TextFormatting.BLUE + "A great meal for those trying to get by in the mines";
+            String msg1 = TextFormatting.BLUE + "Haste I (" + TimeBuilder(AlchemistInfusion.config.IMBUEDRABBITSTEWDURATION2.get());
+            String msg2 = TextFormatting.BLUE + "Night Vision (" + TimeBuilder(AlchemistInfusion.config.IMBUEDRABBITSTEWDURATION3.get());
+            String msg3 = TextFormatting.BLUE + "A great meal for those trying to get by in the mines";
             tooltip.add(new StringTextComponent(msg));
             tooltip.add(new StringTextComponent(msg1));
             tooltip.add(new StringTextComponent(msg2));
+            tooltip.add(new StringTextComponent(msg3));
             super.addInformation(stack, worldIn, tooltip, flagIn);
         }
 

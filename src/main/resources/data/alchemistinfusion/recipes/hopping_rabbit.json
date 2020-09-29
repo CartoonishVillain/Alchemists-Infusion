@@ -1,26 +1,26 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "ii/",
+    " i/",
     "iCi",
-    "aii"
+    "ai "
   ],
   "key": {
     "i": {
-      "item": "minecraft:iron_ingot"
+      "item": "minecraft:rabbit_foot"
     },
     "/": {
       "item": "alchemistinfusion:infusion_rod"
     },
     "C": {
-      "item": "minecraft:cooked_beef"
+      "item": "minecraft:cooked_rabbit"
     },
     "a": {
       "item": "alchemistinfusion:pavement_carver"
     }
   },
   "result": {
-    "item": "alchemistinfusion:iron_steak",
+    "item": "alchemistinfusion:hopping_rabbit",
     "count": 1
   }
 }

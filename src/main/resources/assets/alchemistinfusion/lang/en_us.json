@@ -36,6 +36,11 @@
   "block.alchemistinfusion.particle_ice": "Particle Ice",
   "block.alchemistinfusion.momentum_converter": "Momentum Converter",
   "block.alchemistinfusion.fall_breaker": "Fall Breaker",
+  "block.alchemistinfusion.inventory_blocker": "Inventory Blocker",
+  "block.alchemistinfusion.crafting_blocker": "Crafting Blocker",
+  "block.alchemistinfusion.full_blocker": "Full Blocker",
+  "block.alchemistinfusion.container_blocker": "Container Blocker",
+  "block.alchemistinfusion.trade_blocker": "Trade Blocker",
   "item.alchemistinfusion.quickstep_dust": "Quick Step Dust",
   "item.alchemistinfusion.hop_dust": "Hop Dust",
   "item.alchemistinfusion.light_dust": "Light Dust",
@@ -79,6 +84,9 @@
   "item.alchemistinfusion.vision_carrot": "Vision Carrot",
   "item.alchemistinfusion.sugar_stick": "Sugar Stick",
   "item.alchemistinfusion.spicy_beetroot": "Spicy Beetroot",
+  "item.alchemistinfusion.iron_steak": "Iron Steak",
+  "item.alchemistinfusion.hopping_rabbit": "Hopping Rabbit",
+  "item.alchemistinfusion.imbued_rabbit_stew": "Imbued Rabbit Stew",
 
 
   "itemGroup.AlchemistInfusion": "Alchemist Infusion"
