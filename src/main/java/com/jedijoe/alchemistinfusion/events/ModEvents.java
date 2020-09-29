@@ -42,7 +42,7 @@ public class ModEvents {
     @SubscribeEvent
     public static void executePreparedJump(LivingEvent.LivingJumpEvent event){
         LivingEntity jumper = event.getEntityLiving();
-        if(jumper.getType() == EntityType.PLAYER && jumper.isCrouching() && jumper.isPotionActive(Effects.JUMP_BOOST)){
+        if(jumper.getType() == EntityType.PLAYER && jumper.isCrouching() && jumper.isPotionActive(Effects.JUMP_BOOST) && jumper.getItemStackFromSlot(EquipmentSlotType.FEET).getItem().equals(ItemRegistry.LEAP_BOOTS.get().getItem())){
             PlayerEntity player = (PlayerEntity)jumper;
             player.addExhaustion(0.5F * (AlchemistInfusion.config.LEAPBOOTEXHAUSTION.get() - 1));
         }

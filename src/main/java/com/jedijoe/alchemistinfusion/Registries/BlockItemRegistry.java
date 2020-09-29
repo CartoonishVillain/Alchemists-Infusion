@@ -1,10 +1,8 @@
 package com.jedijoe.alchemistinfusion.Registries;
 
 import com.jedijoe.alchemistinfusion.AlchemistInfusion;
-import com.jedijoe.alchemistinfusion.Blocks.Blocker;
 import com.jedijoe.alchemistinfusion.Blocks.Potioned.PotionBlockItemBase;
-import com.jedijoe.alchemistinfusion.Blocks.Momentum.MomentumBlockItemBase;
-import net.minecraft.block.Block;
+import com.jedijoe.alchemistinfusion.Blocks.Momentum.BlockItemBase;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -19,11 +17,15 @@ public class BlockItemRegistry {
     public static final RegistryObject<Item> PRIMEDPAVEMENT_ITEM = BLOCKITEMS.register("primed_pavement", () -> new PotionBlockItemBase(BlockRegistry.PRIMEDPAVEMENT.get()));
     public static final RegistryObject<Item> PAVEMENTSTONE_ITEM = BLOCKITEMS.register("pavement_stone", () -> new PotionBlockItemBase(BlockRegistry.PAVEMENTSTONE.get()));
 
-    public static final RegistryObject<Item> FALLBREAKER_ITEM = BLOCKITEMS.register("fall_breaker", () -> new MomentumBlockItemBase(BlockRegistry.FALLBREAKER.get()));
-    public static final RegistryObject<Item> PARTICLEICE_ITEM = BLOCKITEMS.register("particle_ice", () -> new MomentumBlockItemBase(BlockRegistry.PARTICLEICE.get()));
-    public static final RegistryObject<Item> MOMENTUMCONVERTER_ITEM = BLOCKITEMS.register("momentum_converter", () -> new MomentumBlockItemBase(BlockRegistry.MOMENTUMCONVERTER.get()));
+    public static final RegistryObject<Item> FALLBREAKER_ITEM = BLOCKITEMS.register("fall_breaker", () -> new BlockItemBase(BlockRegistry.FALLBREAKER.get()));
+    public static final RegistryObject<Item> PARTICLEICE_ITEM = BLOCKITEMS.register("particle_ice", () -> new BlockItemBase(BlockRegistry.PARTICLEICE.get()));
+    public static final RegistryObject<Item> MOMENTUMCONVERTER_ITEM = BLOCKITEMS.register("momentum_converter", () -> new BlockItemBase(BlockRegistry.MOMENTUMCONVERTER.get()));
 
-    public static final RegistryObject<Item> BLOCKER = BLOCKITEMS.register("blocker", () -> new MomentumBlockItemBase(BlockRegistry.BLOCKER.get()));
+    public static final RegistryObject<Item> INVENTORYBLOCKER_ITEM = BLOCKITEMS.register("inventory_blocker", () -> new BlockItemBase(BlockRegistry.INVENTORYBLOCKER.get()));
+    public static final RegistryObject<Item> TRADEBLOCKER_ITEM = BLOCKITEMS.register("trade_blocker", () -> new BlockItemBase(BlockRegistry.TRADEBLOCKER.get()));
+    public static final RegistryObject<Item> CONTAINERBLOCKER_ITEM = BLOCKITEMS.register("container_blocker", () -> new BlockItemBase(BlockRegistry.CONTAINERBLOCKER.get()));
+    public static final RegistryObject<Item> CRAFTINGBLOCKER_ITEM = BLOCKITEMS.register("crafting_blocker", () -> new BlockItemBase(BlockRegistry.CRAFTINGBLOCKER.get()));
+    public static final RegistryObject<Item> FULLBLOCKER_ITEM = BLOCKITEMS.register("full_blocker", () -> new BlockItemBase(BlockRegistry.FULLBLOCKER.get()));
 
 
     public static final RegistryObject<Item> QUICKSTEPSTONE_ITEM = BLOCKITEMS.register("quickstep_stone", () -> new PotionBlockItemBase(BlockRegistry.QUICKSTEPSTONE.get()));

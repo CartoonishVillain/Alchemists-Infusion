@@ -13,7 +13,7 @@ import net.minecraftforge.common.ToolType;
 
 import static java.lang.Math.abs;
 
-public class MomentumConverter extends MomentumBlockBase {
+public class MomentumConverter extends BlockWithLoreBase {
 
     public MomentumConverter() {
         super(Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(3.2F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool());

@@ -13,6 +13,7 @@ import com.jedijoe.alchemistinfusion.Blocks.Potioned.SingleEffect.Tier_One.*;
 import com.jedijoe.alchemistinfusion.Blocks.Potioned.SingleEffect.Tier_Three.*;
 import com.jedijoe.alchemistinfusion.Blocks.Potioned.SingleEffect.Tier_Two.*;
 import net.minecraft.block.Block;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
@@ -31,7 +32,14 @@ public class BlockRegistry {
     public static final RegistryObject<Block> PARTICLEICE = BLOCKS.register("particle_ice", ParticleIce::new);
     public static final RegistryObject<Block> MOMENTUMCONVERTER = BLOCKS.register("momentum_converter", MomentumConverter::new);
 
-    public static final RegistryObject<Block> BLOCKER = BLOCKS.register("blocker", Blocker::new);
+    //Blockers
+    public static final RegistryObject<Block> INVENTORYBLOCKER = BLOCKS.register("inventory_blocker", () -> new Blocker(TextFormatting.RED + "When stepped on, prevents opening of inventory", ""));
+    public static final RegistryObject<Block> TRADEBLOCKER = BLOCKS.register("trade_blocker", () -> new Blocker(TextFormatting.RED + "When stepped on, prevents trade with villagers", ""));
+    public static final RegistryObject<Block> CONTAINERBLOCKER = BLOCKS.register("container_blocker", () -> new Blocker(TextFormatting.RED + "When stepped on, prevents the opening of containers", TextFormatting.GRAY + "Modded Container support not guaranteed"));
+    public static final RegistryObject<Block> CRAFTINGBLOCKER = BLOCKS.register("crafting_blocker", () -> new Blocker(TextFormatting.RED + "When stepped on, prevents the opening of crafting interfaces", TextFormatting.GRAY + "Modded Crafting interface support not guaranteed"));
+    public static final RegistryObject<Block> FULLBLOCKER = BLOCKS.register("full_blocker", () -> new Blocker(TextFormatting.RED + "When stepped on, performs the combined effects of the rest of the blockers", ""));
+
+
     //No tier stones
     public static final RegistryObject<Block> PRIMEDPAVEMENT = BLOCKS.register("primed_pavement", PrimedPavement::new);
     public static final RegistryObject<Block> PAVEMENTSTONE = BLOCKS.register("pavement_stone", PrimedPavement::new);

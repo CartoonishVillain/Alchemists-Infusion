@@ -4,10 +4,10 @@ import com.jedijoe.alchemistinfusion.AlchemistInfusion;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 
-public class MomentumBlockBase extends Block {
+public class BlockWithLoreBase extends Block {
     private String Lore = "";
     private String Lore2 = "";
-    public MomentumBlockBase(Properties properties) {
+    public BlockWithLoreBase(Properties properties) {
             super(properties);
         }
 

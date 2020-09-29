@@ -10,7 +10,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 
-public class FallBreaker extends MomentumBlockBase {
+public class FallBreaker extends BlockWithLoreBase {
 
     public FallBreaker() {
         super(Properties.create(Material.WOOL).speedFactor(0.9f).sound(SoundType.CLOTH).hardnessAndResistance(1.0f));

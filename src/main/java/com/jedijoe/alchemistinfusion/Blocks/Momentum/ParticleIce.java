@@ -6,7 +6,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.common.ToolType;
 
-public class ParticleIce extends MomentumBlockBase {
+public class ParticleIce extends BlockWithLoreBase {
 
     public ParticleIce() {
         super(Properties.create(Material.PACKED_ICE).slipperiness(1.15f).sound(SoundType.GLASS).hardnessAndResistance(3.2F).harvestTool(ToolType.PICKAXE).setRequiresTool());

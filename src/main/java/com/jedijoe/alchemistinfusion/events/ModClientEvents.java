@@ -4,10 +4,11 @@ import com.jedijoe.alchemistinfusion.Registries.BlockRegistry;
 import com.sun.scenario.effect.Effect;
 import jdk.nashorn.internal.ir.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.BrewingStandBlock;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.player.ClientPlayerEntity;
 import net.minecraft.client.gui.screen.MainMenuScreen;
-import net.minecraft.client.gui.screen.inventory.InventoryScreen;
+import net.minecraft.client.gui.screen.inventory.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -42,14 +43,41 @@ public class ModClientEvents {
 
     @SubscribeEvent
     public static void blockerEvent(GuiOpenEvent event){
-        if(event.isCancelable()){
-            if(event.getGui() instanceof InventoryScreen){
-                PlayerEntity player = Minecraft.getInstance().player;
-                BlockPos pos = player.getPosition().down();
-                boolean onBlocker = (player.world.getBlockState(pos).getBlock().equals(BlockRegistry.BLOCKER.get().getBlock()));
-                if(onBlocker){
-                    event.setCanceled(true);
-                }
+        if(event.isCancelable()) {
+            if (Minecraft.getInstance().world != null) {
+                    PlayerEntity player = Minecraft.getInstance().player;
+                    BlockPos pos = player.getPosition().down();
+                    int onBlocker = 0;
+                    if(player.world.getBlockState(pos).getBlock().equals(BlockRegistry.INVENTORYBLOCKER.get().getBlock())){onBlocker = 1;}
+                    else if(player.world.getBlockState(pos).getBlock().equals(BlockRegistry.TRADEBLOCKER.get().getBlock())){onBlocker = 2;}
+                    else if(player.world.getBlockState(pos).getBlock().equals(BlockRegistry.CONTAINERBLOCKER.get().getBlock())){onBlocker = 3;}
+                    else if(player.world.getBlockState(pos).getBlock().equals(BlockRegistry.CRAFTINGBLOCKER.get().getBlock())){onBlocker = 4;}
+                    else if(player.world.getBlockState(pos).getBlock().equals(BlockRegistry.FULLBLOCKER.get().getBlock())){onBlocker = 5;}
+
+                    switch (onBlocker){
+                        case 0:
+                            break;
+                        default:
+                            break;
+                        case 1:
+                            if(event.getGui() instanceof InventoryScreen){ event.setCanceled(true);}
+                            break;
+                        case 2:
+                            if(event.getGui() instanceof MerchantScreen){event.setCanceled(true);}
+                            break;
+                        case 3:
+                            if(event.getGui() instanceof ContainerScreen){event.setCanceled(true);}
+                        case 4:
+                            if(event.getGui() instanceof AbstractFurnaceScreen || event.getGui() instanceof InventoryScreen || event.getGui() instanceof  AbstractRepairScreen || event.getGui() instanceof  BrewingStandScreen || event.getGui() instanceof CartographyTableScreen || event.getGui() instanceof CraftingScreen || event.getGui() instanceof SmithingTableScreen || event.getGui() instanceof  StonecutterScreen){
+                                event.setCanceled(true);}
+                            break;
+                        case 5:
+                            if(event.getGui() instanceof ContainerScreen || event.getGui() instanceof InventoryScreen || event.getGui() instanceof  MerchantScreen || event.getGui() instanceof CraftingScreen){ event.setCanceled(true); }
+                            break;
+                    }
+
+
+
             }
         }
     }
