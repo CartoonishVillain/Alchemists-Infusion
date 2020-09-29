@@ -21,6 +21,9 @@ public class Configuration {
     public ConfigHelper.ConfigValueListener<Boolean>  ENABLET3STONES;
     public ConfigHelper.ConfigValueListener<Boolean>  ENABLET4STONES;
     public ConfigHelper.ConfigValueListener<Boolean>  ENABLEINFUSEDBOOTS;
+    public ConfigHelper.ConfigValueListener<Boolean> ENABLEFALLBREAKER;
+    public ConfigHelper.ConfigValueListener<Boolean> ENABLEMOMENTUMCONVERTER;
+    public ConfigHelper.ConfigValueListener<Boolean>  ENABLEBLOCKERS;
 
 
     public ConfigHelper.ConfigValueListener<Integer> LEAPBOOTPOWER;
@@ -46,8 +49,7 @@ public class Configuration {
     public ConfigHelper.ConfigValueListener<Double> ICEBOOTSTRENGTHSNEAK;
     public ConfigHelper.ConfigValueListener<Double> MOMENTUMCONVERTERPASSTHROUGH;
     
-    public ConfigHelper.ConfigValueListener<Boolean> ENABLEFALLBREAKER;
-    public ConfigHelper.ConfigValueListener<Boolean> ENABLEMOMENTUMCONVERTER;
+
 
     public Configuration(ForgeConfigSpec.Builder builder, ConfigHelper.Subscriber subscriber){
         builder.comment("Enable/Disable").push(SCATEGORY_ENABLE);
@@ -58,6 +60,8 @@ public class Configuration {
         this.ENABLEINFUSEDBOOTS = subscriber.subscribe(builder.comment("Enables or Disables boots infused with special properties").define("enableInfusedBoots", true));
         this.ENABLEFALLBREAKER = subscriber.subscribe(builder.comment("Enables or disables the fall damage reduction of fall breakers").define("enableFallBreakers", true));
         this.ENABLEMOMENTUMCONVERTER = subscriber.subscribe(builder.comment("Enables or disables the effect of the momentum converter (horizontal momentum converted to vertical momentum)").define("enableMomentumConverters", true));
+        this.ENABLEBLOCKERS = subscriber.subscribe(builder.comment("Enables or disables the effect of Blockers, used to restrict gui access ingame (Avoids chat and esc restrictions)").define("enableBlockers", true));
+
         builder.pop();
 
         builder.comment("Boot and momentum balance settings").push(SCATEGORY_BOOTBALANCE);

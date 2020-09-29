@@ -1,4 +1,4 @@
-package com.jedijoe.alchemistinfusion.Blocks.Momentum;
+package com.jedijoe.alchemistinfusion.Blocks;
 
 import com.jedijoe.alchemistinfusion.AlchemistInfusion;
 import net.minecraft.block.Block;

@@ -1,7 +1,9 @@
-package com.jedijoe.alchemistinfusion.Blocks.Momentum;
+package com.jedijoe.alchemistinfusion.Blocks;
 
 import com.jedijoe.alchemistinfusion.AlchemistInfusion;
-import com.jedijoe.alchemistinfusion.Blocks.Blocker;
+import com.jedijoe.alchemistinfusion.Blocks.Momentum.FallBreaker;
+import com.jedijoe.alchemistinfusion.Blocks.Momentum.MomentumConverter;
+import com.jedijoe.alchemistinfusion.Blocks.Momentum.ParticleIce;
 import net.minecraft.block.Block;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.BlockItem;
@@ -25,7 +27,7 @@ public class BlockItemBase extends BlockItem {
 
     @Override
     public void addInformation(ItemStack itemStack, @Nullable World world, List<ITextComponent> textComponents, ITooltipFlag tooltipFlag) {
-            if((blocktype instanceof FallBreaker && AlchemistInfusion.config.ENABLEFALLBREAKER.get()) || blocktype instanceof ParticleIce || (blocktype instanceof  MomentumConverter && AlchemistInfusion.config.ENABLEMOMENTUMCONVERTER.get()) || (blocktype instanceof Blocker)){
+            if((blocktype instanceof FallBreaker && AlchemistInfusion.config.ENABLEFALLBREAKER.get()) || blocktype instanceof ParticleIce || (blocktype instanceof MomentumConverter && AlchemistInfusion.config.ENABLEMOMENTUMCONVERTER.get()) || (blocktype instanceof Blocker && AlchemistInfusion.config.ENABLEBLOCKERS.get())){
                 if(((BlockWithLoreBase) blocktype).getLore() != ""){ textComponents.add(new StringTextComponent(((BlockWithLoreBase) blocktype).getLore())); }
                 if(((BlockWithLoreBase) blocktype).getLore2() != ""){ textComponents.add(new StringTextComponent(((BlockWithLoreBase) blocktype).getLore2())); }}
             else{textComponents.add(new StringTextComponent(TextFormatting.GRAY + "No effect - disabled in server config")); super.addInformation(itemStack, world, textComponents, tooltipFlag);}

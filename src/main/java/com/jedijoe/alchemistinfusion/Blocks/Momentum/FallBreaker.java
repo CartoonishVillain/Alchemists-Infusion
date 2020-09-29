@@ -2,6 +2,7 @@ package com.jedijoe.alchemistinfusion.Blocks.Momentum;
 
 
 import com.jedijoe.alchemistinfusion.AlchemistInfusion;
+import com.jedijoe.alchemistinfusion.Blocks.BlockWithLoreBase;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;

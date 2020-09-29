@@ -1,0 +1,5 @@
+{
+  "variants": { 
+    "": { "model": "alchemistinfusion:block/trade_blocker" }
+  }
+}

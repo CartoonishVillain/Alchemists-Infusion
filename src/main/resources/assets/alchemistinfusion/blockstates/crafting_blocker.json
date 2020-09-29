@@ -1,0 +1,5 @@
+{
+  "variants": { 
+    "": { "model": "alchemistinfusion:block/crafting_blocker" }
+  }
+}

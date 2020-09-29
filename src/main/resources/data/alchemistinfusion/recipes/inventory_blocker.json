@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S/",
+    "SCS",
+    "OS#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:redstone_block"
+    },
+    "S": {
+      "item": "alchemistinfusion:primed_pavement"
+    },
+    "/": {
+      "item": "alchemistinfusion:infusion_rod"
+    },
+    "C": {
+      "item": "minecraft:campfire"
+    },
+    "O": {
+      "item": "minecraft:observer"
+    }
+  },
+  "result": {
+    "item": "alchemistinfusion:inventory_blocker",
+    "count": 1
+  }
+}

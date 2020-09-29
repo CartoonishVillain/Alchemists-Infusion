@@ -20,7 +20,6 @@ public class ItemRegistry {
 
     public static final RegistryObject<Item> PAVEMENTCARVER = ITEMS.register("pavement_carver", PersistentItem::new);
     public static final RegistryObject<Item> INFUSIONROD = ITEMS.register("infusion_rod", PersistentItem::new);
-    public static final RegistryObject<Item> CULINARYINFUSIONROD = ITEMS.register("culinary_infusion_rod", PersistentItem::new);
     public static final RegistryObject<Item> BASEFRAGMENT = ITEMS.register("base_shard", ItemBase::new);
     public static final RegistryObject<Item> BAGOFSUGAR = ITEMS.register("bag_of_sugar", ItemBase::new);
     public static final RegistryObject<Item> BASE_GEM  = ITEMS.register("base_gem", ItemBase::new);

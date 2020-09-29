@@ -5,6 +5,7 @@ import com.jedijoe.alchemistinfusion.Registries.BlockItemRegistry;
 import com.jedijoe.alchemistinfusion.Registries.ItemRegistry;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
+import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
@@ -16,11 +17,11 @@ import java.util.function.Supplier;
 public enum ModArmor implements IArmorMaterial {
     LEAP(AlchemistInfusion.MOD_ID + ":leap",  23, new int[] {1, 0, 0, 1}, 8, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0, ()->{return Ingredient.fromItems(ItemRegistry.LEAPSTONE_GEM.get());}, 0.0f),
 
-    LUCK(AlchemistInfusion.MOD_ID + ":luck",  23, new int[] {1, 0, 0, 1}, 8, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0, ()->{return Ingredient.fromItems(ItemRegistry.LEAPSTONE_GEM.get());}, 0.0f),
+    LUCK(AlchemistInfusion.MOD_ID + ":luck",  23, new int[] {1, 0, 0, 1}, 8, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0, ()->{return Ingredient.fromItems(Items.PACKED_ICE.getItem());}, 0.0f),
 
-     ICE(AlchemistInfusion.MOD_ID + ":ice",  15, new int[] {1, 0, 0, 1}, 8, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0, ()->{return Ingredient.fromItems(ItemRegistry.LEAPSTONE_GEM.get());}, 0.0f),
+     ICE(AlchemistInfusion.MOD_ID + ":ice",  15, new int[] {1, 0, 0, 1}, 8, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0, ()->{return Ingredient.fromItems(Items.NETHER_WART_BLOCK.getItem());}, 0.0f),
 
-    UNLUCK(AlchemistInfusion.MOD_ID + ":unluck",  23, new int[] {1, 0, 0, 1}, 8, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0, ()->{return Ingredient.fromItems(ItemRegistry.LEAPSTONE_GEM.get());}, 0.0f);
+    UNLUCK(AlchemistInfusion.MOD_ID + ":unluck",  23, new int[] {1, 0, 0, 1}, 8, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0, ()->{return Ingredient.fromItems(Items.NETHER_WART_BLOCK.getItem());}, 0.0f);
 
 
 

@@ -54,6 +54,8 @@ public class ModClientEvents {
                     else if(player.world.getBlockState(pos).getBlock().equals(BlockRegistry.CRAFTINGBLOCKER.get().getBlock())){onBlocker = 4;}
                     else if(player.world.getBlockState(pos).getBlock().equals(BlockRegistry.FULLBLOCKER.get().getBlock())){onBlocker = 5;}
 
+                    if(AlchemistInfusion.config.ENABLEBLOCKERS.get() == false){onBlocker = 0;}
+
                     switch (onBlocker){
                         case 0:
                             break;

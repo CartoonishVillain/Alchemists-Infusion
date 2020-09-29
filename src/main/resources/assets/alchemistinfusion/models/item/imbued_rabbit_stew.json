@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+   "layer0": "alchemistinfusion:items/imbued_rabbit_stew"
+ }
+}
