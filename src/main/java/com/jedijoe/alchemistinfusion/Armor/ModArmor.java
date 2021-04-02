@@ -21,7 +21,10 @@ public enum ModArmor implements IArmorMaterial {
 
      ICE(AlchemistInfusion.MOD_ID + ":ice",  15, new int[] {1, 0, 0, 1}, 8, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0, ()->{return Ingredient.fromItems(Items.NETHER_WART_BLOCK.getItem());}, 0.0f),
 
-    UNLUCK(AlchemistInfusion.MOD_ID + ":unluck",  23, new int[] {1, 0, 0, 1}, 8, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0, ()->{return Ingredient.fromItems(Items.NETHER_WART_BLOCK.getItem());}, 0.0f);
+    UNLUCK(AlchemistInfusion.MOD_ID + ":unluck",  23, new int[] {1, 0, 0, 1}, 8, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0, ()->{return Ingredient.fromItems(Items.NETHER_WART_BLOCK.getItem());}, 0.0f),
+
+    LAVASHELL(AlchemistInfusion.MOD_ID + ":lavashell",  23, new int[] {2, 0, 0, 2}, 8, SoundEvents.ITEM_ARMOR_EQUIP_TURTLE, 0, ()->{return Ingredient.fromItems(Items.SCUTE.getItem());}, 0.0f);
+
 
 
 
