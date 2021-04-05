@@ -3,6 +3,7 @@ package com.jedijoe.alchemistinfusion.Registries;
 import com.jedijoe.alchemistinfusion.AlchemistInfusion;
 import com.jedijoe.alchemistinfusion.Armor.*;
 import com.jedijoe.alchemistinfusion.Items.ItemBase;
+import com.jedijoe.alchemistinfusion.Items.KeyItem;
 import com.jedijoe.alchemistinfusion.Items.PersistentItem;
 import com.jedijoe.alchemistinfusion.Items.foods.*;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -50,8 +51,6 @@ public class ItemRegistry {
     public static final RegistryObject<Item> BRAVESTONE_GEM = ITEMS.register("brave_gem", ItemBase::new);
     public static final RegistryObject<Item> CHICKENSTONE_GEM  = ITEMS.register("chicken_gem", ItemBase::new);
     public static final RegistryObject<Item> CLOAKSTONE_GEM = ITEMS.register("cloak_gem", ItemBase::new);
-    public static final RegistryObject<Item> FIREPROOFSTONE_GEM = ITEMS.register("fire_proof_gem", ItemBase::new);
-    public static final RegistryObject<Item> FISHSTONE_GEM  = ITEMS.register("fish_gem", ItemBase::new);
     public static final RegistryObject<Item> GLOWINGSTONE_GEM  = ITEMS.register("glowing_gem", ItemBase::new);
     public static final RegistryObject<Item> HASTESTONE_GEM  = ITEMS.register("haste_gem", ItemBase::new);
     public static final RegistryObject<Item> LEAPSTONE_GEM  = ITEMS.register("leap_gem", ItemBase::new);
@@ -59,6 +58,11 @@ public class ItemRegistry {
     public static final RegistryObject<Item> RESISTANCESTONE_GEM  = ITEMS.register("resistance_gem", ItemBase::new);
     public static final RegistryObject<Item> SPEEDSTEPSTONE_GEM  = ITEMS.register("speed_step_gem", ItemBase::new);
     public static final RegistryObject<Item> VISIBILITYSTONE_GEM  = ITEMS.register("visibility_gem", ItemBase::new);
+
+    //Potion gems used for testing
+    public static final RegistryObject<Item> FIREPROOFSTONE_GEM = ITEMS.register("fire_proof_gem", KeyItem::new);
+    public static final RegistryObject<Item> FISHSTONE_GEM  = ITEMS.register("fish_gem", KeyItem::new);
+
 
     //Infused Food
     public static final RegistryObject<VisionCarrot> VISIONCARROT  = ITEMS.register("vision_carrot", VisionCarrot::new);

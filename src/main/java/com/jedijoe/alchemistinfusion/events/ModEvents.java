@@ -20,21 +20,21 @@ public class ModEvents {
 
     @SubscribeEvent
     public static void playerEffects(TickEvent.PlayerTickEvent event){
-        PlayerEntity jumper = event.player;
-        if(jumper.isCrouching() && jumper.getItemStackFromSlot(EquipmentSlotType.FEET).getItem().equals(ItemRegistry.LEAP_BOOTS.get().getItem()) && AlchemistInfusion.config.ENABLEINFUSEDBOOTS.get()) {
-            jumper.addPotionEffect(new EffectInstance(Effects.JUMP_BOOST, 5, AlchemistInfusion.config.LEAPBOOTPOWER.get()-1, true, false));
-        } else if(jumper.getItemStackFromSlot(EquipmentSlotType.FEET).getItem().equals(ItemRegistry.LUCK_BOOTS.get().getItem()) && AlchemistInfusion.config.ENABLEINFUSEDBOOTS.get()){
-            jumper.addPotionEffect(new EffectInstance(Effects.LUCK, 5, AlchemistInfusion.config.LUCKSTRENGTH.get()-1, true, false));
-        }else if(jumper.getItemStackFromSlot(EquipmentSlotType.FEET).getItem().equals(ItemRegistry.UNLUCK_BOOTS.get().getItem()) && AlchemistInfusion.config.ENABLEINFUSEDBOOTS.get()){
-            jumper.addPotionEffect(new EffectInstance(Effects.UNLUCK, 5, AlchemistInfusion.config.UNLUCKSTRENGTH.get()-1, true, false));
-        }else if(jumper.getItemStackFromSlot(EquipmentSlotType.FEET).getItem().equals(ItemRegistry.ICE_BOOTS.get().getItem()) && AlchemistInfusion.config.ENABLEINFUSEDBOOTS.get()){
-            if(jumper.isOnGround()){
-                if(jumper.isSprinting()){
-                    jumper.moveRelative(1f, new Vector3d(0, 0, AlchemistInfusion.config.ICEBOOTSTRENGTHSPRINT.get()));
-                }else if (jumper.isCrouching()){
-                    jumper.moveRelative(1f, new Vector3d(0, 0, AlchemistInfusion.config.ICEBOOTSTRENGTHSNEAK.get()));
+        PlayerEntity player = event.player;
+        if(player.isCrouching() && player.getItemStackFromSlot(EquipmentSlotType.FEET).getItem().equals(ItemRegistry.LEAP_BOOTS.get().getItem()) && AlchemistInfusion.config.ENABLEINFUSEDBOOTS.get()) {
+            player.addPotionEffect(new EffectInstance(Effects.JUMP_BOOST, 5, AlchemistInfusion.config.LEAPBOOTPOWER.get()-1, true, false));
+        } else if(player.getItemStackFromSlot(EquipmentSlotType.FEET).getItem().equals(ItemRegistry.LUCK_BOOTS.get().getItem()) && AlchemistInfusion.config.ENABLEINFUSEDBOOTS.get()){
+            player.addPotionEffect(new EffectInstance(Effects.LUCK, 5, AlchemistInfusion.config.LUCKSTRENGTH.get()-1, true, false));
+        }else if(player.getItemStackFromSlot(EquipmentSlotType.FEET).getItem().equals(ItemRegistry.UNLUCK_BOOTS.get().getItem()) && AlchemistInfusion.config.ENABLEINFUSEDBOOTS.get()){
+            player.addPotionEffect(new EffectInstance(Effects.UNLUCK, 5, AlchemistInfusion.config.UNLUCKSTRENGTH.get()-1, true, false));
+        }else if(player.getItemStackFromSlot(EquipmentSlotType.FEET).getItem().equals(ItemRegistry.ICE_BOOTS.get().getItem()) && AlchemistInfusion.config.ENABLEINFUSEDBOOTS.get()){
+            if(player.isOnGround()){
+                if(player.isSprinting()){
+                    player.moveRelative(1f, new Vector3d(0, 0, AlchemistInfusion.config.ICEBOOTSTRENGTHSPRINT.get()));
+                }else if (player.isCrouching()){
+                    player.moveRelative(1f, new Vector3d(0, 0, AlchemistInfusion.config.ICEBOOTSTRENGTHSNEAK.get()));
                 }else{
-                    jumper.moveRelative(1f, new Vector3d(0, 0, AlchemistInfusion.config.ICEBOOTSTRENGTHDEFAULT.get()));}}
+                    player.moveRelative(1f, new Vector3d(0, 0, AlchemistInfusion.config.ICEBOOTSTRENGTHDEFAULT.get()));}}
         }
 
     }
@@ -47,6 +47,7 @@ public class ModEvents {
             player.addExhaustion(0.5F * (AlchemistInfusion.config.LEAPBOOTEXHAUSTION.get() - 1));
         }
     }
+
 }
 
 
