@@ -60,9 +60,9 @@ public class BlockItemRegistry {
     public static final RegistryObject<Item> SPEEDSTEPSTONE_ITEM  = BLOCKITEMS.register("speed_step_stone", ()-> new PotionBlockItemBase(BlockRegistry.SPEEDSTEPSTONE.get()));
     public static final RegistryObject<Item> VISIBILITYSTONE_ITEM  = BLOCKITEMS.register("visibility_stone", ()-> new PotionBlockItemBase(BlockRegistry.VISIBILITYSTONE.get()));
 
-    public static final RegistryObject<Item> MOBILITYSTONE_ITEM = BLOCKITEMS.register("mobility_stone", ()-> new PotionBlockItemBase(BlockRegistry.MOBILITYSTONE.get()));
+//    public static final RegistryObject<Item> MOBILITYSTONE_ITEM = BLOCKITEMS.register("mobility_stone", ()-> new PotionBlockItemBase(BlockRegistry.MOBILITYSTONE.get()));
     public static final RegistryObject<Item> DOLPHINSTONE = BLOCKITEMS.register("dolphin_stone", ()-> new PotionBlockItemBase(BlockRegistry.DOLPHINSTONE.get()));
-    public static final RegistryObject<Item> SLOTHSTONE = BLOCKITEMS.register("sloth_stone", ()-> new PotionBlockItemBase(BlockRegistry.SLOTHSTONE.get()));
+//    public static final RegistryObject<Item> SLOTHSTONE = BLOCKITEMS.register("sloth_stone", ()-> new PotionBlockItemBase(BlockRegistry.SLOTHSTONE.get()));
 
 
 
