@@ -10,29 +10,35 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 
+import java.util.ArrayList;
+
 public class InfusedBlockBase extends Block {
-    public InfusedBlockBase(Properties properties, EffectInstance effectInstance, TextFormatting textFormatting, int Tier) {
+    public InfusedBlockBase(Properties properties, ArrayList<EffectInstance> effectInstance, TextFormatting textFormatting, int Tier) {
         super(properties);
         this.textFormatting = textFormatting;
         this.tier = Tier;
         this.effectInstance = effectInstance;
-        timer = effectInstance.getDuration();
-        amplitude = effectInstance.getAmplifier();
-        effect = effectInstance.getPotion();
+        timer = new ArrayList<Integer>();
+        amplitude = new ArrayList<Integer>();
+        effect = new ArrayList<Effect>();
+        for(EffectInstance instance : effectInstance){
+        timer.add(instance.getDuration());
+        amplitude.add(instance.getAmplifier());
+        effect.add(instance.getPotion());}
 
     }
 
 
 
-    private Effect effect;
-    private int timer, amplitude;
+    private ArrayList<Effect> effect;
+    private ArrayList<Integer> timer, amplitude;
     private int tier;
-    private EffectInstance effectInstance;
+    private ArrayList<EffectInstance> effectInstance;
     TextFormatting textFormatting;
 
 
-    public String GetEffect(){
-        String name = effectInstance.getEffectName();
+    public String GetEffect(EffectInstance instance){
+        String name = instance.getEffectName();
         String[] split = name.split("\\.");
         String[] split2 = split[2].split("_");
         name = split2[0];
@@ -53,11 +59,13 @@ public class InfusedBlockBase extends Block {
         name = name + " " + name2;
         else name = name;
         return name;}
-    public String GetAmplifier(){return PotentBuilder(effectInstance.getAmplifier());}
-    public String GetDuration(){return TimeBuilder(effectInstance.getDuration());}
+    public String GetAmplifier(EffectInstance instance){return PotentBuilder(instance.getAmplifier());}
+    public String GetDuration(EffectInstance instance){return TimeBuilder(instance.getDuration());}
     public TextFormatting getTextFormatting() {return textFormatting;}
 
     public int getTier() {return tier;}
+
+    public ArrayList<EffectInstance> getEffectInstance() {return effectInstance;}
 
     private String PotentBuilder(int potency){
         switch(potency){
@@ -104,8 +112,12 @@ public class InfusedBlockBase extends Block {
         super.onEntityWalk(worldIn, pos, entityIn);
         if (!worldIn.isRemote()) {
             if (entityIn instanceof LivingEntity) {
-                if(effectInstance.getDuration() != timer) effectInstance = new EffectInstance(effectInstance.getPotion(), timer, effectInstance.getAmplifier());
-                ((LivingEntity) entityIn).addPotionEffect(effectInstance);
+                int counter = 0;
+                for(EffectInstance effects : effectInstance){
+                    if(effects.getDuration() != timer.get(counter)) effectInstance.set(counter, new EffectInstance(effects.getPotion(), timer.get(counter), effects.getAmplifier()));
+                    ((LivingEntity) entityIn).addPotionEffect(effects);
+                    counter++;
+                }
             }
         }
     }
