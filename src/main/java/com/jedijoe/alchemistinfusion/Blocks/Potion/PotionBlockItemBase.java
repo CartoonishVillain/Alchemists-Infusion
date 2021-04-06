@@ -1,7 +1,6 @@
-package com.jedijoe.alchemistinfusion.Blocks.Potioned;
+package com.jedijoe.alchemistinfusion.Blocks.Potion;
 
 import com.jedijoe.alchemistinfusion.AlchemistInfusion;
-import com.jedijoe.alchemistinfusion.Blocks.Potioned.SingleEffect.*;
 import net.minecraft.block.Block;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.BlockItem;

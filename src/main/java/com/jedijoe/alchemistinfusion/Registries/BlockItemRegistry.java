@@ -1,7 +1,7 @@
 package com.jedijoe.alchemistinfusion.Registries;
 
 import com.jedijoe.alchemistinfusion.AlchemistInfusion;
-import com.jedijoe.alchemistinfusion.Blocks.Potioned.PotionBlockItemBase;
+import com.jedijoe.alchemistinfusion.Blocks.Potion.PotionBlockItemBase;
 import com.jedijoe.alchemistinfusion.Blocks.BlockItemBase;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;

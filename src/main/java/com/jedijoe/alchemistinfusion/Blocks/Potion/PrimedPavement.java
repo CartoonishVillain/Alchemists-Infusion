@@ -1,4 +1,4 @@
-package com.jedijoe.alchemistinfusion.Blocks.Potioned;
+package com.jedijoe.alchemistinfusion.Blocks.Potion;
 
 import com.jedijoe.alchemistinfusion.Crafting.InfusionRecipe;
 import com.jedijoe.alchemistinfusion.Crafting.RecipeProcessor;
