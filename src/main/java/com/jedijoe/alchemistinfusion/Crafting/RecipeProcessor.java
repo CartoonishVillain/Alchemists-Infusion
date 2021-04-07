@@ -1,5 +1,6 @@
 package com.jedijoe.alchemistinfusion.Crafting;
 
+import com.jedijoe.alchemistinfusion.Items.KeyItem;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.item.ItemEntity;
@@ -15,20 +16,34 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class RecipeProcessor {
-    public static void AttemptRecipe(ArrayList<ItemStack> recipeStack, ArrayList<ItemEntity> ExistingItems, BlockPos pos, World world, ItemStack reward){
+    public static void AttemptRecipe(ArrayList<ArrayList<ItemStack>> recipeStack, ArrayList<ItemEntity> ExistingItems, BlockPos pos, World world, ItemStack reward){
         //Phase 0 - List out all existing items
         ArrayList<ItemStack> existingStack = new ArrayList<>();
         for(ItemEntity entity : ExistingItems){existingStack.add(entity.getItem());}
 
         //Phase 1 - Mapping out items that exist
         HashMap<String, Integer> ExistingMap = MapStacks(existingStack);
-        HashMap<String, Integer> Recipe = MapStacks(recipeStack);
+
 
         //Phase 2 - check if recipe will be valid
-        if(!isRecipeValid(ExistingMap, Recipe)) return;
+        HashMap<String, Integer> trueRecipe = null;
+        ItemStack trueReward = null;
+        for(ArrayList<ItemStack> recipes : recipeStack){
+
+            ItemStack potentialReward = recipes.get(recipes.size()-1);
+            recipes.remove(potentialReward);
+
+            HashMap<String, Integer> Recipe = MapStacks(recipes);
+
+            if(!isRecipeValid(ExistingMap, Recipe)) continue;
+            else trueRecipe = Recipe;
+            trueReward = potentialReward; break;
+        }
+        if(trueReward == null) return;
+        else reward = trueReward;
 
         //Phase 3 -  Remove items;
-        updateItems(existingStack, Recipe, ExistingItems);
+        updateItems(existingStack, trueRecipe, ExistingItems);
 
         //Phase 4 - Payout
 
@@ -87,11 +102,12 @@ public class RecipeProcessor {
                 if(entity != null) break;
             } //The proper itemstack should be found at this stage as "entity"
 
+            if(entity != null && recipeMap.containsKey(itemStack.getItem().getName().toString()) && !(itemStack.getItem() instanceof KeyItem)){
             int amount = itemStack.getCount();
             amount -= recipeMap.get(itemStack.getItem().getName().toString());//subtract recipe amount;
             itemStack.setCount(amount);
-            if(entity != null)
             entity.setItem(itemStack); //theoretically working prototype.
+        }
         }
     }
 }

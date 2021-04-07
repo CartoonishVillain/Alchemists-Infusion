@@ -10,6 +10,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
@@ -37,10 +38,8 @@ public class PrimedPavement extends Block {
             }
 
             if (keyItem != null) {
-                ArrayList<ItemStack> recipe = InfusionRecipe.ParseRecipe(keyItem);
-                ItemStack Reward = recipe.get(recipe.size() - 1);
-                recipe.remove(Reward);
-                RecipeProcessor.AttemptRecipe(recipe, itemEntities, pos, worldIn, Reward);
+                ArrayList<ArrayList<ItemStack>> recipe = InfusionRecipe.ParseTier2Recipe(keyItem);
+                RecipeProcessor.AttemptRecipe(recipe, itemEntities, pos, worldIn, null);
             }
         }
         return ActionResultType.SUCCESS;

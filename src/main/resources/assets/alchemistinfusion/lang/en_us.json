@@ -41,6 +41,8 @@
   "block.alchemistinfusion.full_blocker": "Full Blocker",
   "block.alchemistinfusion.container_blocker": "Container Blocker",
   "block.alchemistinfusion.trade_blocker": "Trade Blocker",
+  "item.alchemistinfusion.alchemical_bowl": "Alchemical Bowl",
+  "item.alchemistinfusion.attuned_alchemical_bowl": "Attuned Alchemical Bowl",
   "item.alchemistinfusion.quickstep_dust": "Quick Step Dust",
   "item.alchemistinfusion.hop_dust": "Hop Dust",
   "item.alchemistinfusion.light_dust": "Light Dust",
