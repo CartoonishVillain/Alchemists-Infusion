@@ -4,10 +4,14 @@ import com.jedijoe.alchemistinfusion.AlchemistInfusion;
 import com.jedijoe.alchemistinfusion.Blocks.Potion.PotionBlockItemBase;
 import com.jedijoe.alchemistinfusion.Blocks.BlockItemBase;
 import net.minecraft.item.Item;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class BlockItemRegistry {
     public static final DeferredRegister<Item> BLOCKITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, AlchemistInfusion.MOD_ID);
@@ -15,19 +19,19 @@ public class BlockItemRegistry {
     public static void init(){ BLOCKITEMS.register(FMLJavaModLoadingContext.get().getModEventBus()); }
 
     public static final RegistryObject<Item> PRIMEDPAVEMENT_ITEM = BLOCKITEMS.register("primed_pavement", () -> new PotionBlockItemBase(BlockRegistry.PRIMEDPAVEMENT.get()));
-    public static final RegistryObject<Item> ACTIVATEDPAYMENT_ITEM = BLOCKITEMS.register("activated_pavement", () -> new BlockItemBase(BlockRegistry.ACTIVATEDPAVEMENT.get()));
-    public static final RegistryObject<Item> ATTUNEDPAYMENT_ITEM = BLOCKITEMS.register("attuned_pavement", () -> new BlockItemBase(BlockRegistry.ATTUNEDPAVEMENT.get()));
+    public static final RegistryObject<Item> ACTIVATEDPAYMENT_ITEM = BLOCKITEMS.register("activated_pavement", () -> new BlockItemBase(BlockRegistry.ACTIVATEDPAVEMENT.get(), null));
+    public static final RegistryObject<Item> ATTUNEDPAYMENT_ITEM = BLOCKITEMS.register("attuned_pavement", () -> new BlockItemBase(BlockRegistry.ATTUNEDPAVEMENT.get(), null));
     public static final RegistryObject<Item> PAVEMENTSTONE_ITEM = BLOCKITEMS.register("pavement_stone", () -> new PotionBlockItemBase(BlockRegistry.PAVEMENTSTONE.get()));
 
-    public static final RegistryObject<Item> FALLBREAKER_ITEM = BLOCKITEMS.register("fall_breaker", () -> new BlockItemBase(BlockRegistry.FALLBREAKER.get()));
-    public static final RegistryObject<Item> PARTICLEICE_ITEM = BLOCKITEMS.register("particle_ice", () -> new BlockItemBase(BlockRegistry.PARTICLEICE.get()));
-    public static final RegistryObject<Item> MOMENTUMCONVERTER_ITEM = BLOCKITEMS.register("momentum_converter", () -> new BlockItemBase(BlockRegistry.MOMENTUMCONVERTER.get()));
+    public static final RegistryObject<Item> FALLBREAKER_ITEM = BLOCKITEMS.register("fall_breaker", () -> new BlockItemBase(BlockRegistry.FALLBREAKER.get(), new ArrayList<>(AlchemistInfusion.config.ENABLEFALLBREAKER.get() ? Arrays.asList(TextFormatting.BLUE + "Allows you to fall from high distances and probably survive.. assuming you're not already injured!") : Arrays.asList(TextFormatting.GRAY + "No effect: Disabled in config"))));
+    public static final RegistryObject<Item> PARTICLEICE_ITEM = BLOCKITEMS.register("particle_ice", () -> new BlockItemBase(BlockRegistry.PARTICLEICE.get(), new ArrayList<>(Arrays.asList(TextFormatting.BLUE + "This block of condensed blue ice can cause rapid acceleration while walking on it."))));
+    public static final RegistryObject<Item> MOMENTUMCONVERTER_ITEM = BLOCKITEMS.register("momentum_converter", () -> new BlockItemBase(BlockRegistry.MOMENTUMCONVERTER.get(), new ArrayList<>(AlchemistInfusion.config.ENABLEMOMENTUMCONVERTER.get() ? Arrays.asList(TextFormatting.BLUE + "Converts horizontal momentum to vertical momentum. You may want a method to prevent fall damage..") : Arrays.asList(TextFormatting.GRAY + "No effect: Disabled in config"))));
 
-    public static final RegistryObject<Item> INVENTORYBLOCKER_ITEM = BLOCKITEMS.register("inventory_blocker", () -> new BlockItemBase(BlockRegistry.INVENTORYBLOCKER.get()));
-    public static final RegistryObject<Item> TRADEBLOCKER_ITEM = BLOCKITEMS.register("trade_blocker", () -> new BlockItemBase(BlockRegistry.TRADEBLOCKER.get()));
-    public static final RegistryObject<Item> CONTAINERBLOCKER_ITEM = BLOCKITEMS.register("container_blocker", () -> new BlockItemBase(BlockRegistry.CONTAINERBLOCKER.get()));
-    public static final RegistryObject<Item> CRAFTINGBLOCKER_ITEM = BLOCKITEMS.register("crafting_blocker", () -> new BlockItemBase(BlockRegistry.CRAFTINGBLOCKER.get()));
-    public static final RegistryObject<Item> FULLBLOCKER_ITEM = BLOCKITEMS.register("full_blocker", () -> new BlockItemBase(BlockRegistry.FULLBLOCKER.get()));
+    public static final RegistryObject<Item> INVENTORYBLOCKER_ITEM = BLOCKITEMS.register("inventory_blocker", () -> new BlockItemBase(BlockRegistry.INVENTORYBLOCKER.get(), new ArrayList<>(AlchemistInfusion.config.ENABLEBLOCKERS.get() ? Arrays.asList(TextFormatting.RED + "When stepped on, prevents opening of inventory") : Arrays.asList(TextFormatting.GRAY + "No effect: Disabled in config"))));
+    public static final RegistryObject<Item> TRADEBLOCKER_ITEM = BLOCKITEMS.register("trade_blocker", () -> new BlockItemBase(BlockRegistry.TRADEBLOCKER.get(), new ArrayList<>(AlchemistInfusion.config.ENABLEBLOCKERS.get() ? Arrays.asList(TextFormatting.RED + "When stepped on, prevents trade with villagers") : Arrays.asList(TextFormatting.GRAY + "No effect: Disabled in config"))));
+    public static final RegistryObject<Item> CONTAINERBLOCKER_ITEM = BLOCKITEMS.register("container_blocker", () -> new BlockItemBase(BlockRegistry.CONTAINERBLOCKER.get(), new ArrayList<>(AlchemistInfusion.config.ENABLEBLOCKERS.get() ? Arrays.asList(TextFormatting.RED + "When stepped on, prevents the opening of containers", TextFormatting.GRAY + "Modded Container support not guaranteed") : Arrays.asList(TextFormatting.GRAY + "No effect: Disabled in config"))));
+    public static final RegistryObject<Item> CRAFTINGBLOCKER_ITEM = BLOCKITEMS.register("crafting_blocker", () -> new BlockItemBase(BlockRegistry.CRAFTINGBLOCKER.get(), new ArrayList<>(AlchemistInfusion.config.ENABLEBLOCKERS.get() ? Arrays.asList(TextFormatting.RED + "When stepped on, prevents the opening of crafting interfaces", TextFormatting.GRAY + "Modded Crafting interface support not guaranteed") : Arrays.asList(TextFormatting.GRAY + "No effect: Disabled in config"))));
+    public static final RegistryObject<Item> FULLBLOCKER_ITEM = BLOCKITEMS.register("full_blocker", () -> new BlockItemBase(BlockRegistry.FULLBLOCKER.get(), new ArrayList<>(AlchemistInfusion.config.ENABLEBLOCKERS.get() ? Arrays.asList(TextFormatting.RED + "When stepped on, performs the combined effects of the rest of the blockers") : Arrays.asList(TextFormatting.GRAY + "No effect: Disabled in config"))));
 
 
     public static final RegistryObject<Item> QUICKSTEPSTONE_ITEM = BLOCKITEMS.register("quickstep_stone", () -> new PotionBlockItemBase(BlockRegistry.QUICKSTEPSTONE.get()));

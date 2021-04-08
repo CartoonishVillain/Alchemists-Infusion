@@ -2,7 +2,7 @@ package com.jedijoe.alchemistinfusion.Blocks.Momentum;
 
 
 import com.jedijoe.alchemistinfusion.AlchemistInfusion;
-import com.jedijoe.alchemistinfusion.Blocks.BlockWithLoreBase;
+import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
@@ -14,13 +14,10 @@ import net.minecraftforge.common.ToolType;
 
 import static java.lang.Math.abs;
 
-public class MomentumConverter extends BlockWithLoreBase {
+public class MomentumConverter extends Block {
 
-    public MomentumConverter() {
-        super(Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(3.2F).harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool());
-        if(AlchemistInfusion.config.ENABLEMOMENTUMCONVERTER.get()){
-            setLore(TextFormatting.BLUE + "Converts horizontal momentum to vertical momentum.");
-        setLore2(TextFormatting.BLUE + "You may want a method to prevent fall damage");}
+    public MomentumConverter(Properties properties) {
+        super(properties);
     }
 
     @Override

@@ -2,23 +2,18 @@ package com.jedijoe.alchemistinfusion.Blocks.Momentum;
 
 
 import com.jedijoe.alchemistinfusion.AlchemistInfusion;
-import com.jedijoe.alchemistinfusion.Blocks.BlockWithLoreBase;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
+import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 
-public class FallBreaker extends BlockWithLoreBase {
+public class FallBreaker extends Block {
 
-    public FallBreaker() {
-        super(Properties.create(Material.WOOL).speedFactor(0.9f).sound(SoundType.CLOTH).hardnessAndResistance(1.0f));
-        if(AlchemistInfusion.config.ENABLEFALLBREAKER.get()){
-        setLore(TextFormatting.BLUE + "Allows you to fall from high distances and probably survive..");
-        setLore2(TextFormatting.BLUE + "assuming you're not already injured!");}
+    public FallBreaker(Properties properties) {
+        super(properties);
     }
+
 
     @Override
     public void onFallenUpon(World world, BlockPos blockPos, Entity entity, float distanceFallen) {
