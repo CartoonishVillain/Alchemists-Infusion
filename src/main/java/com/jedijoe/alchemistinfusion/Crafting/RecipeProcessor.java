@@ -9,6 +9,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.World;
 
 import java.util.ArrayList;
@@ -16,7 +17,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class RecipeProcessor {
-    public static void AttemptRecipe(ArrayList<ArrayList<ItemStack>> recipeStack, ArrayList<ItemEntity> ExistingItems, BlockPos pos, World world, ItemStack reward){
+    public static void AttemptRecipe(ArrayList<ArrayList<ItemStack>> recipeStack, ArrayList<ItemEntity> ExistingItems, BlockPos pos, World world, ItemStack reward, PlayerEntity playerEntity){
         //Phase 0 - List out all existing items
         ArrayList<ItemStack> existingStack = new ArrayList<>();
         for(ItemEntity entity : ExistingItems){existingStack.add(entity.getItem());}
@@ -39,7 +40,9 @@ public class RecipeProcessor {
             else trueRecipe = Recipe;
             trueReward = potentialReward; break;
         }
-        if(trueReward == null) return;
+        if(trueReward == null){
+            playerEntity.sendStatusMessage(new StringTextComponent("No matching recipes! Please recheck your components!"), false);
+            return;}
         else reward = trueReward;
 
         //Phase 3 -  Remove items;
@@ -59,20 +62,19 @@ public class RecipeProcessor {
         double y2 = pos.getY() + 2;
         double z2 = pos.getZ() + 1;
         AxisAlignedBB scanner = new AxisAlignedBB(x,y,z,x2,y2,z2);
-        ArrayList<ItemEntity> entities = (ArrayList<ItemEntity>) world.getEntitiesWithinAABB(ItemEntity.class, scanner);
-        return entities;
+        return (ArrayList<ItemEntity>) world.getEntitiesWithinAABB(ItemEntity.class, scanner);
     }
 
     private static HashMap<String, Integer> MapStacks(ArrayList<ItemStack> items){ // converts the itemstack arraylist into a map of usable items.
-        HashMap<String, Integer> itemMap = new HashMap<String, Integer>();
+        HashMap<String, Integer> itemMap = new HashMap<>();
         for(ItemStack itemStack : items){
             String name = itemStack.getItem().getName().toString();
             int amount = itemStack.getCount();
             if(itemMap.containsKey(name)){ // if the map already has a stack (multiple stacks of the same item in equation)
                 int temp = itemMap.get(name);
                 amount += temp;
-                itemMap.put(name, amount);
-            }else itemMap.put(name, amount);
+            }
+            itemMap.put(name, amount);
         }
         return itemMap;
     }
@@ -93,7 +95,6 @@ public class RecipeProcessor {
 
     private static void updateItems(ArrayList<ItemStack> existingStack, HashMap<String, Integer> recipeMap, ArrayList<ItemEntity> ExistingItems){
         for(ItemStack itemStack : existingStack){
-            int counter = 0;
             ItemEntity entity = null;
             for(ItemEntity itemEntity : ExistingItems){
                 if(itemEntity.getItem().equals(itemStack)){

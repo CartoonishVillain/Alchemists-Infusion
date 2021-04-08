@@ -15,6 +15,8 @@ public class BlockItemRegistry {
     public static void init(){ BLOCKITEMS.register(FMLJavaModLoadingContext.get().getModEventBus()); }
 
     public static final RegistryObject<Item> PRIMEDPAVEMENT_ITEM = BLOCKITEMS.register("primed_pavement", () -> new PotionBlockItemBase(BlockRegistry.PRIMEDPAVEMENT.get()));
+    public static final RegistryObject<Item> ACTIVATEDPAYMENT_ITEM = BLOCKITEMS.register("activated_pavement", () -> new BlockItemBase(BlockRegistry.ACTIVATEDPAVEMENT.get()));
+    public static final RegistryObject<Item> ATTUNEDPAYMENT_ITEM = BLOCKITEMS.register("attuned_pavement", () -> new BlockItemBase(BlockRegistry.ATTUNEDPAVEMENT.get()));
     public static final RegistryObject<Item> PAVEMENTSTONE_ITEM = BLOCKITEMS.register("pavement_stone", () -> new PotionBlockItemBase(BlockRegistry.PAVEMENTSTONE.get()));
 
     public static final RegistryObject<Item> FALLBREAKER_ITEM = BLOCKITEMS.register("fall_breaker", () -> new BlockItemBase(BlockRegistry.FALLBREAKER.get()));

@@ -1,11 +1,13 @@
 package com.jedijoe.alchemistinfusion.Registries;
 
 import com.jedijoe.alchemistinfusion.AlchemistInfusion;
+import com.jedijoe.alchemistinfusion.Blocks.Infusions.ActivatedPavement;
 import com.jedijoe.alchemistinfusion.Blocks.Blocker;
+import com.jedijoe.alchemistinfusion.Blocks.Infusions.AttunedPavement;
 import com.jedijoe.alchemistinfusion.Blocks.Momentum.FallBreaker;
 import com.jedijoe.alchemistinfusion.Blocks.Momentum.MomentumConverter;
 import com.jedijoe.alchemistinfusion.Blocks.Momentum.ParticleIce;
-import com.jedijoe.alchemistinfusion.Blocks.Potion.PrimedPavement;
+import com.jedijoe.alchemistinfusion.Blocks.Infusions.PrimedPavement;
 import com.jedijoe.alchemistinfusion.Blocks.Potion.InfusedBlockBase;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -45,7 +47,9 @@ public class BlockRegistry {
 
     //No tier stones
     public static final RegistryObject<Block> PRIMEDPAVEMENT = BLOCKS.register("primed_pavement", PrimedPavement::new);
-    public static final RegistryObject<Block> PAVEMENTSTONE = BLOCKS.register("pavement_stone", PrimedPavement::new);
+    public static final RegistryObject<Block> ACTIVATEDPAVEMENT = BLOCKS.register("activated_pavement", ActivatedPavement::new);
+    public static final RegistryObject<Block> ATTUNEDPAVEMENT = BLOCKS.register("attuned_pavement", AttunedPavement::new);
+    public static final RegistryObject<Block> PAVEMENTSTONE = BLOCKS.register("pavement_stone", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE).harvestLevel(0).setRequiresTool()));
 
     //tier 1 stones
     public static final RegistryObject<Block> QUICKSTEPSTONE = BLOCKS.register("quickstep_stone", () -> new InfusedBlockBase(Block.Properties.create(Material.ROCK).hardnessAndResistance(1).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE).harvestLevel(0).setRequiresTool(), new ArrayList<EffectInstance>(Arrays.asList(new EffectInstance(Effects.SPEED, 1*20, 0))), TextFormatting.BLUE, 1));

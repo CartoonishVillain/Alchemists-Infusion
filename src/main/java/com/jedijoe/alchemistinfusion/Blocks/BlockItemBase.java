@@ -20,6 +20,7 @@ import java.util.List;
 public class BlockItemBase extends BlockItem {
     Block blocktype;
 
+    //TODO Change how it reads lore. Make it part of contructor
     public BlockItemBase(Block block) {
         super(block, new Item.Properties().group(AlchemistInfusion.TAB));
         blocktype = block;

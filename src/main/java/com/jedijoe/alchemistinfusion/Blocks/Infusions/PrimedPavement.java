@@ -1,5 +1,6 @@
-package com.jedijoe.alchemistinfusion.Blocks.Potion;
+package com.jedijoe.alchemistinfusion.Blocks.Infusions;
 
+import com.jedijoe.alchemistinfusion.Blocks.Potion.PotionBlockItemBase;
 import com.jedijoe.alchemistinfusion.Crafting.InfusionRecipe;
 import com.jedijoe.alchemistinfusion.Crafting.RecipeProcessor;
 import com.jedijoe.alchemistinfusion.Items.KeyItem;
@@ -9,12 +10,14 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
+import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ToolType;
 
@@ -28,19 +31,23 @@ public class PrimedPavement extends Block {
     @Override
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit){
 
-        if(!worldIn.isRemote()) {
+        if(!worldIn.isRemote() && handIn == Hand.MAIN_HAND) {
+            ArrayList<ArrayList<ItemStack>> recipe = null;
             ArrayList<ItemEntity> itemEntities = RecipeProcessor.Scan(pos, worldIn);
-            KeyItem keyItem = null;
+            Item keyItem = null;
             for (ItemEntity itemEntity : itemEntities) {
-                if (itemEntity.getItem().getItem() instanceof KeyItem)
-                    keyItem = (KeyItem) itemEntity.getItem().getItem();
+                if (itemEntity.getItem().getItem() instanceof KeyItem || itemEntity.getItem().getItem() instanceof PotionBlockItemBase)
+                    keyItem = itemEntity.getItem().getItem();
                 if (keyItem != null) break;
             }
 
             if (keyItem != null) {
-                ArrayList<ArrayList<ItemStack>> recipe = InfusionRecipe.ParseTier2Recipe(keyItem);
-                RecipeProcessor.AttemptRecipe(recipe, itemEntities, pos, worldIn, null);
+                recipe = InfusionRecipe.ParseTier1Recipe(keyItem);
+                if(recipe.size() > 0)
+                RecipeProcessor.AttemptRecipe(recipe, itemEntities, pos, worldIn, null, player);
+                else{player.sendStatusMessage(new StringTextComponent("No recipes found. Are you using the right tier? Do you have the ingredients? (Currently: Tier 1)"), false);}
             }
+            else{player.sendStatusMessage(new StringTextComponent("No recipes found. Are you using the right tier? Do you have the ingredients? (Currently: Tier 1)"), false);}
         }
         return ActionResultType.SUCCESS;
     }
