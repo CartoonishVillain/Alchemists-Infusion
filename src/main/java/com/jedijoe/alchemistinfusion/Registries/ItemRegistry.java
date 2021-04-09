@@ -35,6 +35,7 @@ public class ItemRegistry {
 
 
     public static final RegistryObject<Item> PAVEMENTCARVER = ITEMS.register("pavement_carver", PersistentItem::new);
+    public static final RegistryObject<Item> CULINARYKEY = ITEMS.register("alchemical_culinary_key", KeyItem::new);
     public static final RegistryObject<Item> INFUSIONROD = ITEMS.register("infusion_rod", PersistentItem::new);
     public static final RegistryObject<Item> ATTUNEDINFUSIONROD = ITEMS.register("attuned_infusion_rod", PersistentItem::new);
     public static final RegistryObject<Item> BASEFRAGMENT = ITEMS.register("base_shard", () -> new LoreItem(TextFormatting.BLUE + "Tier 2 Base crafting material"));

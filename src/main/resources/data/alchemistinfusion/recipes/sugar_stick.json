@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "#G#",
-    "EWZ",
+    "GWG",
     "#G#"
   ],
   "key": {
@@ -12,14 +12,8 @@
     "G": {
       "item": "minecraft:paper"
     },
-    "E": {
-      "item": "alchemistinfusion:pavement_carver"
-    },
     "W": {
       "item": "alchemistinfusion:bag_of_sugar"
-    },
-    "Z": {
-      "item": "alchemistinfusion:infusion_rod"
     }
   },
   "result": {

@@ -1,6 +1,7 @@
 package com.jedijoe.alchemistinfusion.Crafting;
 
 import com.jedijoe.alchemistinfusion.Items.KeyItem;
+import com.jedijoe.alchemistinfusion.Items.PersistentItem;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.item.ItemEntity;
@@ -103,7 +104,7 @@ public class RecipeProcessor {
                 if(entity != null) break;
             } //The proper itemstack should be found at this stage as "entity"
 
-            if(entity != null && recipeMap.containsKey(itemStack.getItem().getName().toString()) && !(itemStack.getItem() instanceof KeyItem)){
+            if(entity != null && recipeMap.containsKey(itemStack.getItem().getName().toString()) && !(itemStack.getItem() instanceof KeyItem || itemStack.getItem() instanceof PersistentItem)){
             int amount = itemStack.getCount();
             amount -= recipeMap.get(itemStack.getItem().getName().toString());//subtract recipe amount;
             itemStack.setCount(amount);

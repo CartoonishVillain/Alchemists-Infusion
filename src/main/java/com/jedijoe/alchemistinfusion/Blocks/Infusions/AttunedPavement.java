@@ -37,7 +37,7 @@ public class AttunedPavement extends Block {
             Item keyItem = null;
             if (player.getHeldItemMainhand().getItem().equals(ItemRegistry.ATTUNEDINFUSIONROD.get()) || player.getHeldItemOffhand().getItem().equals(ItemRegistry.ATTUNEDINFUSIONROD.get())){
                 for (ItemEntity itemEntity : itemEntities) {
-                    if (itemEntity.getItem().getItem() instanceof KeyItem || itemEntity.getItem().getItem() instanceof PotionBlockItemBase)
+                    if (itemEntity.getItem().getItem() instanceof KeyItem || (itemEntity.getItem().getItem() instanceof PotionBlockItemBase && (itemEntity.getItem().getItem().getRegistryName().toString().equals("alchemistinfusion:fish_stone") || itemEntity.getItem().getItem().getRegistryName().toString().equals("alchemistinfusion:snailstep_stone") || itemEntity.getItem().getItem().getRegistryName().toString().equals("alchemistinfusion:speed_step_stone"))))
                         keyItem = itemEntity.getItem().getItem();
                     if (keyItem != null) break;
                 }
@@ -51,37 +51,21 @@ public class AttunedPavement extends Block {
                     }
                 }else player.sendStatusMessage(new StringTextComponent("No recipes found. Are you using the right tier? Do you have the ingredients? (Currently: Tier 3)"), false);
             }
-            else if(player.getHeldItemMainhand().getItem().equals(ItemRegistry.INFUSIONROD.get()) || player.getHeldItemOffhand().getItem().equals(ItemRegistry.INFUSIONROD.get())){ // if item is holding an infusion rod.
-            for (ItemEntity itemEntity : itemEntities) {
-                if (itemEntity.getItem().getItem() instanceof KeyItem || itemEntity.getItem().getItem() instanceof PotionBlockItemBase)
-                    keyItem = itemEntity.getItem().getItem();
-                if (keyItem != null) break;
-            }
-
-            if (keyItem != null) {
-                recipe = InfusionRecipe.ParseTier2Recipe(keyItem);
-                if (recipe.size() > 0)
-                    RecipeProcessor.AttemptRecipe(recipe, itemEntities, pos, worldIn, null, player);
-                else {
-                    player.sendStatusMessage(new StringTextComponent("No recipes found. You are not using an attuned infusion rod, reducing the capabilities of this block! (Currently: Tier 2)"), false);
-                }
-            }else player.sendStatusMessage(new StringTextComponent("No recipes found. You are not using an attuned infusion rod, reducing the capabilities of this block! (Currently: Tier 2)"), false);
-            }
             else{
                 for (ItemEntity itemEntity : itemEntities) {
-                    if (itemEntity.getItem().getItem() instanceof KeyItem || itemEntity.getItem().getItem() instanceof PotionBlockItemBase)
+                    if (itemEntity.getItem().getItem() instanceof KeyItem)
                         keyItem = itemEntity.getItem().getItem();
                     if (keyItem != null) break;
                 }
 
                 if (keyItem != null) {
-                    recipe = InfusionRecipe.ParseTier1Recipe(keyItem);
+                    recipe = InfusionRecipe.ParseTier2Recipe(keyItem);
                     if (recipe.size() > 0)
                         RecipeProcessor.AttemptRecipe(recipe, itemEntities, pos, worldIn, null, player);
                     else {
-                        player.sendStatusMessage(new StringTextComponent("No recipes found. You are not using an infusion rod, reducing the capabilities of this block! (Currently: Tier 1)"), false);
+                        player.sendStatusMessage(new StringTextComponent("No recipes found. You are not using an attuned infusion rod, reducing the capabilities of this block! (Currently: Tier 2)"), false);
                     }
-                }else player.sendStatusMessage(new StringTextComponent("No recipes found. You are not using an infusion rod, reducing the capabilities of this block! (Currently: Tier 1)"), false);
+                }else player.sendStatusMessage(new StringTextComponent("No recipes found. You are not using an attuned infusion rod, reducing the capabilities of this block! (Currently: Tier 2)"), false);
 
             }
         }
