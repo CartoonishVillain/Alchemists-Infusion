@@ -8,6 +8,9 @@ import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.util.SoundEvent;
+import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.StringTextComponent;
@@ -43,6 +46,7 @@ public class RecipeProcessor {
         }
         if(trueReward == null){
             playerEntity.sendStatusMessage(new StringTextComponent("No matching recipes! Please recheck your components!"), false);
+            world.playSound(null, pos, new SoundEvent(SoundEvents.ENTITY_GENERIC_EXTINGUISH_FIRE.getRegistryName()), SoundCategory.BLOCKS, 100f, 1.5f);
             return;}
         else reward = trueReward;
 
@@ -53,6 +57,7 @@ public class RecipeProcessor {
 
         ItemEntity itemEntity = new ItemEntity(world, pos.getX(), pos.getY() + 1, pos.getZ(), reward);
         world.addEntity(itemEntity);
+        world.playSound(null, pos, new SoundEvent(SoundEvents.ENTITY_PLAYER_LEVELUP.getRegistryName()), SoundCategory.BLOCKS, 100f, 1.5f);
     }
 
     public static ArrayList<ItemEntity> Scan(BlockPos pos, World world){

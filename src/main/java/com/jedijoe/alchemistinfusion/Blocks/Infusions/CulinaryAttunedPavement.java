@@ -13,8 +13,7 @@ import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ActionResultType;
-import net.minecraft.util.Hand;
+import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.text.StringTextComponent;
@@ -46,13 +45,11 @@ public class CulinaryAttunedPavement extends Block {
                 recipe = InfusionRecipe.ParseTierFRecipe(keyItem);
                 if(recipe.size() > 0)
                     RecipeProcessor.AttemptRecipe(recipe, itemEntities, pos, worldIn, null, player);
-                else{player.sendStatusMessage(new StringTextComponent("No recipes found. Culinary Pavement only prepares alchemical food and requires an alchemical culinary key!"), false);}
-            }else{player.sendStatusMessage(new StringTextComponent("No recipes found. Culinary Pavement only prepares alchemical food and requires an alchemical culinary key!"), false);}
-
+                else{player.sendStatusMessage(new StringTextComponent("No recipes found. Culinary Pavement only prepares alchemical food and requires an alchemical culinary key!"), false);
+                    worldIn.playSound(null, pos, new SoundEvent(SoundEvents.ENTITY_GENERIC_EXTINGUISH_FIRE.getRegistryName()), SoundCategory.BLOCKS, 100f, 1.5f);}
+            }else{player.sendStatusMessage(new StringTextComponent("No recipes found. Culinary Pavement only prepares alchemical food and requires an alchemical culinary key!"), false);
+                worldIn.playSound(null, pos, new SoundEvent(SoundEvents.ENTITY_GENERIC_EXTINGUISH_FIRE.getRegistryName()), SoundCategory.BLOCKS, 100f, 1.5f); }
         }
-
-
-
         return ActionResultType.SUCCESS;
     }
 }

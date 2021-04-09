@@ -13,8 +13,7 @@ import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ActionResultType;
-import net.minecraft.util.Hand;
+import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.text.StringTextComponent;
@@ -48,8 +47,10 @@ public class AttunedPavement extends Block {
                         RecipeProcessor.AttemptRecipe(recipe, itemEntities, pos, worldIn, null, player);
                     else {
                         player.sendStatusMessage(new StringTextComponent("No recipes found. Are you using the right tier? Do you have the ingredients? (Currently: Tier 3)"), false);
+                        worldIn.playSound(null, pos, new SoundEvent(SoundEvents.ENTITY_GENERIC_EXTINGUISH_FIRE.getRegistryName()), SoundCategory.BLOCKS, 100f, 1.5f);
                     }
                 }else player.sendStatusMessage(new StringTextComponent("No recipes found. Are you using the right tier? Do you have the ingredients? (Currently: Tier 3)"), false);
+                worldIn.playSound(null, pos, new SoundEvent(SoundEvents.ENTITY_GENERIC_EXTINGUISH_FIRE.getRegistryName()), SoundCategory.BLOCKS, 100f, 1.5f);
             }
             else{
                 for (ItemEntity itemEntity : itemEntities) {
@@ -64,9 +65,10 @@ public class AttunedPavement extends Block {
                         RecipeProcessor.AttemptRecipe(recipe, itemEntities, pos, worldIn, null, player);
                     else {
                         player.sendStatusMessage(new StringTextComponent("No recipes found. You are not using an attuned infusion rod, reducing the capabilities of this block! (Currently: Tier 2)"), false);
+                        worldIn.playSound(null, pos, new SoundEvent(SoundEvents.ENTITY_GENERIC_EXTINGUISH_FIRE.getRegistryName()), SoundCategory.BLOCKS, 100f, 1.5f);
                     }
                 }else player.sendStatusMessage(new StringTextComponent("No recipes found. You are not using an attuned infusion rod, reducing the capabilities of this block! (Currently: Tier 2)"), false);
-
+                worldIn.playSound(null, pos, new SoundEvent(SoundEvents.ENTITY_GENERIC_EXTINGUISH_FIRE.getRegistryName()), SoundCategory.BLOCKS, 100f, 1.5f);
             }
         }
         return ActionResultType.SUCCESS;
