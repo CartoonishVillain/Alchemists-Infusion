@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "type": "header",
+      "text": "#title",
+      "x": -1,
+      "y": -1
+    },
+    {
+      "type": "text",
+      "text": "$(l)$(o)Input Items",
+      "x": 35,
+      "y": 10
+    },
+    {
+      "type": "item",
+      "item": "#input1",
+      "x": 0,
+      "y": 25
+    },
+    {
+      "type": "item",
+      "item": "#input2",
+      "x": 20,
+      "y": 25
+    },
+    {
+      "type": "item",
+      "item": "#input3",
+      "x": 0,
+      "y": 45
+    },
+    {
+      "type": "item",
+      "item": "#input4",
+      "x": 20,
+      "y": 45
+    }
+  ]
+}

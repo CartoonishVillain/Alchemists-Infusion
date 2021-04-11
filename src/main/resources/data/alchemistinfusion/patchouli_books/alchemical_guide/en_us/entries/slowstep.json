@@ -1,0 +1,15 @@
+{
+  "name": "Introduction",
+  "icon": "alchemistinfusion:infusion_rod",
+  "category": "alchemistinfusion:tier1",
+  "pages":[
+    {
+      "type": "alchemistinfusion:recipe_test",
+      "title": "Slow Step Dust",
+      "input1": "minecraft:stone",
+      "input2": "minecraft:stone#2",
+      "input4": "minecraft:stone#4"
+    }
+
+  ]
+}

@@ -2,7 +2,6 @@ package com.cartoonishvillain.alchemistinfusion.Registries;
 
 import com.cartoonishvillain.alchemistinfusion.AlchemistInfusion;
 import com.cartoonishvillain.alchemistinfusion.Armor.*;
-import com.jedijoe.alchemistinfusion.Armor.*;
 import com.cartoonishvillain.alchemistinfusion.Items.AlchemistFoodItems;
 import com.cartoonishvillain.alchemistinfusion.Items.KeyItem;
 import com.cartoonishvillain.alchemistinfusion.Items.LoreItem;

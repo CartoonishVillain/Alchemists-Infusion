@@ -1,0 +1,23 @@
+{
+  "name": "Introduction",
+  "icon": "alchemistinfusion:pavement_carver",
+  "category": "alchemistinfusion:tier1",
+  "pages": [
+    {
+      "type": "blasting",
+      "recipe": "alchemistinfusion:pavement_stone",
+      "text": "Alchemist infusion is designed to imbue blocks and items with special properties they otherwise would not have. To get started, you'll need to cook stone in a blast furnace. You then need some primed pavement, as seen on the right...",
+      "title": "In the beginning..."
+    },
+    {
+      "type": "crafting",
+      "recipe": "alchemistinfusion:pavement_carver",
+      "recipe2": "alchemistinfusion:primed_pavement"
+    },
+    {
+      "type": "crafting",
+      "recipe": "alchemistinfusion:alchemical_bowl",
+      "text": "You'll also need an alchemical mixing bowl to get started with infusions!"
+    }
+  ]
+}
