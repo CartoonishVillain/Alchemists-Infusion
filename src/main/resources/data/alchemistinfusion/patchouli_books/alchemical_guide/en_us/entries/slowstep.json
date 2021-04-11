@@ -1,14 +1,21 @@
 {
-  "name": "Introduction",
-  "icon": "alchemistinfusion:infusion_rod",
+  "name": "Slow Step Dust",
+  "icon": "alchemistinfusion:slowstep_dust",
   "category": "alchemistinfusion:tier1",
   "pages":[
     {
-      "type": "alchemistinfusion:recipe_test",
+      "type": "alchemistinfusion:10recipe",
       "title": "Slow Step Dust",
-      "input1": "minecraft:stone",
-      "input2": "minecraft:stone#2",
-      "input4": "minecraft:stone#4"
+      "tier": "Tier 1 Required",
+      "result": "alchemistinfusion:slowstep_dust#2",
+      "input7": "alchemistinfusion:alchemical_bowl",
+      "input8": "minecraft:string#4",
+      "input9": "minecraft:slime_ball#4"
+    },
+    {
+      "type": "crafting",
+      "recipe": "alchemistinfusion:slowstep_stone",
+      "text": "Slow down your friends and annoy your enemies with this stone!"
     }
 
   ]

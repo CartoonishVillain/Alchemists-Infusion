@@ -1,0 +1,25 @@
+{
+  "name": "Slow Dig Dust",
+  "icon": "alchemistinfusion:slowdigging_dust",
+  "category": "alchemistinfusion:tier1",
+  "pages":[
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Slow Dig Dust",
+      "tier": "Tier 1 Required",
+      "result": "alchemistinfusion:slowdigging_dust#2",
+      "input3": "alchemistinfusion:alchemical_bowl",
+      "input7": "minecraft:string#2",
+      "input6": "minecraft:slime_ball#2",
+      "input8": "minecraft:iron_pickaxe",
+      "input9": "minecraft:piston",
+      "input10": "minecraft:redstone_torch#2"
+    },
+    {
+      "type": "crafting",
+      "recipe": "alchemistinfusion:slowdigging_stone",
+      "text": "Great for when you want to slow down a break in just a little bit"
+    }
+
+  ]
+}

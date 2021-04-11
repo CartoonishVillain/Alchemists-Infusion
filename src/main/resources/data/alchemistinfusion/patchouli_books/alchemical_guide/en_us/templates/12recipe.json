@@ -1,0 +1,119 @@
+{
+  "components": [
+    {
+      "type": "header",
+      "text": "#title",
+      "x": -1,
+      "y": -1
+    },
+    {
+      "type": "text",
+      "text": "$(l)$(o)Input Items",
+      "x": 35,
+      "y": 10
+    },
+    {
+      "type": "item",
+      "item": "#input1",
+      "framed": true,
+      "x": 0,
+      "y": 25
+    },
+    {
+      "type": "item",
+      "item": "#input2",
+      "framed": true,
+      "x": 20,
+      "y": 25
+    },
+    {
+      "type": "item",
+      "item": "#input3",
+      "framed": true,
+      "x": 40,
+      "y": 25
+    },
+    {
+      "type": "item",
+      "item": "#input4",
+      "framed": true,
+      "x": 60,
+      "y": 25
+    },
+    {
+      "type": "item",
+      "item": "#input5",
+      "framed": true,
+      "x": 80,
+      "y": 25
+    },
+    {
+      "type": "item",
+      "item": "#input6",
+      "framed": true,
+      "x": 100,
+      "y": 25
+    },
+    {
+      "type": "item",
+      "item": "#input7",
+      "framed": true,
+      "x": 0,
+      "y": 45
+    },
+    {
+      "type": "item",
+      "item": "#input8",
+      "framed": true,
+      "x": 20,
+      "y": 45
+    },
+    {
+      "type": "item",
+      "item": "#input9",
+      "framed": true,
+      "x": 40,
+      "y": 45
+    },
+    {
+      "type": "item",
+      "item": "#input10",
+      "framed": true,
+      "x": 60,
+      "y": 45
+    },
+    {
+      "type": "item",
+      "item": "#input11",
+      "framed": true,
+      "x": 80,
+      "y": 45
+    },
+    {
+      "type": "item",
+      "item": "#input12",
+      "framed": true,
+      "x": 100,
+      "y": 45
+    },
+    {
+      "type": "text",
+      "text": "#tier",
+      "x": 30,
+      "y": 65
+    },
+    {
+      "type": "text",
+      "text": "$(l)$(o)Result",
+      "x": 45,
+      "y": 75
+    },
+    {
+      "type": "item",
+      "item": "#result",
+      "framed": true,
+      "x": 50,
+      "y": 90
+    }
+  ]
+}
