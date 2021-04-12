@@ -1,0 +1,25 @@
+{
+  "name": "Hop Dust",
+  "icon": "alchemistinfusion:hop_dust",
+  "category": "alchemistinfusion:potionblocks",
+  "sortnum": 2,
+  "pages":[
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Hop Dust",
+      "tier": "Tier 1 Required",
+      "result": "alchemistinfusion:hop_dust#2",
+      "input6": "alchemistinfusion:alchemical_bowl",
+      "input7": "minecraft:rabbit_foot",
+      "input8": "minecraft:rabbit_hide#3",
+      "input9": "minecraft:sugar#3",
+      "input10": "minecraft:piston"
+    },
+    {
+      "type": "crafting",
+      "recipe": "alchemistinfusion:hop_stone",
+      "text": "Hop over obstacles with this stone"
+    }
+
+  ]
+}

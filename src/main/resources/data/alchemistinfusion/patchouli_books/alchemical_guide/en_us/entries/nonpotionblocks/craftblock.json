@@ -1,0 +1,19 @@
+{
+  "name": "Crafting Blocker",
+  "icon": "alchemistinfusion:crafting_blocker",
+  "category": "alchemistinfusion:otherblocks",
+  "sortnum": 4,
+  "pages":[
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Crafting Blocker",
+      "tier": "Tier 2 Required",
+      "result": "alchemistinfusion:crafting_blocker",
+      "input6": "alchemistinfusion:alchemical_fragment_cast",
+      "input7": "minecraft:redstone_block#2",
+      "input8": "alchemistinfusion:primed_pavement#4",
+      "input9": "minecraft:crafting_table",
+      "input10": "minecraft:observer"
+    }
+  ]
+}

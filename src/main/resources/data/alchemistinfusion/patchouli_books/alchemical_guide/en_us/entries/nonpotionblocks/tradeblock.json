@@ -1,0 +1,19 @@
+{
+  "name": "Trade Blocker",
+  "icon": "alchemistinfusion:trade_blocker",
+  "category": "alchemistinfusion:otherblocks",
+  "sortnum": 7,
+  "pages":[
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Trade Blocker",
+      "tier": "Tier 2 Required",
+      "result": "alchemistinfusion:trade_blocker",
+      "input6": "alchemistinfusion:alchemical_fragment_cast",
+      "input7": "minecraft:redstone_block#2",
+      "input8": "alchemistinfusion:primed_pavement#4",
+      "input9": "minecraft:emerald",
+      "input10": "minecraft:observer"
+    }
+  ]
+}

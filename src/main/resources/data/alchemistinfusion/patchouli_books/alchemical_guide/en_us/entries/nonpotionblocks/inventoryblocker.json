@@ -1,0 +1,19 @@
+{
+  "name": "Inventory Blocker",
+  "icon": "alchemistinfusion:inventory_blocker",
+  "category": "alchemistinfusion:otherblocks",
+  "sortnum": 6,
+  "pages":[
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Inventory Blocker",
+      "tier": "Tier 2 Required",
+      "result": "alchemistinfusion:inventory_blocker",
+      "input6": "alchemistinfusion:alchemical_fragment_cast",
+      "input7": "minecraft:redstone_block#2",
+      "input8": "alchemistinfusion:primed_pavement#4",
+      "input9": "minecraft:campfire",
+      "input10": "minecraft:observer"
+    }
+  ]
+}

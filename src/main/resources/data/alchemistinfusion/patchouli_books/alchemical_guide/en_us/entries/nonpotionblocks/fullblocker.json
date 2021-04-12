@@ -1,0 +1,21 @@
+{
+  "name": "Full Blocker",
+  "icon": "alchemistinfusion:full_blocker",
+  "category": "alchemistinfusion:otherblocks",
+  "sortnum": 8,
+  "pages":[
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Full Blocker",
+      "tier": "Tier 2 Required",
+      "result": "alchemistinfusion:full_blocker#4",
+      "input6": "alchemistinfusion:alchemical_fragment_cast",
+      "input2": "alchemistinfusion:crafting_blocker",
+      "input7": "alchemistinfusion:container_blocker",
+      "input8": "minecraft:redstone_block#2",
+      "input4": "alchemistinfusion:trade_blocker",
+      "input9": "alchemistinfusion:inventory_blocker",
+      "input10": "minecraft:observer"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Potion Blocks",
+  "description": "Displays the recipes and requirements for the potion blocks as well as what they do.",
+  "icon": "alchemistinfusion:speed_step_stone",
+  "sortnum": 2
+}

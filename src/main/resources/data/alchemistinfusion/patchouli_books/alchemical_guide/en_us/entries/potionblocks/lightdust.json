@@ -1,0 +1,24 @@
+{
+  "name": "Light Dust",
+  "icon": "alchemistinfusion:light_dust",
+  "category": "alchemistinfusion:potionblocks",
+  "sortnum": 3,
+  "pages":[
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Light Dust",
+      "tier": "Tier 1 Required",
+      "result": "alchemistinfusion:light_dust#2",
+      "input3": "alchemistinfusion:alchemical_bowl",
+      "input7": "minecraft:torch#4",
+      "input8": "minecraft:jack_o_lantern#2",
+      "input9": "minecraft:lantern#2"
+    },
+    {
+      "type": "crafting",
+      "recipe": "alchemistinfusion:light_stone",
+      "text": "Light up the night and your enemies with this stone!"
+    }
+
+  ]
+}

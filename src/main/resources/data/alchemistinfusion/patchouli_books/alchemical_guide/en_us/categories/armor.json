@@ -1,0 +1,6 @@
+{
+  "name": "Infused Armor",
+  "description": "Displays the recipes and requirements for infused armor as well as what they do.",
+  "icon": "alchemistinfusion:ice_boots",
+  "sortnum": 4
+}

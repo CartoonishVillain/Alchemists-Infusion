@@ -1,0 +1,19 @@
+{
+  "name": "Jump Fragment",
+  "icon": "alchemistinfusion:jump_fragment",
+  "category": "alchemistinfusion:potionblocks",
+  "sortnum": 12,
+  "pages":[
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Jump Fragment",
+      "tier": "Tier 2 Required",
+      "result": "alchemistinfusion:jump_fragment",
+      "input6": "alchemistinfusion:alchemical_fragment_cast",
+      "input7": "alchemistinfusion:base_shard",
+      "input8": "minecraft:piston#3",
+      "input9": "minecraft:slime_block#3",
+      "input10": "alchemistinfusion:hop_dust"
+    }
+  ]
+}

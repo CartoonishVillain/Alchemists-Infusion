@@ -1,0 +1,19 @@
+{
+  "name": "Cowardly Fragment",
+  "icon": "alchemistinfusion:cowardly_fragment",
+  "category": "alchemistinfusion:potionblocks",
+  "sortnum": 7,
+  "pages":[
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Cowardly Fragment",
+      "tier": "Tier 2 Required",
+      "result": "alchemistinfusion:cowardly_fragment",
+      "input6": "alchemistinfusion:alchemical_fragment_cast",
+      "input7": "alchemistinfusion:base_shard",
+      "input8": "minecraft:poisonous_potato#3",
+      "input9": "minecraft:golden_sword",
+      "input10": "minecraft:target#3"
+    }
+  ]
+}

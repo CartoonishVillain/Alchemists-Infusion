@@ -1,0 +1,21 @@
+{
+  "name": "Unluck Boots",
+  "icon": "alchemistinfusion:unluck_boots",
+  "category": "alchemistinfusion:armor",
+  "sortnum": 10,
+  "pages":[
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Unluck Boots",
+      "tier": "Tier 1 Required",
+      "result": "alchemistinfusion:unluck_boots",
+      "input2": "alchemistinfusion:alchemical_bowl",
+      "input4": "minecraft:nether_wart#2",
+      "input6": "minecraft:coal",
+      "input7": "alchemistinfusion:pavement_carver",
+      "input8": "minecraft:iron_boots",
+      "input9": "minecraft:nether_wart_block#2",
+      "input10": "minecraft:iron_block"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Attuned Pavement",
+  "icon": "alchemistinfusion:attuned_pavement",
+  "category": "alchemistinfusion:tier2",
+  "sortnum": 16,
+  "pages":[
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Attuned Pavement",
+      "tier": "Tier 2 Required",
+      "result": "alchemistinfusion:attuned_pavement",
+      "input3": "alchemistinfusion:alchemical_fragment_cast",
+      "input6": "alchemistinfusion:activated_pavement",
+      "input7": "minecraft:emerald#4",
+      "input8": "minecraft:ender_eye#2",
+      "input9": "minecraft:blaze_rod#2",
+      "input10": "minecraft:enchanting_table#2"
+    }
+  ]
+}

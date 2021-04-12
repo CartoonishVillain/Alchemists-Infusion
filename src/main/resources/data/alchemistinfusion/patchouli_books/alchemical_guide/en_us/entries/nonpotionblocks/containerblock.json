@@ -1,0 +1,19 @@
+{
+  "name": "Container Blocker",
+  "icon": "alchemistinfusion:otherblocks",
+  "category": "alchemistinfusion:otherblocks",
+  "sortnum": 5,
+  "pages":[
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Container Blocker",
+      "tier": "Tier 2 Required",
+      "result": "alchemistinfusion:container_blocker",
+      "input6": "alchemistinfusion:alchemical_fragment_cast",
+      "input7": "minecraft:redstone_block#2",
+      "input8": "alchemistinfusion:primed_pavement#4",
+      "input9": "minecraft:chest",
+      "input10": "minecraft:observer"
+    }
+  ]
+}

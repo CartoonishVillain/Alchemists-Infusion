@@ -1,0 +1,25 @@
+{
+  "name": "Digging Dust",
+  "icon": "alchemistinfusion:digging_dust",
+  "category": "alchemistinfusion:potionblocks",
+  "sortnum": 1,
+  "pages":[
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Digging Dust",
+      "tier": "Tier 1 Required",
+      "result": "alchemistinfusion:digging_dust#2",
+      "input6": "alchemistinfusion:alchemical_bowl",
+      "input7": "minecraft:redstone#4",
+      "input8": "minecraft:redstone_torch#2",
+      "input9": "minecraft:iron_pickaxe",
+      "input10": "minecraft:piston"
+    },
+    {
+      "type": "crafting",
+      "recipe": "alchemistinfusion:digging_stone",
+      "text": "Break through obstacles faster with this stone!"
+    }
+
+  ]
+}

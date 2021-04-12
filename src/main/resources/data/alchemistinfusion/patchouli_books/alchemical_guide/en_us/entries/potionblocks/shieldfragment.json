@@ -1,0 +1,19 @@
+{
+  "name": "Shield Fragment",
+  "icon": "alchemistinfusion:shield_fragment",
+  "category": "alchemistinfusion:potionblocks",
+  "sortnum": 15,
+  "pages":[
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Shield Fragment",
+      "tier": "Tier 2 Required",
+      "result": "alchemistinfusion:shield_fragment",
+      "input6": "alchemistinfusion:alchemical_fragment_cast",
+      "input7": "alchemistinfusion:base_shard",
+      "input8": "minecraft:iron_block#3",
+      "input9": "minecraft:shield",
+      "input10": "minecraft:armor_stand#3"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Attuned Infusion Rod",
+  "icon": "alchemistinfusion:attuned_infusion_rod",
+  "category": "alchemistinfusion:tier2",
+  "sortnum": 2,
+  "pages":[
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Attuned Infusion Rod",
+      "tier": "Tier 2 Required",
+      "result": "alchemistinfusion:attuned_infusion_rod",
+      "input6": "alchemistinfusion:alchemical_bowl",
+      "input7": "minecraft:diamond#4",
+      "input8": "minecraft:nether_wart#12",
+      "input9": "minecraft:lapis_lazuli#8",
+      "input10": "minecraft:ender_pearl#6"
+    }
+  ]
+}

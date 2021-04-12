@@ -1,0 +1,6 @@
+{
+  "name": "Other Infused Blocks",
+  "description": "Displays the recipes and requirements for the non-potion blocks as well as what they do.",
+  "icon": "alchemistinfusion:particle_ice",
+  "sortnum": 3
+}

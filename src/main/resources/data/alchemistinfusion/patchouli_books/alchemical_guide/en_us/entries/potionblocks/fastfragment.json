@@ -1,0 +1,19 @@
+{
+  "name": "Fast Step Fragment",
+  "icon": "alchemistinfusion:faststep_fragment",
+  "category": "alchemistinfusion:potionblocks",
+  "sortnum": 9,
+  "pages":[
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Fast Step Fragment",
+      "tier": "Tier 2 Required",
+      "result": "alchemistinfusion:faststep_fragment",
+      "input6": "alchemistinfusion:alchemical_fragment_cast",
+      "input7": "alchemistinfusion:base_shard",
+      "input8": "alchemistinfusion:bag_of_sugar#3",
+      "input9": "alchemistinfusion:quickstep_dust",
+      "input10": "minecraft:redstone_block#3"
+    }
+  ]
+}

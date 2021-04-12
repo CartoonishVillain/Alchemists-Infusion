@@ -1,7 +1,8 @@
 {
   "name": "Slow Dig Dust",
   "icon": "alchemistinfusion:slowdigging_dust",
-  "category": "alchemistinfusion:tier1",
+  "category": "alchemistinfusion:potionblocks",
+  "sortnum": 5,
   "pages":[
     {
       "type": "alchemistinfusion:10recipe",

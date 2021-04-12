@@ -1,0 +1,18 @@
+{
+  "name": "Hunger Fragment",
+  "icon": "alchemistinfusion:hunger_fragment",
+  "category": "alchemistinfusion:potionblocks",
+  "sortnum": 10,
+  "pages":[
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Hunger Fragment",
+      "tier": "Tier 2 Required",
+      "result": "alchemistinfusion:hunger_fragment",
+      "input3": "alchemistinfusion:alchemical_fragment_cast",
+      "input7": "alchemistinfusion:base_shard",
+      "input8": "minecraft:rotten_flesh#4",
+      "input9": "minecraft:chicken#3"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Culinary Attuned Pavement",
+  "icon": "alchemistinfusion:culinary_pavement",
+  "category": "alchemistinfusion:tier2",
+  "sortnum": 3,
+  "pages":[
+    {
+      "type": "alchemistinfusion:12recipe",
+      "title": "Culinary Attuned Pavement",
+      "tier": "Tier 2 Required",
+      "result": "alchemistinfusion:culinary_pavement",
+      "input8": "alchemistinfusion:alchemical_bowl",
+      "input9": "alchemistinfusion:hunger_stone",
+      "input10": "minecraft:golden_apple#2",
+      "input11": "minecraft:golden_carrot#6"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Ice Boots",
+  "icon": "alchemistinfusion:ice_boots",
+  "category": "alchemistinfusion:armor",
+  "sortnum": 18,
+  "pages":[
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Ice Boots",
+      "tier": "Tier 2 Required",
+      "result": "alchemistinfusion:ice_boots",
+      "input3": "alchemistinfusion:alchemical_fragment_cast",
+      "input6": "minecraft:iron_boots",
+      "input7": "minecraft:nether_wart#2",
+      "input8": "minecraft:lapis_lazuli#6",
+      "input9": "minecraft:diamond",
+      "input10": "minecraft:packed_ice#2"
+    }
+  ]
+}

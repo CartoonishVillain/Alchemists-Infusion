@@ -1,0 +1,24 @@
+{
+  "name": "Quick Step Dust",
+  "icon": "alchemistinfusion:quickstep_dust",
+  "category": "alchemistinfusion:potionblocks",
+  "sortnum": 4,
+  "pages":[
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Quick Step Dust",
+      "tier": "Tier 1 Required",
+      "result": "alchemistinfusion:quickstep_dust#2",
+      "input3": "alchemistinfusion:alchemical_bowl",
+      "input7": "minecraft:sugar#3",
+      "input8": "minecraft:redstone#3",
+      "input9": "minecraft:sugar_cane#2"
+    },
+    {
+      "type": "crafting",
+      "recipe": "alchemistinfusion:quickstep_stone",
+      "text": "Get from point A to point B faster with this stone!"
+    }
+
+  ]
+}

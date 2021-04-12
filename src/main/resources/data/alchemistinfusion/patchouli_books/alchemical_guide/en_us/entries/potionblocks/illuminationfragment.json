@@ -1,0 +1,19 @@
+{
+  "name": "Illumination Fragment",
+  "icon": "alchemistinfusion:illumination_fragment",
+  "category": "alchemistinfusion:potionblocks",
+  "sortnum": 11,
+  "pages":[
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Illumination Fragment",
+      "tier": "Tier 2 Required",
+      "result": "alchemistinfusion:illumination_fragment",
+      "input6": "alchemistinfusion:alchemical_fragment_cast",
+      "input7": "alchemistinfusion:base_shard",
+      "input8": "minecraft:glowstone#3",
+      "input9": "alchemistinfusion:light_dust",
+      "input10": "minecraft:redstone_lamp#3"
+    }
+  ]
+}

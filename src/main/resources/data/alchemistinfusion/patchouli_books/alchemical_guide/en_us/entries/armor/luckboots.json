@@ -1,0 +1,21 @@
+{
+  "name": "Luck Boots",
+  "icon": "alchemistinfusion:luck_boots",
+  "category": "alchemistinfusion:armor",
+  "sortnum": 17,
+  "pages":[
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Luck Boots",
+      "tier": "Tier 2 Required",
+      "result": "alchemistinfusion:luck_boots",
+      "input2": "alchemistinfusion:alchemical_fragment_cast",
+      "input4": "alchemistinfusion:unluck_boots",
+      "input6": "minecraft:nether_wart_block#2",
+      "input7": "minecraft:nether_wart#2",
+      "input8": "minecraft:lapis_block",
+      "input9": "minecraft:gold_block",
+      "input10": "minecraft:emerald_block"
+    }
+  ]
+}

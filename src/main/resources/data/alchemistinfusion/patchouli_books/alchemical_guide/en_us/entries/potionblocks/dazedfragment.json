@@ -1,0 +1,19 @@
+{
+  "name": "Dazed Fragment",
+  "icon": "alchemistinfusion:dazed_fragment",
+  "category": "alchemistinfusion:potionblocks",
+  "sortnum": 8,
+  "pages":[
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Dazed Fragment",
+      "tier": "Tier 2 Required",
+      "result": "alchemistinfusion:dazed_fragment",
+      "input6": "alchemistinfusion:alchemical_fragment_cast",
+      "input7": "alchemistinfusion:base_shard",
+      "input8": "minecraft:wheat#3",
+      "input9": "minecraft:water_bucket",
+      "input10": "minecraft:nether_wart#3"
+    }
+  ]
+}
