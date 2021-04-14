@@ -1,12 +1,12 @@
 {
-  "name": "Cowardly Fragment",
+  "name": "Cowardly Stone",
   "icon": "alchemistinfusion:cowardly_fragment",
   "category": "alchemistinfusion:potionblocks",
   "sortnum": 7,
   "pages":[
     {
       "type": "alchemistinfusion:10recipe",
-      "title": "Cowardly Fragment",
+      "title": "Cowardly Stone",
       "tier": "Tier 2 Required",
       "result": "alchemistinfusion:cowardly_fragment",
       "input6": "alchemistinfusion:alchemical_fragment_cast",
@@ -14,6 +14,11 @@
       "input8": "minecraft:poisonous_potato#3",
       "input9": "minecraft:golden_sword",
       "input10": "minecraft:target#3"
+    },
+    {
+      "type": "crafting",
+      "recipe": "alchemistinfusion:cowardly_stone",
+      "text": "Those who step on this stone will find themselves afraid of a fight."
     }
   ]
 }

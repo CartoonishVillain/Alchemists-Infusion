@@ -1,12 +1,12 @@
 {
-  "name": "Reduced Visibility Fragment",
+  "name": "Reduced Visibility Stone",
   "icon": "alchemistinfusion:reducedvisibility_fragment",
   "category": "alchemistinfusion:potionblocks",
   "sortnum": 13,
   "pages":[
     {
       "type": "alchemistinfusion:10recipe",
-      "title": "Reduced Visibility Fragment",
+      "title": "Reduced Visibility Stone",
       "tier": "Tier 2 Required",
       "result": "alchemistinfusion:reducedvisibility_fragment",
       "input6": "alchemistinfusion:alchemical_fragment_cast",
@@ -14,6 +14,11 @@
       "input8": "minecraft:poisonous_potato#3",
       "input9": "minecraft:carrot",
       "input10": "minecraft:ink_sac#3"
+    },
+    {
+      "type": "crafting",
+      "recipe": "alchemistinfusion:reducevisibility_stone",
+      "text": "Hinder the eyes sight of your enemies with this stone!"
     }
   ]
 }

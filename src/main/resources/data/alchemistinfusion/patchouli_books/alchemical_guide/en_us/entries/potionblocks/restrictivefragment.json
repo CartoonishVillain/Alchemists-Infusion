@@ -1,12 +1,12 @@
 {
-  "name": "Restrictive Fragment",
+  "name": "Restrictive Stone",
   "icon": "alchemistinfusion:restrictive_fragment",
   "category": "alchemistinfusion:potionblocks",
   "sortnum": 14,
   "pages":[
     {
       "type": "alchemistinfusion:10recipe",
-      "title": "Restrictive Fragment",
+      "title": "Restrictive Stone",
       "tier": "Tier 2 Required",
       "result": "alchemistinfusion:restrictive_fragment",
       "input6": "alchemistinfusion:alchemical_fragment_cast",
@@ -14,6 +14,11 @@
       "input8": "minecraft:piston#3",
       "input9": "alchemistinfusion:slowdigging_dust",
       "input10": "minecraft:sticky_piston#3"
+    },
+    {
+      "type": "crafting",
+      "recipe": "alchemistinfusion:restrictive_stone",
+      "text": "For when you really need to make sure no one breaks into your vaults.."
     }
   ]
 }

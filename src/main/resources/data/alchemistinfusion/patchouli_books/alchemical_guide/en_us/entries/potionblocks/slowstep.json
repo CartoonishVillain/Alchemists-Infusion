@@ -1,12 +1,12 @@
 {
-  "name": "Slow Step Dust",
+  "name": "Slow Step Stone",
   "icon": "alchemistinfusion:slowstep_dust",
   "category": "alchemistinfusion:potionblocks",
   "sortnum": 6,
   "pages":[
     {
       "type": "alchemistinfusion:10recipe",
-      "title": "Slow Step Dust",
+      "title": "Slow Step Stone",
       "tier": "Tier 1 Required",
       "result": "alchemistinfusion:slowstep_dust#2",
       "input7": "alchemistinfusion:alchemical_bowl",

@@ -1,12 +1,12 @@
 {
-  "name": "Light Dust",
+  "name": "Light Stone",
   "icon": "alchemistinfusion:light_dust",
   "category": "alchemistinfusion:potionblocks",
   "sortnum": 3,
   "pages":[
     {
       "type": "alchemistinfusion:10recipe",
-      "title": "Light Dust",
+      "title": "Light Stone",
       "tier": "Tier 1 Required",
       "result": "alchemistinfusion:light_dust#2",
       "input3": "alchemistinfusion:alchemical_bowl",

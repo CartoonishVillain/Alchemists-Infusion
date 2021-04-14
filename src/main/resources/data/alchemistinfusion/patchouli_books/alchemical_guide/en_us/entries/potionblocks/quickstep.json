@@ -1,12 +1,12 @@
 {
-  "name": "Quick Step Dust",
+  "name": "Quick Step Stone",
   "icon": "alchemistinfusion:quickstep_dust",
   "category": "alchemistinfusion:potionblocks",
   "sortnum": 4,
   "pages":[
     {
       "type": "alchemistinfusion:10recipe",
-      "title": "Quick Step Dust",
+      "title": "Quick Step Stone",
       "tier": "Tier 1 Required",
       "result": "alchemistinfusion:quickstep_dust#2",
       "input3": "alchemistinfusion:alchemical_bowl",

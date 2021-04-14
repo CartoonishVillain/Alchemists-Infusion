@@ -1,12 +1,12 @@
 {
-  "name": "Dazed Fragment",
+  "name": "Dazed Stone",
   "icon": "alchemistinfusion:dazed_fragment",
   "category": "alchemistinfusion:potionblocks",
   "sortnum": 8,
   "pages":[
     {
       "type": "alchemistinfusion:10recipe",
-      "title": "Dazed Fragment",
+      "title": "Dazed Stone",
       "tier": "Tier 2 Required",
       "result": "alchemistinfusion:dazed_fragment",
       "input6": "alchemistinfusion:alchemical_fragment_cast",
@@ -14,6 +14,11 @@
       "input8": "minecraft:wheat#3",
       "input9": "minecraft:water_bucket",
       "input10": "minecraft:nether_wart#3"
+    },
+    {
+      "type": "crafting",
+      "recipe": "alchemistinfusion:dazed_stone",
+      "text": "Stepping on this stone causes severe nausea."
     }
   ]
 }

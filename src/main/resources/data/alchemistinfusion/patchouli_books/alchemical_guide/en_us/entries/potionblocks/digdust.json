@@ -1,12 +1,12 @@
 {
-  "name": "Digging Dust",
+  "name": "Digging Stone",
   "icon": "alchemistinfusion:digging_dust",
   "category": "alchemistinfusion:potionblocks",
   "sortnum": 1,
   "pages":[
     {
       "type": "alchemistinfusion:10recipe",
-      "title": "Digging Dust",
+      "title": "Digging Stone",
       "tier": "Tier 1 Required",
       "result": "alchemistinfusion:digging_dust#2",
       "input6": "alchemistinfusion:alchemical_bowl",

@@ -1,12 +1,12 @@
 {
-  "name": "Hop Dust",
+  "name": "Hop Stone",
   "icon": "alchemistinfusion:hop_dust",
   "category": "alchemistinfusion:potionblocks",
   "sortnum": 2,
   "pages":[
     {
       "type": "alchemistinfusion:10recipe",
-      "title": "Hop Dust",
+      "title": "Hop Stone",
       "tier": "Tier 1 Required",
       "result": "alchemistinfusion:hop_dust#2",
       "input6": "alchemistinfusion:alchemical_bowl",

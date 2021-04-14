@@ -1,12 +1,12 @@
 {
-  "name": "Slow Dig Dust",
+  "name": "Slow Dig Stone",
   "icon": "alchemistinfusion:slowdigging_dust",
   "category": "alchemistinfusion:potionblocks",
   "sortnum": 5,
   "pages":[
     {
       "type": "alchemistinfusion:10recipe",
-      "title": "Slow Dig Dust",
+      "title": "Slow Dig Stone",
       "tier": "Tier 1 Required",
       "result": "alchemistinfusion:slowdigging_dust#2",
       "input3": "alchemistinfusion:alchemical_bowl",
