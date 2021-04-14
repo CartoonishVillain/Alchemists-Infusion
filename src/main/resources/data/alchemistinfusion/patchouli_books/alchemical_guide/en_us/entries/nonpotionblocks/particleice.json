@@ -12,6 +12,11 @@
       "input7": "alchemistinfusion:alchemical_bowl",
       "input8": "minecraft:diamond",
       "input9": "minecraft:blue_ice#4"
+    },
+    {
+      "type": "spotlight",
+      "item": "alchemistinfusion:particle_ice",
+      "text": "Infused Ice that is so slippery, that you rapidly gain more and more momentum."
     }
   ]
 }

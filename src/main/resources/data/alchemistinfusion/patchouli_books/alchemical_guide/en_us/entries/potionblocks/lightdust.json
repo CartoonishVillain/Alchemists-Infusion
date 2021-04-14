@@ -6,7 +6,7 @@
   "pages":[
     {
       "type": "alchemistinfusion:10recipe",
-      "title": "Light Stone",
+      "title": "Light Dust",
       "tier": "Tier 1 Required",
       "result": "alchemistinfusion:light_dust#2",
       "input3": "alchemistinfusion:alchemical_bowl",

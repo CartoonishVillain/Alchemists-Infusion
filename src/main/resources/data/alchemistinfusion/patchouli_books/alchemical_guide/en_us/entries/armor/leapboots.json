@@ -15,6 +15,11 @@
       "input8": "alchemistinfusion:jump_fragment",
       "input9": "minecraft:emerald",
       "input10": "minecraft:nether_wart_block#2"
+    },
+    {
+      "type": "spotlight",
+      "item": "alchemistinfusion:leap_boots",
+      "text": "Allows you to crouch to prepare a much higher jump (2.5 blocks) at the cost of more hunger per charged jump!"
     }
   ]
 }

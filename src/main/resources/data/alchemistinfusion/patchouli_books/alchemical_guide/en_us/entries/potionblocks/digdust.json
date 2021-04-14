@@ -6,7 +6,7 @@
   "pages":[
     {
       "type": "alchemistinfusion:10recipe",
-      "title": "Digging Stone",
+      "title": "Digging Dust",
       "tier": "Tier 1 Required",
       "result": "alchemistinfusion:digging_dust#2",
       "input6": "alchemistinfusion:alchemical_bowl",

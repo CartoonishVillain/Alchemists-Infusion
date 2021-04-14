@@ -1,0 +1,51 @@
+{
+  "name": "Tier 2 Infusions",
+  "icon": "alchemistinfusion:activated_pavement",
+  "category": "alchemistinfusion:introduction",
+  "sortnum": 3,
+  "pages":[
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Activated Pavement",
+      "tier": "Tier 1 Required",
+      "result": "alchemistinfusion:activated_pavement",
+      "input3": "alchemistinfusion:alchemical_bowl",
+      "input6": "alchemistinfusion:primed_pavement",
+      "input7": "minecraft:flint_and_steel",
+      "input8": "minecraft:gold_ingot#4",
+      "input9": "minecraft:lapis_lazuli#4",
+      "input10": "minecraft:diamond"
+    },
+    {
+      "type": "text",
+      "text": "This stone is where you start your first tier 2 infusions. It requires the use of an Infusion Rod, or else it will not be powerful enough for tier 2 infusions. Without an infusion rod in your hands, it'll only be capable of tier 1 recipes. $(l)The next page shows the recipe for the infusion rod.",
+      "title": "Tier 2 Infusions"
+    },
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Infusion Rod",
+      "tier": "Tier 1 Required",
+      "result": "alchemistinfusion:infusion_rod",
+      "input6": "alchemistinfusion:alchemical_bowl",
+      "input7": "minecraft:blaze_rod",
+      "input8": "minecraft:gold_ingot#2",
+      "input9": "minecraft:lapis_lazuli#2",
+      "input10": "minecraft:ender_pearl"
+    },
+    {
+      "type": "text",
+      "text": "With this infusion rod, you can bring the Activated Pavement to it's full potential and run tier 2 infusions. Tier 2 infusions also lead to a new base material for some infusions. $(l)The recipe to which can be seen on the next page...",
+      "title": "Tier 2 Infusions"
+    },
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Alchemical Fragment Cast",
+      "tier": "Tier 1 Required",
+      "result": "alchemistinfusion:alchemical_fragment_cast",
+      "input3": "alchemistinfusion:alchemical_bowl",
+      "input7": "alchemistinfusion:base_shard",
+      "input8": "minecraft:clay_ball#4",
+      "input9": "minecraft:sand#4"
+    }
+  ]
+}

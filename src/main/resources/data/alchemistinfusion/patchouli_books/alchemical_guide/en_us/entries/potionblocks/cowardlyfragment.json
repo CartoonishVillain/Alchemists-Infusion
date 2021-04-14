@@ -6,7 +6,7 @@
   "pages":[
     {
       "type": "alchemistinfusion:10recipe",
-      "title": "Cowardly Stone",
+      "title": "Cowardly Fragment",
       "tier": "Tier 2 Required",
       "result": "alchemistinfusion:cowardly_fragment",
       "input6": "alchemistinfusion:alchemical_fragment_cast",

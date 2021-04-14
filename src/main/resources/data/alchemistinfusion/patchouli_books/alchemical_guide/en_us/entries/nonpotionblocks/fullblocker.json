@@ -16,6 +16,11 @@
       "input4": "alchemistinfusion:trade_blocker",
       "input9": "alchemistinfusion:inventory_blocker",
       "input10": "minecraft:observer"
+    },
+    {
+      "type": "spotlight",
+      "item": "alchemistinfusion:full_blocker",
+      "text": "Blocks users from being able to trade with villagers, open containers, crafting tables, or their inventories! $(l)Mod support not guarenteed."
     }
   ]
 }

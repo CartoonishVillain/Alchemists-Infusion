@@ -14,6 +14,11 @@
       "input8": "alchemistinfusion:primed_pavement#4",
       "input9": "minecraft:chest",
       "input10": "minecraft:observer"
+    },
+    {
+      "type": "spotlight",
+      "item": "alchemistinfusion:container_blocker",
+      "text": "Blocks users from being able to open containers while standing on this block!$(l) May or may not work on modded containers!"
     }
   ]
 }

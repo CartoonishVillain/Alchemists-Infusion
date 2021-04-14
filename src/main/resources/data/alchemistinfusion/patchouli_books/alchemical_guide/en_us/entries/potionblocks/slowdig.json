@@ -6,7 +6,7 @@
   "pages":[
     {
       "type": "alchemistinfusion:10recipe",
-      "title": "Slow Dig Stone",
+      "title": "Slow Dig Dust",
       "tier": "Tier 1 Required",
       "result": "alchemistinfusion:slowdigging_dust#2",
       "input3": "alchemistinfusion:alchemical_bowl",

@@ -14,6 +14,11 @@
       "input8": "alchemistinfusion:primed_pavement#4",
       "input9": "minecraft:emerald",
       "input10": "minecraft:observer"
+    },
+    {
+      "type": "spotlight",
+      "item": "alchemistinfusion:trade_blocker",
+      "text": "Blocks users from being able to trade with villagers while standing on this block!"
     }
   ]
 }

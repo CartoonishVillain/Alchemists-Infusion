@@ -6,7 +6,7 @@
   "pages":[
     {
       "type": "alchemistinfusion:10recipe",
-      "title": "Restrictive Stone",
+      "title": "Restrictive Fragment",
       "tier": "Tier 2 Required",
       "result": "alchemistinfusion:restrictive_fragment",
       "input6": "alchemistinfusion:alchemical_fragment_cast",

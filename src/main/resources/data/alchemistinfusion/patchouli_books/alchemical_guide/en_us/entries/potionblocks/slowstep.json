@@ -6,7 +6,7 @@
   "pages":[
     {
       "type": "alchemistinfusion:10recipe",
-      "title": "Slow Step Stone",
+      "title": "Slow Step Dust",
       "tier": "Tier 1 Required",
       "result": "alchemistinfusion:slowstep_dust#2",
       "input7": "alchemistinfusion:alchemical_bowl",

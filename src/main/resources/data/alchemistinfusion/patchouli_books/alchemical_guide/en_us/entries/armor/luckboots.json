@@ -16,6 +16,11 @@
       "input8": "minecraft:lapis_block",
       "input9": "minecraft:gold_block",
       "input10": "minecraft:emerald_block"
+    },
+    {
+      "type": "spotlight",
+      "item": "alchemistinfusion:luck_boots",
+      "text": "Your good luck charm"
     }
   ]
 }

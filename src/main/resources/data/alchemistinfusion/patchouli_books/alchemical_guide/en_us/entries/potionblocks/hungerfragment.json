@@ -6,7 +6,7 @@
   "pages":[
     {
       "type": "alchemistinfusion:10recipe",
-      "title": "Hunger Stone",
+      "title": "Hunger Fragment",
       "tier": "Tier 2 Required",
       "result": "alchemistinfusion:hunger_fragment",
       "input3": "alchemistinfusion:alchemical_fragment_cast",

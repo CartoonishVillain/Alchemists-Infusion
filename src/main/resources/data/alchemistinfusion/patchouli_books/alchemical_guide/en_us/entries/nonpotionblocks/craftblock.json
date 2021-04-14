@@ -14,6 +14,11 @@
       "input8": "alchemistinfusion:primed_pavement#4",
       "input9": "minecraft:crafting_table",
       "input10": "minecraft:observer"
+    },
+    {
+      "type": "spotlight",
+      "item": "alchemistinfusion:crafting_blocker",
+      "text": "Blocks users from being able to open crafting interfaces while standing on this block!"
     }
   ]
 }

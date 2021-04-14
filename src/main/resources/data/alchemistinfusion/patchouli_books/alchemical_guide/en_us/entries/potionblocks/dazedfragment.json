@@ -6,7 +6,7 @@
   "pages":[
     {
       "type": "alchemistinfusion:10recipe",
-      "title": "Dazed Stone",
+      "title": "Dazed Fragment",
       "tier": "Tier 2 Required",
       "result": "alchemistinfusion:dazed_fragment",
       "input6": "alchemistinfusion:alchemical_fragment_cast",

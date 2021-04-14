@@ -6,7 +6,7 @@
   "pages":[
     {
       "type": "alchemistinfusion:10recipe",
-      "title": "Reduced Visibility Stone",
+      "title": "Reduced Visibility Fragment",
       "tier": "Tier 2 Required",
       "result": "alchemistinfusion:reducedvisibility_fragment",
       "input6": "alchemistinfusion:alchemical_fragment_cast",
@@ -17,7 +17,7 @@
     },
     {
       "type": "crafting",
-      "recipe": "alchemistinfusion:reducevisibility_stone",
+      "recipe": "alchemistinfusion:reducedvisibility_stone",
       "text": "Hinder the eyes sight of your enemies with this stone!"
     }
   ]

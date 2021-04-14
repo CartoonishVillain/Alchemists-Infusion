@@ -16,6 +16,11 @@
       "input8": "minecraft:iron_boots",
       "input9": "minecraft:nether_wart_block#2",
       "input10": "minecraft:iron_block"
+    },
+    {
+      "type": "spotlight",
+      "item": "alchemistinfusion:unluck_boots",
+      "text": "Your bad luck charm"
     }
   ]
 }

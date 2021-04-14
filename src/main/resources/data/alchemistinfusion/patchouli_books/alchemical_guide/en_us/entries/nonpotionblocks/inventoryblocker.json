@@ -14,6 +14,11 @@
       "input8": "alchemistinfusion:primed_pavement#4",
       "input9": "minecraft:campfire",
       "input10": "minecraft:observer"
+    },
+    {
+      "type": "spotlight",
+      "item": "alchemistinfusion:inventory_blocker",
+      "text": "Blocks users from being able to open their inventory while standing on this block!"
     }
   ]
 }

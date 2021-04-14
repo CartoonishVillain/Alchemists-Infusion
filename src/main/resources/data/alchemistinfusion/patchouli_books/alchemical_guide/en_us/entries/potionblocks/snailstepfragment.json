@@ -6,7 +6,7 @@
   "pages":[
     {
       "type": "alchemistinfusion:10recipe",
-      "title": "Snail Step Stone",
+      "title": "Snail Step Fragment",
       "tier": "Tier 2 Required",
       "result": "alchemistinfusion:snailstep_fragment",
       "input6": "alchemistinfusion:alchemical_fragment_cast",

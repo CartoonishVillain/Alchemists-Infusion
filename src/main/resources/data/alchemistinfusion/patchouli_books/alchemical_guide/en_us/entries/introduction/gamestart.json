@@ -2,6 +2,7 @@
   "name": "Introduction",
   "icon": "alchemistinfusion:pavement_carver",
   "category": "alchemistinfusion:introduction",
+  "sortnum": 1,
   "pages": [
     {
       "type": "blasting",

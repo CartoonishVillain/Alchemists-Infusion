@@ -15,6 +15,11 @@
       "input8": "minecraft:lapis_lazuli#6",
       "input9": "minecraft:diamond",
       "input10": "minecraft:packed_ice#2"
+    },
+    {
+      "type": "spotlight",
+      "item": "alchemistinfusion:ice_boots",
+      "text": "These boots are as cold as ice, because they are infact ice! You will constantly slip around while wearing these boots, but this gives a movement speed increase when working with the slippery properties"
     }
   ]
 }

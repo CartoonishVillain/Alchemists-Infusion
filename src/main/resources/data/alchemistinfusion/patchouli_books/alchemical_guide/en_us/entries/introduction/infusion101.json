@@ -1,0 +1,27 @@
+{
+  "name": "Infusions 101",
+  "icon": "alchemistinfusion:infusion_rod",
+  "category": "alchemistinfusion:introduction",
+  "sortnum": 2,
+  "pages":[
+    {
+      "type": "text",
+      "text": "To do an infusion, you must have an Infusion stone at the bottom. For Tier 1 infusions, this would be the primed pavement. For every tier above, the new block is listed within the first pages of the entry.$(br2)An Infusion recipe, with an example shown on the next page must have all ingredients on the stone before starting for the infusion to work.",
+      "title": "Infusions 101"
+    },
+    {
+      "type": "text",
+      "text": "If you placed the correct items for the recipe, all but the foundational materials will be consumed, and your new item will be made. The recipe will also tell you the minimum tier station required for the infusion to go through."
+    },
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Example infusion recipe",
+      "tier": "Tier 1 Required",
+      "result": "alchemistinfusion:quickstep_dust#2",
+      "input3": "alchemistinfusion:alchemical_bowl",
+      "input7": "minecraft:sugar#3",
+      "input8": "minecraft:redstone#3",
+      "input9": "minecraft:sugar_cane#2"
+    }
+  ]
+}

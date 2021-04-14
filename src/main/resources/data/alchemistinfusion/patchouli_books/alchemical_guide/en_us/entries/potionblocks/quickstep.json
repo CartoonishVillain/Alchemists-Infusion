@@ -6,7 +6,7 @@
   "pages":[
     {
       "type": "alchemistinfusion:10recipe",
-      "title": "Quick Step Stone",
+      "title": "Quick Step Dust",
       "tier": "Tier 1 Required",
       "result": "alchemistinfusion:quickstep_dust#2",
       "input3": "alchemistinfusion:alchemical_bowl",

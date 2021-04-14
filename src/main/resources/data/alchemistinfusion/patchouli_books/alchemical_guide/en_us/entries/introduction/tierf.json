@@ -1,0 +1,33 @@
+{
+  "name": "Tier F Infusions",
+  "icon": "alchemistinfusion:culinary_pavement",
+  "category": "alchemistinfusion:introduction",
+  "sortnum": 5,
+  "pages":[
+    {
+      "type": "alchemistinfusion:12recipe",
+      "title": "Culinary Attuned Pavement",
+      "tier": "Tier 2 Required",
+      "result": "alchemistinfusion:culinary_pavement",
+      "input8": "alchemistinfusion:alchemical_bowl",
+      "input9": "alchemistinfusion:hunger_stone",
+      "input10": "minecraft:golden_apple#2",
+      "input11": "minecraft:golden_carrot#6"
+    },
+    {
+      "type": "text",
+      "text": "Tier F, for food, is an offshoot of Tier 2 Infusions dedicated to infusing foods with different effects. Food based Infusions require a small magical key to be performed, $(l)The recipe to which can be found on the next page",
+      "title": "Tier F Infusion"
+    },
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Alchemical Culinary Key",
+      "tier": "Tier 2 Required",
+      "result": "alchemistinfusion:alchemical_culinary_key",
+      "input3": "alchemistinfusion:alchemical_bowl",
+      "input7": "minecraft:gold_ingot",
+      "input8": "minecraft:lapis_lazuli",
+      "input9": "minecraft:golden_carrot"
+    }
+  ]
+}
