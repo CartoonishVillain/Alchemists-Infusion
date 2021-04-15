@@ -49,6 +49,11 @@
       "input8": "minecraft:lapis_lazuli",
       "input9": "minecraft:nether_wart#3",
       "input10": "minecraft:nether_wart_block"
+    },
+    {
+      "type": "crafting",
+      "recipe": "alchemistinfusion:base_gem",
+      "text": "This is also a regularly used item in Tier 3 Infusions"
     }
   ]
 }

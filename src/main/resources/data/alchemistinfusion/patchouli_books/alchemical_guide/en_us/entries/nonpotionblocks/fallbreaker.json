@@ -1,0 +1,13 @@
+{
+  "name": "Fall Breaker",
+  "icon": "alchemistinfusion:fall_breaker",
+  "category": "alchemistinfusion:otherblocks",
+  "sortnum": 1,
+  "pages":[
+    {
+      "type": "crafting",
+      "recipe": "alchemistinfusion:fall_breaker",
+      "text": "Allows you to fall from significant heights without dying. Barring any previous damage or modifiers increasing fall damage."
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Iron Steak",
+  "icon": "alchemistinfusion:iron_steak",
+  "category": "alchemistinfusion:food",
+  "sortnum": 3,
+  "pages":[
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Iron Steak",
+      "tier": "Tier F Required",
+      "result": "alchemistinfusion:iron_steak",
+      "input7": "alchemistinfusion:alchemical_culinary_key",
+      "input8": "minecraft:iron_ingot#6",
+      "input9": "minecraft:cooked_beef"
+    },
+    {
+      "type": "text",
+      "text": "A cooked slab of steak infused with iron. Toughens up your gut for a while, but makes you slower in the process.",
+      "title": "Iron Steak"
+    }
+
+  ]
+}

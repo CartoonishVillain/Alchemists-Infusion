@@ -1,0 +1,24 @@
+{
+  "name": "Brave Stone",
+  "icon": "alchemistinfusion:brave_gem",
+  "category": "alchemistinfusion:potionblocks",
+  "sortnum": 18,
+  "pages":[
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Brave Gem",
+      "tier": "Tier 3 Required",
+      "result": "alchemistinfusion:brave_gem",
+      "input6": "alchemistinfusion:alchemical_gem_cast",
+      "input7": "alchemistinfusion:base_gem",
+      "input8": "minecraft:diamond_sword",
+      "input9": "minecraft:magma_block#3",
+      "input10": "minecraft:blaze_rod#3"
+    },
+    {
+      "type": "crafting",
+      "recipe": "alchemistinfusion:brave_stone",
+      "text": "Helps those who stands on it stand up to the challenges that face them (with strength!)"
+    }
+  ]
+}

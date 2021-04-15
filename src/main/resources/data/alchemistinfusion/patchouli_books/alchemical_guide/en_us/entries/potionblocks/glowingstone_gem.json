@@ -1,0 +1,24 @@
+{
+  "name": "Glowing Stone",
+  "icon": "alchemistinfusion:glowing_gem",
+  "category": "alchemistinfusion:potionblocks",
+  "sortnum": 23,
+  "pages":[
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Glowing Gem",
+      "tier": "Tier 3 Required",
+      "result": "alchemistinfusion:glowing_gem",
+      "input6": "alchemistinfusion:alchemical_gem_cast",
+      "input7": "alchemistinfusion:base_gem",
+      "input8": "minecraft:end_rod#2",
+      "input9": "minecraft:sea_lantern#4",
+      "input10": "alchemistinfusion:illumination_fragment"
+    },
+    {
+      "type": "crafting",
+      "recipe": "alchemistinfusion:glowing_stone",
+      "text": "Lights up the world and places a fairly long lasting glow effect on those who pass by"
+    }
+  ]
+}

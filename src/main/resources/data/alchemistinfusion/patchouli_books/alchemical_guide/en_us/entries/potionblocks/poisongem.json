@@ -1,0 +1,26 @@
+{
+  "name": "Poison Stone",
+  "icon": "alchemistinfusion:poison_gem",
+  "category": "alchemistinfusion:potionblocks",
+  "sortnum": 26,
+  "pages":[
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Poison Gem",
+      "tier": "Tier 3 Required",
+      "result": "alchemistinfusion:poison_gem",
+      "input3": "alchemistinfusion:alchemical_gem_cast",
+      "input6": "alchemistinfusion:base_gem",
+      "input7": "minecraft:fermented_spider_eye",
+      "input8": "minecraft:pufferfish#4",
+      "input9": "minecraft:golden_apple",
+      "input10": "alchemistinfusion:dazed_fragment"
+    },
+    {
+      "type": "crafting",
+      "recipe": "alchemistinfusion:poison_stone",
+      "text": "Hit intruders where it hurts! Gives a constant poison effect while stood on."
+    }
+  ]
+}
+

@@ -1,0 +1,26 @@
+
+{
+  "name": "Mobility Stone",
+  "icon": "alchemistinfusion:mobility_stone",
+  "category": "alchemistinfusion:potionblocks",
+  "sortnum": 31,
+  "pages":[
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Mobility Stone",
+      "tier": "Tier 3 Required",
+      "result": "alchemistinfusion:mobility_stone",
+      "input3": "minecraft:diamond_block",
+      "input6": "alchemistinfusion:speed_step_stone",
+      "input7": "minecraft:emerald_block",
+      "input8": "minecraft:slime_block",
+      "input9": "alchemistinfusion:bag_of_sugar#3",
+      "input10": "alchemistinfusion:leap_stone"
+    },
+    {
+      "type": "spotlight",
+      "item": "alchemistinfusion:mobility_stone",
+      "text": "Combines the effects of the leap and speed step stone to allow those who step on this stone high mobility for a short amount of time."
+    }
+  ]
+}

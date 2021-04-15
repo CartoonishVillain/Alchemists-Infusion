@@ -1,6 +1,6 @@
 {
   "name": "Container Blocker",
-  "icon": "alchemistinfusion:otherblocks",
+  "icon": "alchemistinfusion:container_blocker",
   "category": "alchemistinfusion:otherblocks",
   "sortnum": 5,
   "pages":[

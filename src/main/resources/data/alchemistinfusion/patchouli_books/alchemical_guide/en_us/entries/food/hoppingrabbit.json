@@ -1,0 +1,22 @@
+{
+  "name": "Hopping Rabbit",
+  "icon": "alchemistinfusion:hopping_rabbit",
+  "category": "alchemistinfusion:food",
+  "sortnum": 1,
+  "pages":[
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Hopping Rabbit",
+      "tier": "Tier F Required",
+      "result": "alchemistinfusion:hopping_rabbit",
+      "input7": "alchemistinfusion:alchemical_culinary_key",
+      "input8": "minecraft:rabbit_foot#4",
+      "input9": "minecraft:cooked_rabbit"
+    },
+    {
+      "type": "text",
+      "text": "A cooked rabbit infused with the essence of jumping to give the consumer a jump boost effect.",
+      "title": "Hopping Rabbit"
+    }
+  ]
+}

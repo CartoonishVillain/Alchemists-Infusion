@@ -1,0 +1,6 @@
+{
+  "name": "Infused Food",
+  "description": "Displays the recipes and requirements for infused food as well as what they do.",
+  "icon": "alchemistinfusion:sugar_stick",
+  "sortnum": 5
+}

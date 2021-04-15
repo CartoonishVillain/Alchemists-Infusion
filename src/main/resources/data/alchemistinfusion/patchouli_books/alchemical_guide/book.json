@@ -4,6 +4,7 @@
   "version": 1,
   "book_texture": "patchouli:textures/gui/book_purple.png",
   "model": "alchemistinfusion:modifiedbook",
+  "filler_texture": "alchemistinfusion:textures/blankpage.png",
   "creative_tab": "AlchemistInfusion",
   "show_progress": false
 }

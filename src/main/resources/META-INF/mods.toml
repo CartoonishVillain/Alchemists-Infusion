@@ -1,8 +1,3 @@
-# This is an example mods.toml file. It contains the data relating to the loading mods.
-# There are several mandatory fields (#mandatory), and many more that are optional (#optional).
-# The overall format is standard TOML format, v0.5.0.
-# Note that there are a couple of TOML lists in this file.
-# Find more information on toml format here:  https://github.com/toml-lang/toml
 # The name of the mod loader type to load - for regular FML @Mod mods it should be javafml
 modLoader="javafml" #mandatory
 # A version range to match for said mod loader - for regular FML @Mod it will be the forge version
@@ -21,18 +16,18 @@ version="1.1.0" #mandatory
  # A display name for the mod
 displayName="Alchemist Infusion" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification <here>
-updateJSONURL="https://github.com/jedijoe93/Alchemists-Infusion" #optional
+#updateJSONURL="https://github.com/jedijoe93/Alchemists-Infusion" #optional
 # A URL for the "homepage" for this mod, displayed in the mod UI
-displayURL="https://github.com/jedijoe93/Alchemists-Infusion" #optional
+displayURL="https://github.com/CartoonishVillain/Alchemists-Infusion" #optional
 # A file name (in the root of the mod JAR) containing a logo for display
-logoFile="examplemod.png" #optional
+#logoFile="examplemod.png" #optional
 # A text field displayed in the mod UI
 credits="Mojang, Blusunrize (and the folks behind Immersive Engineering), Commoble, and the Forge Team" #optional
 # A text field displayed in the mod UI
 authors="Cartoonish Villain (Formerly: jedijoe_)" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-Alchemist infusion is all about taking potion effects, as well as other strange properties, and adding new ways to obtain them by imbuing their essence into new things.
+Alchemist Infusion is about taking properties from items, and infusing them into new mediums
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.examplemod]] #optional

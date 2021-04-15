@@ -1,0 +1,22 @@
+{
+  "name": "Visibility Stone",
+  "icon": "alchemistinfusion:visibility_gem",
+  "category": "alchemistinfusion:potionblocks",
+  "sortnum": 29,
+  "pages": [
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Visibility Gem",
+      "tier": "Tier 3 Required",
+      "result": "alchemistinfusion:visibility_gem",
+      "input7": "alchemistinfusion:alchemical_gem_cast",
+      "input8": "minecraft:golden_carrot#6",
+      "input9": "alchemistinfusion:glowing_gem"
+    },
+    {
+      "type": "crafting",
+      "recipe": "alchemistinfusion:visibility_stone",
+      "text": "Provides night vision to those who step on the infused stone."
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Vision Carrot",
+  "icon": "alchemistinfusion:vision_carrot",
+  "category": "alchemistinfusion:food",
+  "sortnum": 7,
+  "pages":[
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Vision Carrot",
+      "tier": "Tier F Required",
+      "result": "alchemistinfusion:vision_carrot",
+      "input3": "alchemistinfusion:alchemical_culinary_key",
+      "input7": "minecraft:torch#4",
+      "input8": "minecraft:glowstone_dust#2",
+      "input9": "minecraft:golden_carrot"
+    },
+    {
+      "type": "text",
+      "text": "They always said carrots were good for your eyes... This golden carrot gives you temporary night vision, and may also cause other visual anomalies!",
+      "title": "Vision Carrot"
+    }
+  ]
+}

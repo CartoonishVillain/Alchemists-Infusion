@@ -1,0 +1,23 @@
+{
+  "name": "Productive Potato",
+  "icon": "alchemistinfusion:productive_potato",
+  "category": "alchemistinfusion:food",
+  "sortnum": 4,
+  "pages":[
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Productive Potato",
+      "tier": "Tier F Required",
+      "result": "alchemistinfusion:productive_potato",
+      "input3": "alchemistinfusion:alchemical_culinary_key",
+      "input7": "minecraft:coal#4",
+      "input8": "minecraft:iron_ingot#2",
+      "input9": "minecraft:baked_potato"
+    },
+    {
+      "type": "text",
+      "text": "A potato that fills you with the energy to keep swinging that pickaxe...",
+      "title": "Productive Potato"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Blindness Stone",
+  "icon": "alchemistinfusion:blindness_gem",
+  "category": "alchemistinfusion:potionblocks",
+  "sortnum": 17,
+  "pages":[
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Blindness Gem",
+      "tier": "Tier 3 Required",
+      "result": "alchemistinfusion:blindness_gem",
+      "input3": "alchemistinfusion:alchemical_gem_cast",
+      "input7": "alchemistinfusion:base_gem",
+      "input8": "minecraft:ink_sac#6",
+      "input9": "alchemistinfusion:reducedvisibility_fragment"
+    },
+    {
+      "type": "crafting",
+      "recipe": "alchemistinfusion:blindness_stone",
+      "text": "Those who step on this stone, as the name suggests, go blind temporarily"
+    }
+  ]
+}

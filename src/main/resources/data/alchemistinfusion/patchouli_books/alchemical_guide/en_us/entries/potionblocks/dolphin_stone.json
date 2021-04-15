@@ -1,0 +1,26 @@
+
+{
+  "name": "Dolphin Stone",
+  "icon": "alchemistinfusion:dolphin_stone",
+  "category": "alchemistinfusion:potionblocks",
+  "sortnum": 30,
+  "pages":[
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Dolphin Stone",
+      "tier": "Tier 3 Required",
+      "result": "alchemistinfusion:dolphin_stone",
+      "input3": "minecraft:diamond_block",
+      "input6": "alchemistinfusion:speed_step_stone",
+      "input7": "minecraft:emerald_block#2",
+      "input8": "minecraft:heart_of_the_sea",
+      "input9": "alchemistinfusion:bag_of_sugar#3",
+      "input10": "alchemistinfusion:fish_stone"
+    },
+    {
+      "type": "spotlight",
+      "item": "alchemistinfusion:dolphin_stone",
+      "text": "Combines the effects of the fish and speed step stone to artificially create the essence of a dolphin's grace, and apply it to those who stand on this stone."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Resistance Stone",
+  "icon": "alchemistinfusion:resistance_gem",
+  "category": "alchemistinfusion:potionblocks",
+  "sortnum": 27,
+  "pages":[
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Resistance Gem",
+      "tier": "Tier 3 Required",
+      "result": "alchemistinfusion:resistance_gem",
+      "input6": "alchemistinfusion:alchemical_gem_cast",
+      "input7": "alchemistinfusion:base_gem",
+      "input8": "minecraft:obsidian#3",
+      "input9": "minecraft:armor_stand#3",
+      "input10": "alchemistinfusion:shield_fragment"
+    },
+    {
+      "type": "crafting",
+      "recipe": "alchemistinfusion:resistance_stone",
+      "text": "Helps those standing on this infused stone defend themselves!"
+    }
+  ]
+}

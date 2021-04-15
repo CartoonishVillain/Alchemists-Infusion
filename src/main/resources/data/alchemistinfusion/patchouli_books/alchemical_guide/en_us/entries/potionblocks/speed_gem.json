@@ -1,0 +1,23 @@
+{
+  "name": "Speed Step Stone",
+  "icon": "alchemistinfusion:speed_step_gem",
+  "category": "alchemistinfusion:potionblocks",
+  "sortnum": 28,
+  "pages":[
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Speed Step Gem",
+      "tier": "Tier 3 Required",
+      "result": "alchemistinfusion:speed_step_gem",
+      "input3": "alchemistinfusion:alchemical_gem_cast",
+      "input7": "alchemistinfusion:base_gem",
+      "input8": "alchemistinfusion:bag_of_sugar#6",
+      "input9": "alchemistinfusion:faststep_fragment"
+    },
+    {
+      "type": "crafting",
+      "recipe": "alchemistinfusion:speed_step_stone",
+      "text": "From Point A to Point D"
+    }
+  ]
+}

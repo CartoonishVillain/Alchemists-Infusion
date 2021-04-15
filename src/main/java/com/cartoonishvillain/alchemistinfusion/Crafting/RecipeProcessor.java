@@ -5,6 +5,7 @@ import com.cartoonishvillain.alchemistinfusion.Items.KeyItem;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.particles.ParticleTypes;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
@@ -12,6 +13,7 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.World;
+import net.minecraft.world.server.ServerWorld;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -43,6 +45,12 @@ public class RecipeProcessor {
         }
         if(trueReward == null){
             playerEntity.sendStatusMessage(new StringTextComponent("No matching recipes! Please recheck your components!"), false);
+            ServerWorld serverWorld = (ServerWorld) world;
+            serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.5, 0.5, 0.5, 0);
+            serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.1, 0.5, 0.1, 0);
+            serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.1, 0.5, 0.9, 0);
+            serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.9, 0.5, 0.9, 0);
+            serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.9, 0.5, 0.1, 0);
             world.playSound(null, pos, new SoundEvent(SoundEvents.ENTITY_GENERIC_EXTINGUISH_FIRE.getRegistryName()), SoundCategory.BLOCKS, 100f, 1.5f);
             return;}
         else reward = trueReward;
@@ -54,6 +62,12 @@ public class RecipeProcessor {
 
         ItemEntity itemEntity = new ItemEntity(world, pos.getX(), pos.getY() + 1, pos.getZ(), reward);
         world.addEntity(itemEntity);
+        ServerWorld serverWorld = (ServerWorld) world;
+        serverWorld.spawnParticle(ParticleTypes.HAPPY_VILLAGER, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.5, 0.5, 0.5, 0);
+        serverWorld.spawnParticle(ParticleTypes.HAPPY_VILLAGER, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.1, 0.5, 0.1, 0);
+        serverWorld.spawnParticle(ParticleTypes.HAPPY_VILLAGER, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.1, 0.5, 0.9, 0);
+        serverWorld.spawnParticle(ParticleTypes.HAPPY_VILLAGER, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.9, 0.5, 0.9, 0);
+        serverWorld.spawnParticle(ParticleTypes.HAPPY_VILLAGER, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.9, 0.5, 0.1, 0);
         world.playSound(null, pos, new SoundEvent(SoundEvents.ENTITY_PLAYER_LEVELUP.getRegistryName()), SoundCategory.BLOCKS, 100f, 1.5f);
     }
 

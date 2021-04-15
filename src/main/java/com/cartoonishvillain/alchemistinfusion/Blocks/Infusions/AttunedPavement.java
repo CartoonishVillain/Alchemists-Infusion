@@ -13,11 +13,13 @@ import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.particles.ParticleTypes;
 import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.World;
+import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.ToolType;
 
 import java.util.ArrayList;
@@ -34,9 +36,9 @@ public class AttunedPavement extends Block {
             ArrayList<ArrayList<ItemStack>> recipe = null;
             ArrayList<ItemEntity> itemEntities = RecipeProcessor.Scan(pos, worldIn);
             Item keyItem = null;
-            if (player.getHeldItemMainhand().getItem().equals(ItemRegistry.ATTUNEDINFUSIONROD.get()) || player.getHeldItemOffhand().getItem().equals(ItemRegistry.ATTUNEDINFUSIONROD.get())){
+            if (player.getHeldItemMainhand().getItem().equals(ItemRegistry.ATTUNEDINFUSIONROD.get()) || player.getHeldItemOffhand().getItem().equals(ItemRegistry.ATTUNEDINFUSIONROD.get())) {
                 for (ItemEntity itemEntity : itemEntities) {
-                    if (itemEntity.getItem().getItem() instanceof KeyItem || (itemEntity.getItem().getItem() instanceof PotionBlockItemBase && (itemEntity.getItem().getItem().getRegistryName().toString().equals("alchemistinfusion:fish_stone") || itemEntity.getItem().getItem().getRegistryName().toString().equals("alchemistinfusion:snailstep_stone") || itemEntity.getItem().getItem().getRegistryName().toString().equals("alchemistinfusion:speed_step_stone"))))
+                    if (itemEntity.getItem().getItem() instanceof KeyItem || (itemEntity.getItem().getItem() instanceof PotionBlockItemBase && (itemEntity.getItem().getItem().getRegistryName().toString().equals("alchemistinfusion:snailstep_stone") || itemEntity.getItem().getItem().getRegistryName().toString().equals("alchemistinfusion:speed_step_stone"))))
                         keyItem = itemEntity.getItem().getItem();
                     if (keyItem != null) break;
                 }
@@ -47,10 +49,24 @@ public class AttunedPavement extends Block {
                         RecipeProcessor.AttemptRecipe(recipe, itemEntities, pos, worldIn, null, player);
                     else {
                         player.sendStatusMessage(new StringTextComponent("No recipes found. Are you using the right tier? Do you have the ingredients? (Currently: Tier 3)"), false);
+                        ServerWorld serverWorld = (ServerWorld) worldIn;
+                        serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY() + 1, pos.getZ(), 10, 0.5, 0.5, 0.5, 0);
+                        serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY() + 1, pos.getZ(), 10, 0.1, 0.5, 0.1, 0);
+                        serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY() + 1, pos.getZ(), 10, 0.1, 0.5, 0.9, 0);
+                        serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY() + 1, pos.getZ(), 10, 0.9, 0.5, 0.9, 0);
+                        serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY() + 1, pos.getZ(), 10, 0.9, 0.5, 0.1, 0);
                         worldIn.playSound(null, pos, new SoundEvent(SoundEvents.ENTITY_GENERIC_EXTINGUISH_FIRE.getRegistryName()), SoundCategory.BLOCKS, 100f, 1.5f);
                     }
-                }else player.sendStatusMessage(new StringTextComponent("No recipes found. Are you using the right tier? Do you have the ingredients? (Currently: Tier 3)"), false);
-                worldIn.playSound(null, pos, new SoundEvent(SoundEvents.ENTITY_GENERIC_EXTINGUISH_FIRE.getRegistryName()), SoundCategory.BLOCKS, 100f, 1.5f);
+                } else {
+                    player.sendStatusMessage(new StringTextComponent("No recipes found. Are you using the right tier? Do you have the ingredients? (Currently: Tier 3)"), false);
+                    ServerWorld serverWorld = (ServerWorld) worldIn;
+                    serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY() + 1, pos.getZ(), 10, 0.5, 0.5, 0.5, 0);
+                    serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY() + 1, pos.getZ(), 10, 0.1, 0.5, 0.1, 0);
+                    serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY() + 1, pos.getZ(), 10, 0.1, 0.5, 0.9, 0);
+                    serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY() + 1, pos.getZ(), 10, 0.9, 0.5, 0.9, 0);
+                    serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY() + 1, pos.getZ(), 10, 0.9, 0.5, 0.1, 0);
+                    worldIn.playSound(null, pos, new SoundEvent(SoundEvents.ENTITY_GENERIC_EXTINGUISH_FIRE.getRegistryName()), SoundCategory.BLOCKS, 100f, 1.5f);
+                }
             }
             else{
                 for (ItemEntity itemEntity : itemEntities) {
@@ -65,10 +81,23 @@ public class AttunedPavement extends Block {
                         RecipeProcessor.AttemptRecipe(recipe, itemEntities, pos, worldIn, null, player);
                     else {
                         player.sendStatusMessage(new StringTextComponent("No recipes found. You are not using an attuned infusion rod, reducing the capabilities of this block! (Currently: Tier 2)"), false);
+                        ServerWorld serverWorld = (ServerWorld) worldIn;
+                        serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.5, 0.5, 0.5, 0);
+                        serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.1, 0.5, 0.1, 0);
+                        serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.1, 0.5, 0.9, 0);
+                        serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.9, 0.5, 0.9, 0);
+                        serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.9, 0.5, 0.1, 0);
                         worldIn.playSound(null, pos, new SoundEvent(SoundEvents.ENTITY_GENERIC_EXTINGUISH_FIRE.getRegistryName()), SoundCategory.BLOCKS, 100f, 1.5f);
                     }
-                }else player.sendStatusMessage(new StringTextComponent("No recipes found. You are not using an attuned infusion rod, reducing the capabilities of this block! (Currently: Tier 2)"), false);
+                }else{ player.sendStatusMessage(new StringTextComponent("No recipes found. You are not using an attuned infusion rod, reducing the capabilities of this block! (Currently: Tier 2)"), false);
+                ServerWorld serverWorld = (ServerWorld) worldIn;
+                serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.5, 0.5, 0.5, 0);
+                serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.1, 0.5, 0.1, 0);
+                serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.1, 0.5, 0.9, 0);
+                serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.9, 0.5, 0.9, 0);
+                serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.9, 0.5, 0.1, 0);
                 worldIn.playSound(null, pos, new SoundEvent(SoundEvents.ENTITY_GENERIC_EXTINGUISH_FIRE.getRegistryName()), SoundCategory.BLOCKS, 100f, 1.5f);
+            }
             }
         }
         return ActionResultType.SUCCESS;

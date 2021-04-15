@@ -1,0 +1,14 @@
+{
+  "name": "Sugar Sticks",
+  "icon": "alchemistinfusion:sugar_stick",
+  "category": "alchemistinfusion:food",
+  "sortnum": 6,
+  "pages":[
+    {
+      "type": "crafting",
+      "recipe": "alchemistinfusion:sugar_stick",
+      "text": "A mundane package of sugar. Gives a sugar high, but has a chance to make you ill temporarily"
+    }
+
+  ]
+}

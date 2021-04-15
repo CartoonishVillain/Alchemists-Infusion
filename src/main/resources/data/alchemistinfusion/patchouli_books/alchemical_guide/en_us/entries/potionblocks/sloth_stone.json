@@ -1,0 +1,26 @@
+
+{
+  "name": "Sloth Stone",
+  "icon": "alchemistinfusion:sloth_stone",
+  "category": "alchemistinfusion:potionblocks",
+  "sortnum": 32,
+  "pages":[
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Sloth Stone",
+      "tier": "Tier 3 Required",
+      "result": "alchemistinfusion:sloth_stone",
+      "input3": "minecraft:diamond_block",
+      "input6": "alchemistinfusion:snailstep_stone",
+      "input7": "minecraft:emerald_block",
+      "input8": "minecraft:soul_campfire",
+      "input9": "minecraft:sticky_piston",
+      "input10": "alchemistinfusion:restrictive_stone"
+    },
+    {
+      "type": "spotlight",
+      "item": "alchemistinfusion:sloth_stone",
+      "text": "Combines the effects of the snail step stone and the restrictive stone to keep those who step on this infused stone slow and unable to break blocks efficiently."
+    }
+  ]
+}

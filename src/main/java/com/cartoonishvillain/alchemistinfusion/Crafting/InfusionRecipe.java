@@ -145,14 +145,13 @@ public class InfusionRecipe {
                 stacks.add(new ArrayList<>(Arrays.asList(new ItemStack(item), new ItemStack(Items.SLIME_BLOCK, 6), new ItemStack(ItemRegistry.JUMPFRAGMENT.get()), new ItemStack(ItemRegistry.BASE_GEM.get()), new ItemStack(ItemRegistry.LEAPSTONE_GEM.get()))));
                 stacks.add(new ArrayList<>(Arrays.asList(new ItemStack(item), new ItemStack(Items.FERMENTED_SPIDER_EYE), new ItemStack(Items.PUFFERFISH, 4), new ItemStack(Items.GOLDEN_APPLE), new ItemStack(ItemRegistry.DAZEDFRAGMENT.get()), new ItemStack(ItemRegistry.BASE_GEM.get()), new ItemStack(ItemRegistry.POISONSTONE_GEM.get()))));
                 stacks.add(new ArrayList<>(Arrays.asList(new ItemStack(item), new ItemStack(Items.OBSIDIAN, 3), new ItemStack(Items.ARMOR_STAND, 3), new ItemStack(ItemRegistry.SHIELDFRAGMENT.get()), new ItemStack(ItemRegistry.BASE_GEM.get()), new ItemStack(ItemRegistry.RESISTANCESTONE_GEM.get()))));
-                stacks.add(new ArrayList<>(Arrays.asList(new ItemStack(item), new ItemStack(ItemRegistry.BAGOFSUGAR.get(), 6), new ItemStack(ItemRegistry.FASTSTEPFRAGMENT.get()), new ItemStack(ItemRegistry.BASE_GEM.get()))));
+                stacks.add(new ArrayList<>(Arrays.asList(new ItemStack(item), new ItemStack(ItemRegistry.BAGOFSUGAR.get(), 6), new ItemStack(ItemRegistry.FASTSTEPFRAGMENT.get()), new ItemStack(ItemRegistry.BASE_GEM.get()), new ItemStack(ItemRegistry.SPEEDSTEPSTONE_GEM.get()))));
                 stacks.add(new ArrayList<>(Arrays.asList(new ItemStack(item), new ItemStack(Items.GOLDEN_CARROT, 6), new ItemStack(ItemRegistry.GLOWINGSTONE_GEM.get()), new ItemStack(ItemRegistry.VISIBILITYSTONE_GEM.get()))));
-            case "alchemistinfusion:fish_stone":
-                stacks.add(new ArrayList<>(Arrays.asList(new ItemStack(item), new ItemStack(Items.DIAMOND_BLOCK), new ItemStack(Items.EMERALD_BLOCK, 2), new ItemStack(Items.HEART_OF_THE_SEA), new ItemStack(BlockItemRegistry.SPEEDSTEPSTONE_ITEM.get()), new ItemStack(ItemRegistry.BAGOFSUGAR.get(), 3), new ItemStack(BlockItemRegistry.DOLPHINSTONE.get()))));
             case "alchemistinfusion:snailstep_stone":
                 stacks.add(new ArrayList<>(Arrays.asList(new ItemStack(item), new ItemStack(Items.SOUL_CAMPFIRE), new ItemStack(Items.DIAMOND_BLOCK), new ItemStack(Items.EMERALD_BLOCK), new ItemStack(BlockItemRegistry.RESTRICTIVESTONE_ITEM.get()), new ItemStack(Items.STICKY_PISTON), new ItemStack(BlockItemRegistry.SLOTHSTONE.get()))));
             case "alchemistinfusion:speed_step_stone":
                 stacks.add(new ArrayList<>(Arrays.asList(new ItemStack(item), new ItemStack(Items.SLIME_BLOCK), new ItemStack(Items.DIAMOND_BLOCK), new ItemStack(Items.EMERALD_BLOCK), new ItemStack(BlockItemRegistry.LEAPSTONE_ITEM.get()), new ItemStack(ItemRegistry.BAGOFSUGAR.get(), 3), new ItemStack(BlockItemRegistry.MOBILITYSTONE_ITEM.get()))));
+                stacks.add(new ArrayList<>(Arrays.asList(new ItemStack(item), new ItemStack(Items.DIAMOND_BLOCK), new ItemStack(Items.EMERALD_BLOCK, 2), new ItemStack(Items.HEART_OF_THE_SEA), new ItemStack(BlockItemRegistry.FISHSTONE_ITEM.get()), new ItemStack(ItemRegistry.BAGOFSUGAR.get(), 3), new ItemStack(BlockItemRegistry.DOLPHINSTONE.get()))));
             default:
                 break;
         }

@@ -1,0 +1,14 @@
+{
+  "name": "Imbued Rabbit Stew",
+  "icon": "alchemistinfusion:imbued_rabbit_stew",
+  "category": "alchemistinfusion:food",
+  "sortnum": 2,
+  "pages":[
+    {
+      "type": "crafting",
+      "recipe": "alchemistinfusion:imbued_rabbit_stew",
+      "text": "A stew of infused foods providing all of their buffs and sometimes more!"
+    }
+
+  ]
+}

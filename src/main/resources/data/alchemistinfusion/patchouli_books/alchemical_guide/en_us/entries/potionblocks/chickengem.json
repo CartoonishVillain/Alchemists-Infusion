@@ -1,0 +1,23 @@
+{
+  "name": "Chicken Stone",
+  "icon": "alchemistinfusion:chicken_gem",
+  "category": "alchemistinfusion:potionblocks",
+  "sortnum": 19,
+  "pages":[
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Chicken Gem",
+      "tier": "Tier 3 Required",
+      "result": "alchemistinfusion:chicken_gem",
+      "input3": "alchemistinfusion:alchemical_gem_cast",
+      "input7": "alchemistinfusion:base_gem",
+      "input8": "minecraft:diamond_boots",
+      "input9": "alchemistinfusion:pile_of_feathers#6"
+    },
+    {
+      "type": "crafting",
+      "recipe": "alchemistinfusion:chicken_stone",
+      "text": "You can't flap your arms and fly, but with this stone you can flap your arms and float to the ground with greater safety"
+    }
+  ]
+}

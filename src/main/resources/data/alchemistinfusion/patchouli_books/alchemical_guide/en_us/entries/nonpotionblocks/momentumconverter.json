@@ -1,0 +1,25 @@
+{
+  "name": "Momentum Converter",
+  "icon": "alchemistinfusion:momentum_converter",
+  "category": "alchemistinfusion:otherblocks",
+  "sortnum": 3,
+  "pages":[
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Momentum Converter",
+      "tier": "Tier 3 Required",
+      "result": "alchemistinfusion:momentum_converter",
+      "input3": "alchemistinfusion:alchemical_fragment_cast",
+      "input6": "minecraft:piston#3",
+      "input7": "alchemistinfusion:fall_breaker",
+      "input8": "minecraft:comparator",
+      "input9": "minecraft:obsidian#2",
+      "input10": "minecraft:diamond"
+    },
+    {
+      "type": "spotlight",
+      "item": "alchemistinfusion:momentum_converter",
+      "text": "Converts horizontal momentum into vertical momentum. If you move quickly onto this block, you'll be launched high in the air!"
+    }
+  ]
+}

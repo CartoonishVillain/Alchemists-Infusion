@@ -12,11 +12,13 @@ import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.particles.ParticleTypes;
 import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.World;
+import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.ToolType;
 
 import java.util.ArrayList;
@@ -45,8 +47,20 @@ public class CulinaryAttunedPavement extends Block {
                 if(recipe.size() > 0)
                     RecipeProcessor.AttemptRecipe(recipe, itemEntities, pos, worldIn, null, player);
                 else{player.sendStatusMessage(new StringTextComponent("No recipes found. Culinary Pavement only prepares alchemical food and requires an alchemical culinary key!"), false);
+                    ServerWorld serverWorld = (ServerWorld) worldIn;
+                    serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.5, 0.5, 0.5, 0);
+                    serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.1, 0.5, 0.1, 0);
+                    serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.1, 0.5, 0.9, 0);
+                    serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.9, 0.5, 0.9, 0);
+                    serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.9, 0.5, 0.1, 0);
                     worldIn.playSound(null, pos, new SoundEvent(SoundEvents.ENTITY_GENERIC_EXTINGUISH_FIRE.getRegistryName()), SoundCategory.BLOCKS, 100f, 1.5f);}
             }else{player.sendStatusMessage(new StringTextComponent("No recipes found. Culinary Pavement only prepares alchemical food and requires an alchemical culinary key!"), false);
+                ServerWorld serverWorld = (ServerWorld) worldIn;
+                serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.5, 0.5, 0.5, 0);
+                serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.1, 0.5, 0.1, 0);
+                serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.1, 0.5, 0.9, 0);
+                serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.9, 0.5, 0.9, 0);
+                serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.9, 0.5, 0.1, 0);
                 worldIn.playSound(null, pos, new SoundEvent(SoundEvents.ENTITY_GENERIC_EXTINGUISH_FIRE.getRegistryName()), SoundCategory.BLOCKS, 100f, 1.5f); }
         }
         return ActionResultType.SUCCESS;

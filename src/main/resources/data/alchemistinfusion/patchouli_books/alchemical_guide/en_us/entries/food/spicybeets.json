@@ -1,0 +1,22 @@
+{
+  "name": "Spicy Beetroot",
+  "icon": "alchemistinfusion:spicy_beetroot",
+  "category": "alchemistinfusion:food",
+  "sortnum": 5,
+  "pages":[
+    {
+      "type": "alchemistinfusion:10recipe",
+      "title": "Spicy Beetroot",
+      "tier": "Tier F Required",
+      "result": "alchemistinfusion:spicy_beetroot",
+      "input7": "alchemistinfusion:alchemical_culinary_key",
+      "input8": "minecraft:fire_charge#6",
+      "input9": "minecraft:beetroot"
+    },
+    {
+      "type": "text",
+      "text": "A beetroot that is so spicy that you forget about the fact that you are swimming through lava right now...",
+      "title": "Spicy Beetroot"
+    }
+  ]
+}

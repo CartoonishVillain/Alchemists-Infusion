@@ -46,6 +46,11 @@
       "input7": "alchemistinfusion:base_shard",
       "input8": "minecraft:clay_ball#4",
       "input9": "minecraft:sand#4"
+    },
+    {
+      "type": "crafting",
+      "recipe": "alchemistinfusion:base_shard",
+      "text": "This is also a regularly used item in Tier 2 Infusions"
     }
   ]
 }
