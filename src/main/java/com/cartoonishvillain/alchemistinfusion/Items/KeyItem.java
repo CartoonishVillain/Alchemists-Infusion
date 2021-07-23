@@ -1,9 +1,9 @@
 package com.cartoonishvillain.alchemistinfusion.Items;
 
 import com.cartoonishvillain.alchemistinfusion.AlchemistInfusion;
-import net.minecraft.item.Item;
+import net.minecraft.world.item.Item;
 
 public class KeyItem extends Item {
-    public KeyItem() {super(new Item.Properties().group(AlchemistInfusion.TAB));}
+    public KeyItem() {super(new Item.Properties().tab(AlchemistInfusion.TAB));}
 
 }

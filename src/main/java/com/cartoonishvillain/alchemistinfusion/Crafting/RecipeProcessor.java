@@ -2,25 +2,25 @@ package com.cartoonishvillain.alchemistinfusion.Crafting;
 
 import com.cartoonishvillain.alchemistinfusion.Items.PersistentItem;
 import com.cartoonishvillain.alchemistinfusion.Items.KeyItem;
-import net.minecraft.entity.item.ItemEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.particles.ParticleTypes;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.SoundEvent;
-import net.minecraft.util.SoundEvents;
-import net.minecraft.util.math.AxisAlignedBB;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.world.World;
-import net.minecraft.world.server.ServerWorld;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.world.level.Level;
+import net.minecraft.server.level.ServerLevel;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 public class RecipeProcessor {
-    public static void AttemptRecipe(ArrayList<ArrayList<ItemStack>> recipeStack, ArrayList<ItemEntity> ExistingItems, BlockPos pos, World world, ItemStack reward, PlayerEntity playerEntity){
+    public static void AttemptRecipe(ArrayList<ArrayList<ItemStack>> recipeStack, ArrayList<ItemEntity> ExistingItems, BlockPos pos, Level world, ItemStack reward, Player playerEntity){
         //Phase 0 - List out all existing items
         ArrayList<ItemStack> existingStack = new ArrayList<>();
         for(ItemEntity entity : ExistingItems){existingStack.add(entity.getItem());}
@@ -44,14 +44,14 @@ public class RecipeProcessor {
             trueReward = potentialReward; break;
         }
         if(trueReward == null){
-            playerEntity.sendStatusMessage(new StringTextComponent("No matching recipes! Please recheck your components!"), false);
-            ServerWorld serverWorld = (ServerWorld) world;
-            serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.5, 0.5, 0.5, 0);
-            serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.1, 0.5, 0.1, 0);
-            serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.1, 0.5, 0.9, 0);
-            serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.9, 0.5, 0.9, 0);
-            serverWorld.spawnParticle(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.9, 0.5, 0.1, 0);
-            world.playSound(null, pos, new SoundEvent(SoundEvents.ENTITY_GENERIC_EXTINGUISH_FIRE.getRegistryName()), SoundCategory.BLOCKS, 100f, 1.5f);
+            playerEntity.displayClientMessage(new TextComponent("No matching recipes! Please recheck your components!"), false);
+            ServerLevel serverWorld = (ServerLevel) world;
+            serverWorld.sendParticles(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.5, 0.5, 0.5, 0);
+            serverWorld.sendParticles(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.1, 0.5, 0.1, 0);
+            serverWorld.sendParticles(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.1, 0.5, 0.9, 0);
+            serverWorld.sendParticles(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.9, 0.5, 0.9, 0);
+            serverWorld.sendParticles(ParticleTypes.LARGE_SMOKE, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.9, 0.5, 0.1, 0);
+            world.playSound(null, pos, new SoundEvent(SoundEvents.GENERIC_EXTINGUISH_FIRE.getRegistryName()), SoundSource.BLOCKS, 100f, 1.5f);
             return;}
         else reward = trueReward;
 
@@ -61,31 +61,31 @@ public class RecipeProcessor {
         //Phase 4 - Payout
 
         ItemEntity itemEntity = new ItemEntity(world, pos.getX(), pos.getY() + 1, pos.getZ(), reward);
-        world.addEntity(itemEntity);
-        ServerWorld serverWorld = (ServerWorld) world;
-        serverWorld.spawnParticle(ParticleTypes.HAPPY_VILLAGER, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.5, 0.5, 0.5, 0);
-        serverWorld.spawnParticle(ParticleTypes.HAPPY_VILLAGER, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.1, 0.5, 0.1, 0);
-        serverWorld.spawnParticle(ParticleTypes.HAPPY_VILLAGER, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.1, 0.5, 0.9, 0);
-        serverWorld.spawnParticle(ParticleTypes.HAPPY_VILLAGER, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.9, 0.5, 0.9, 0);
-        serverWorld.spawnParticle(ParticleTypes.HAPPY_VILLAGER, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.9, 0.5, 0.1, 0);
-        world.playSound(null, pos, new SoundEvent(SoundEvents.ENTITY_PLAYER_LEVELUP.getRegistryName()), SoundCategory.BLOCKS, 100f, 1.5f);
+        world.addFreshEntity(itemEntity);
+        ServerLevel serverWorld = (ServerLevel) world;
+        serverWorld.sendParticles(ParticleTypes.HAPPY_VILLAGER, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.5, 0.5, 0.5, 0);
+        serverWorld.sendParticles(ParticleTypes.HAPPY_VILLAGER, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.1, 0.5, 0.1, 0);
+        serverWorld.sendParticles(ParticleTypes.HAPPY_VILLAGER, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.1, 0.5, 0.9, 0);
+        serverWorld.sendParticles(ParticleTypes.HAPPY_VILLAGER, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.9, 0.5, 0.9, 0);
+        serverWorld.sendParticles(ParticleTypes.HAPPY_VILLAGER, pos.getX(), pos.getY()+1, pos.getZ(), 10, 0.9, 0.5, 0.1, 0);
+        world.playSound(null, pos, new SoundEvent(SoundEvents.PLAYER_LEVELUP.getRegistryName()), SoundSource.BLOCKS, 100f, 1.5f);
     }
 
-    public static ArrayList<ItemEntity> Scan(BlockPos pos, World world){
+    public static ArrayList<ItemEntity> Scan(BlockPos pos, Level world){
         double x = pos.getX() - 1;
         double y = pos.getY() - 2;
         double z = pos.getZ() - 1;
         double x2 = pos.getX() + 1;
         double y2 = pos.getY() + 2;
         double z2 = pos.getZ() + 1;
-        AxisAlignedBB scanner = new AxisAlignedBB(x,y,z,x2,y2,z2);
-        return (ArrayList<ItemEntity>) world.getEntitiesWithinAABB(ItemEntity.class, scanner);
+        AABB scanner = new AABB(x,y,z,x2,y2,z2);
+        return (ArrayList<ItemEntity>) world.getEntitiesOfClass(ItemEntity.class, scanner);
     }
 
     private static HashMap<String, Integer> MapStacks(ArrayList<ItemStack> items){ // converts the itemstack arraylist into a map of usable items.
         HashMap<String, Integer> itemMap = new HashMap<>();
         for(ItemStack itemStack : items){
-            String name = itemStack.getItem().getName().toString();
+            String name = itemStack.getItem().getDescription().toString();
             int amount = itemStack.getCount();
             if(itemMap.containsKey(name)){ // if the map already has a stack (multiple stacks of the same item in equation)
                 int temp = itemMap.get(name);
@@ -120,9 +120,9 @@ public class RecipeProcessor {
                 if(entity != null) break;
             } //The proper itemstack should be found at this stage as "entity"
 
-            if(entity != null && recipeMap.containsKey(itemStack.getItem().getName().toString()) && !(itemStack.getItem() instanceof KeyItem || itemStack.getItem() instanceof PersistentItem)){
+            if(entity != null && recipeMap.containsKey(itemStack.getItem().getDescription().toString()) && !(itemStack.getItem() instanceof KeyItem || itemStack.getItem() instanceof PersistentItem)){
             int amount = itemStack.getCount();
-            amount -= recipeMap.get(itemStack.getItem().getName().toString());//subtract recipe amount;
+            amount -= recipeMap.get(itemStack.getItem().getDescription().toString());//subtract recipe amount;
             itemStack.setCount(amount);
             entity.setItem(itemStack); //theoretically working prototype.
         }

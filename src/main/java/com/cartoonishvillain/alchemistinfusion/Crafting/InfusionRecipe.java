@@ -2,9 +2,9 @@ package com.cartoonishvillain.alchemistinfusion.Crafting;
 
 import com.cartoonishvillain.alchemistinfusion.Registries.BlockItemRegistry;
 import com.cartoonishvillain.alchemistinfusion.Registries.ItemRegistry;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,7 +12,7 @@ import java.util.Arrays;
 public class InfusionRecipe {
 
     public static ArrayList<ArrayList<ItemStack>> ParseTierFRecipe(Item item){
-        String parser = item.getItem().getRegistryName().toString();
+        String parser = item.getRegistryName().toString();
         ArrayList<ArrayList<ItemStack>> stacks = new ArrayList<>();
         if ("alchemistinfusion:alchemical_culinary_key".equals(parser)) {
             stacks.add(new ArrayList<>(Arrays.asList(new ItemStack(item), new ItemStack(Items.RABBIT_FOOT, 4), new ItemStack(Items.COOKED_RABBIT), new ItemStack(ItemRegistry.HOPPINGRABBIT.get()))));
@@ -25,7 +25,7 @@ public class InfusionRecipe {
     }
 
     public static ArrayList<ArrayList<ItemStack>> ParseTier1Recipe(Item item){
-        String parser = item.getItem().getRegistryName().toString();
+        String parser = item.getRegistryName().toString();
         ArrayList<ArrayList<ItemStack>> stacks = new ArrayList<>();
         if ("alchemistinfusion:alchemical_bowl".equals(parser)) {
             stacks.add(new ArrayList<>(Arrays.asList(new ItemStack(item), new ItemStack(Items.SLIME_BALL, 4), new ItemStack(Items.STRING, 4), new ItemStack(ItemRegistry.SLOWSTEPDUST.get(), 2))));
@@ -42,7 +42,7 @@ public class InfusionRecipe {
         return stacks;}
 
     public static ArrayList<ArrayList<ItemStack>> ParseTier2Recipe(Item item){
-        String parser = item.getItem().getRegistryName().toString();
+        String parser = item.getRegistryName().toString();
         ArrayList<ArrayList<ItemStack>> stacks = new ArrayList<>();
         switch(parser){
             case "alchemistinfusion:alchemical_bowl":
@@ -57,7 +57,7 @@ public class InfusionRecipe {
                 stacks.add(new ArrayList<>(Arrays.asList(new ItemStack(item), new ItemStack(BlockItemRegistry.PAVEMENTSTONE_ITEM.get()), new ItemStack(Items.FLINT_AND_STEEL), new ItemStack(Items.GOLD_INGOT, 4), new ItemStack(Items.LAPIS_LAZULI, 4), new ItemStack(Items.DIAMOND), new ItemStack(BlockItemRegistry.ACTIVATEDPAVEMENT_ITEM.get()))));
                 stacks.add(new ArrayList<>(Arrays.asList(new ItemStack(item), new ItemStack(Items.GOLD_INGOT, 2), new ItemStack(Items.LAPIS_LAZULI, 2), new ItemStack(Items.ENDER_PEARL), new ItemStack(Items.BLAZE_ROD), new ItemStack(ItemRegistry.INFUSIONROD.get()))));
                 stacks.add(new ArrayList<>(Arrays.asList(new ItemStack(item), new ItemStack(Items.DIAMOND, 4), new ItemStack(Items.NETHER_WART, 12), new ItemStack(Items.LAPIS_LAZULI, 8), new ItemStack(Items.ENDER_PEARL, 6), new ItemStack(ItemRegistry.ATTUNEDINFUSIONROD.get()))));
-                stacks.add(new ArrayList<>(Arrays.asList(new ItemStack(item), new ItemStack(BlockItemRegistry.HUNGERSTONE_ITEM.get()), new ItemStack(Items.GOLDEN_APPLE.getItem(), 2), new ItemStack(Items.GOLDEN_CARROT, 6), new ItemStack(BlockItemRegistry.CULINARY_ITEM.get()))));
+                stacks.add(new ArrayList<>(Arrays.asList(new ItemStack(item), new ItemStack(BlockItemRegistry.HUNGERSTONE_ITEM.get()), new ItemStack(Items.GOLDEN_APPLE, 2), new ItemStack(Items.GOLDEN_CARROT, 6), new ItemStack(BlockItemRegistry.CULINARY_ITEM.get()))));
                 stacks.add(new ArrayList<>(Arrays.asList(new ItemStack(item), new ItemStack(Items.GOLD_INGOT), new ItemStack(Items.LAPIS_LAZULI), new ItemStack(Items.GOLDEN_CARROT), new ItemStack(ItemRegistry.CULINARYKEY.get()))));
                 stacks.add(new ArrayList<>(Arrays.asList(new ItemStack(item), new ItemStack(Items.DIAMOND), new ItemStack(Items.BLUE_ICE, 4), new ItemStack(BlockItemRegistry.PARTICLEICE_ITEM.get()))));
                 stacks.add(new ArrayList<>(Arrays.asList(new ItemStack(item), new ItemStack(Items.NETHER_WART, 2), new ItemStack(Items.COAL), new ItemStack(ItemRegistry.PAVEMENTCARVER.get()), new ItemStack(Items.IRON_BOOTS), new ItemStack(Items.NETHER_WART_BLOCK, 2), new ItemStack(Items.IRON_BLOCK), new ItemStack(ItemRegistry.UNLUCK_BOOTS.get()))));
@@ -91,7 +91,7 @@ public class InfusionRecipe {
 
 
     public static ArrayList<ArrayList<ItemStack>> ParseTier3Recipe(Item item){
-        String parser = item.getItem().getRegistryName().toString();
+        String parser = item.getRegistryName().toString();
         ArrayList<ArrayList<ItemStack>> stacks = new ArrayList<>();
         switch(parser){
             case "alchemistinfusion:alchemical_bowl":
@@ -106,7 +106,7 @@ public class InfusionRecipe {
                 stacks.add(new ArrayList<>(Arrays.asList(new ItemStack(item), new ItemStack(BlockItemRegistry.PAVEMENTSTONE_ITEM.get()), new ItemStack(Items.FLINT_AND_STEEL), new ItemStack(Items.GOLD_INGOT, 4), new ItemStack(Items.LAPIS_LAZULI, 4), new ItemStack(Items.DIAMOND), new ItemStack(BlockItemRegistry.ACTIVATEDPAVEMENT_ITEM.get()))));
                 stacks.add(new ArrayList<>(Arrays.asList(new ItemStack(item), new ItemStack(Items.GOLD_INGOT, 2), new ItemStack(Items.LAPIS_LAZULI, 2), new ItemStack(Items.ENDER_PEARL), new ItemStack(Items.BLAZE_ROD), new ItemStack(ItemRegistry.INFUSIONROD.get()))));
                 stacks.add(new ArrayList<>(Arrays.asList(new ItemStack(item), new ItemStack(Items.DIAMOND, 4), new ItemStack(Items.NETHER_WART, 12), new ItemStack(Items.LAPIS_LAZULI, 8), new ItemStack(Items.ENDER_PEARL, 6), new ItemStack(ItemRegistry.ATTUNEDINFUSIONROD.get()))));
-                stacks.add(new ArrayList<>(Arrays.asList(new ItemStack(item), new ItemStack(BlockItemRegistry.HUNGERSTONE_ITEM.get()), new ItemStack(Items.GOLDEN_APPLE.getItem(), 2), new ItemStack(Items.GOLDEN_CARROT, 6), new ItemStack(BlockItemRegistry.CULINARY_ITEM.get()))));
+                stacks.add(new ArrayList<>(Arrays.asList(new ItemStack(item), new ItemStack(BlockItemRegistry.HUNGERSTONE_ITEM.get()), new ItemStack(Items.GOLDEN_APPLE, 2), new ItemStack(Items.GOLDEN_CARROT, 6), new ItemStack(BlockItemRegistry.CULINARY_ITEM.get()))));
                 stacks.add(new ArrayList<>(Arrays.asList(new ItemStack(item), new ItemStack(Items.GOLD_INGOT), new ItemStack(Items.LAPIS_LAZULI), new ItemStack(Items.GOLDEN_CARROT), new ItemStack(ItemRegistry.CULINARYKEY.get()))));
                 stacks.add(new ArrayList<>(Arrays.asList(new ItemStack(item), new ItemStack(Items.DIAMOND), new ItemStack(Items.BLUE_ICE, 4), new ItemStack(BlockItemRegistry.PARTICLEICE_ITEM.get()))));
                 stacks.add(new ArrayList<>(Arrays.asList(new ItemStack(item), new ItemStack(Items.NETHER_WART, 2), new ItemStack(Items.COAL), new ItemStack(ItemRegistry.PAVEMENTCARVER.get()), new ItemStack(Items.IRON_BOOTS), new ItemStack(Items.NETHER_WART_BLOCK, 2), new ItemStack(Items.IRON_BLOCK), new ItemStack(ItemRegistry.UNLUCK_BOOTS.get()))));

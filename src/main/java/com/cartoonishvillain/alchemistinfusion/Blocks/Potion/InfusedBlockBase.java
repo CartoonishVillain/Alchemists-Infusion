@@ -1,43 +1,46 @@
 package com.cartoonishvillain.alchemistinfusion.Blocks.Potion;
 
-import net.minecraft.block.Block;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.potion.Effect;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.TextFormatting;
-import net.minecraft.world.World;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.core.BlockPos;
+import net.minecraft.ChatFormatting;
+import net.minecraft.world.level.Level;
 
 import java.util.ArrayList;
 
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+import net.minecraft.world.level.block.state.BlockState;
+
 public class InfusedBlockBase extends Block {
-    public InfusedBlockBase(Properties properties, ArrayList<EffectInstance> effectInstance, TextFormatting textFormatting, int Tier) {
+    public InfusedBlockBase(Properties properties, ArrayList<MobEffectInstance> effectInstance, ChatFormatting textFormatting, int Tier) {
         super(properties);
         this.textFormatting = textFormatting;
         this.tier = Tier;
         this.effectInstance = effectInstance;
         timer = new ArrayList<Integer>();
         amplitude = new ArrayList<Integer>();
-        effect = new ArrayList<Effect>();
-        for(EffectInstance instance : effectInstance){
+        effect = new ArrayList<MobEffect>();
+        for(MobEffectInstance instance : effectInstance){
         timer.add(instance.getDuration());
         amplitude.add(instance.getAmplifier());
-        effect.add(instance.getPotion());}
+        effect.add(instance.getEffect());}
 
     }
 
 
 
-    private ArrayList<Effect> effect;
+    private ArrayList<MobEffect> effect;
     private ArrayList<Integer> timer, amplitude;
     private int tier;
-    private ArrayList<EffectInstance> effectInstance;
-    TextFormatting textFormatting;
+    private ArrayList<MobEffectInstance> effectInstance;
+    ChatFormatting textFormatting;
 
 
-    public String GetEffect(EffectInstance instance){
-        String name = instance.getEffectName();
+    public String GetEffect(MobEffectInstance instance){
+        String name = instance.getDescriptionId();
         String[] split = name.split("\\.");
         String[] split2 = split[2].split("_");
         name = split2[0];
@@ -58,13 +61,13 @@ public class InfusedBlockBase extends Block {
         name = name + " " + name2;
         else name = name;
         return name;}
-    public String GetAmplifier(EffectInstance instance){return PotentBuilder(instance.getAmplifier());}
-    public String GetDuration(EffectInstance instance){return TimeBuilder(instance.getDuration());}
-    public TextFormatting getTextFormatting() {return textFormatting;}
+    public String GetAmplifier(MobEffectInstance instance){return PotentBuilder(instance.getAmplifier());}
+    public String GetDuration(MobEffectInstance instance){return TimeBuilder(instance.getDuration());}
+    public ChatFormatting getTextFormatting() {return textFormatting;}
 
     public int getTier() {return tier;}
 
-    public ArrayList<EffectInstance> getEffectInstance() {return effectInstance;}
+    public ArrayList<MobEffectInstance> getEffectInstance() {return effectInstance;}
 
     private String PotentBuilder(int potency){
         switch(potency){
@@ -107,14 +110,14 @@ public class InfusedBlockBase extends Block {
     }
 
     @Override
-    public void onEntityWalk(World worldIn, BlockPos pos, Entity entityIn) {
-        super.onEntityWalk(worldIn, pos, entityIn);
-        if (!worldIn.isRemote()) {
+    public void stepOn(Level worldIn, BlockPos pos, BlockState blockState, Entity entityIn) {
+        super.stepOn(worldIn, pos, blockState, entityIn);
+        if (!worldIn.isClientSide()) {
             if (entityIn instanceof LivingEntity) {
                 int counter = 0;
-                for(EffectInstance effects : effectInstance){
-                    if(effects.getDuration() != timer.get(counter)) effectInstance.set(counter, new EffectInstance(effects.getPotion(), timer.get(counter), effects.getAmplifier()));
-                    ((LivingEntity) entityIn).addPotionEffect(effects);
+                for(MobEffectInstance effects : effectInstance){
+                    if(effects.getDuration() != timer.get(counter)) effectInstance.set(counter, new MobEffectInstance(effects.getEffect(), timer.get(counter), effects.getAmplifier()));
+                    ((LivingEntity) entityIn).addEffect(effects);
                     counter++;
                 }
             }

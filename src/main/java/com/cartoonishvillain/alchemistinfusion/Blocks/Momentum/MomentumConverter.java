@@ -2,13 +2,16 @@ package com.cartoonishvillain.alchemistinfusion.Blocks.Momentum;
 
 
 import com.cartoonishvillain.alchemistinfusion.AlchemistInfusion;
-import net.minecraft.block.Block;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.Level;
 
 import static java.lang.Math.abs;
+
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+import net.minecraft.world.level.block.state.BlockState;
 
 public class MomentumConverter extends Block {
 
@@ -17,9 +20,9 @@ public class MomentumConverter extends Block {
     }
 
     @Override
-    public void onEntityWalk(World world, BlockPos blockPos, Entity entity) {
+    public void stepOn(Level world, BlockPos blockPos, BlockState blockState, Entity entity) {
         if(entity instanceof LivingEntity && AlchemistInfusion.config.ENABLEMOMENTUMCONVERTER.get()){
-            ((LivingEntity) entity).setMotion(entity.getMotion().x * AlchemistInfusion.config.MOMENTUMCONVERTERPASSTHROUGH.get(), (abs(entity.getMotion().x) + abs(entity.getMotion().z)), entity.getMotion().z * AlchemistInfusion.config.MOMENTUMCONVERTERPASSTHROUGH.get());
+            ((LivingEntity) entity).setDeltaMovement(entity.getDeltaMovement().x * AlchemistInfusion.config.MOMENTUMCONVERTERPASSTHROUGH.get(), (abs(entity.getDeltaMovement().x) + abs(entity.getDeltaMovement().z)), entity.getDeltaMovement().z * AlchemistInfusion.config.MOMENTUMCONVERTERPASSTHROUGH.get());
         }
     }
 }

@@ -4,8 +4,8 @@ import com.cartoonishvillain.alchemistinfusion.Configs.ConfigHelper;
 import com.cartoonishvillain.alchemistinfusion.Configs.Configuration;
 import com.cartoonishvillain.alchemistinfusion.Registries.ItemRegistry;
 import com.cartoonishvillain.alchemistinfusion.Registries.RegistryController;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
@@ -49,12 +49,11 @@ public class AlchemistInfusion
 
     private void doClientStuff(final FMLClientSetupEvent event) {
         // do something that can only be done on the client
-        LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().gameSettings);
     }
 
-    public static final ItemGroup TAB = new ItemGroup("AlchemistInfusion") {
+    public static final CreativeModeTab TAB = new CreativeModeTab("AlchemistInfusion") {
         @Override
-        public ItemStack createIcon() {
+        public ItemStack makeIcon() {
             return new ItemStack(ItemRegistry.INFUSIONROD.get());
         }
     };

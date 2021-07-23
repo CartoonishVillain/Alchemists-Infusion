@@ -1,30 +1,32 @@
 package com.cartoonishvillain.alchemistinfusion.Armor;
 
 import com.cartoonishvillain.alchemistinfusion.AlchemistInfusion;
-import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.IArmorMaterial;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.text.TextFormatting;
-import net.minecraft.world.World;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.ChatFormatting;
+import net.minecraft.world.level.Level;
 
 import javax.annotation.Nullable;
 import java.util.List;
 
+import net.minecraft.world.item.Item.Properties;
+
 public class Luck extends ArmorItem {
-    public Luck(IArmorMaterial materialIn, EquipmentSlotType slot, Properties builderIn) {
+    public Luck(ArmorMaterial materialIn, EquipmentSlot slot, Properties builderIn) {
         super(materialIn, slot, builderIn);
 
     }
 
     @Override
-    public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
+    public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn) {
         if(AlchemistInfusion.config.ENABLEINFUSEDBOOTS.get()){
-        String msg = TextFormatting.BLUE + "Luck for the duration of wearing";
-        tooltip.add(new StringTextComponent(msg));} else {String msg = (TextFormatting.GRAY + "No Effect- Disabled in configuration"); tooltip.add(new StringTextComponent(msg));}
-        super.addInformation(stack, worldIn, tooltip, flagIn);
+        String msg = ChatFormatting.BLUE + "Luck for the duration of wearing";
+        tooltip.add(new TextComponent(msg));} else {String msg = (ChatFormatting.GRAY + "No Effect- Disabled in configuration"); tooltip.add(new TextComponent(msg));}
+        super.appendHoverText(stack, worldIn, tooltip, flagIn);
     }
 }

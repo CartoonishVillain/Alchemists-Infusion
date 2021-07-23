@@ -2,27 +2,27 @@ package com.cartoonishvillain.alchemistinfusion.Armor;
 
 import com.cartoonishvillain.alchemistinfusion.Registries.ItemRegistry;
 import com.cartoonishvillain.alchemistinfusion.AlchemistInfusion;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.IArmorMaterial;
-import net.minecraft.item.Items;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.util.SoundEvent;
-import net.minecraft.util.SoundEvents;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
 import java.util.function.Supplier;
 
-public enum ModArmor implements IArmorMaterial {
-    LEAP(AlchemistInfusion.MOD_ID + ":leap",  23, new int[] {1, 0, 0, 1}, 8, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0, ()->{return Ingredient.fromItems(ItemRegistry.LEAPSTONE_GEM.get());}, 0.0f),
+public enum ModArmor implements ArmorMaterial {
+    LEAP(AlchemistInfusion.MOD_ID + ":leap",  23, new int[] {1, 0, 0, 1}, 8, SoundEvents.ARMOR_EQUIP_IRON, 0, ()->{return Ingredient.of(ItemRegistry.LEAPSTONE_GEM.get());}, 0.0f),
 
-    LUCK(AlchemistInfusion.MOD_ID + ":luck",  23, new int[] {1, 0, 0, 1}, 8, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0, ()->{return Ingredient.fromItems(Items.PACKED_ICE.getItem());}, 0.0f),
+    LUCK(AlchemistInfusion.MOD_ID + ":luck",  23, new int[] {1, 0, 0, 1}, 8, SoundEvents.ARMOR_EQUIP_IRON, 0, ()->{return Ingredient.of(Items.PACKED_ICE.getDefaultInstance());}, 0.0f),
 
-     ICE(AlchemistInfusion.MOD_ID + ":ice",  15, new int[] {1, 0, 0, 1}, 8, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0, ()->{return Ingredient.fromItems(Items.NETHER_WART_BLOCK.getItem());}, 0.0f),
+     ICE(AlchemistInfusion.MOD_ID + ":ice",  15, new int[] {1, 0, 0, 1}, 8, SoundEvents.ARMOR_EQUIP_IRON, 0, ()->{return Ingredient.of(Items.NETHER_WART_BLOCK.getDefaultInstance());}, 0.0f),
 
-    UNLUCK(AlchemistInfusion.MOD_ID + ":unluck",  23, new int[] {1, 0, 0, 1}, 8, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0, ()->{return Ingredient.fromItems(Items.NETHER_WART_BLOCK.getItem());}, 0.0f),
+    UNLUCK(AlchemistInfusion.MOD_ID + ":unluck",  23, new int[] {1, 0, 0, 1}, 8, SoundEvents.ARMOR_EQUIP_IRON, 0, ()->{return Ingredient.of(Items.NETHER_WART_BLOCK.getDefaultInstance());}, 0.0f),
 
-    LAVASHELL(AlchemistInfusion.MOD_ID + ":lavashell",  23, new int[] {2, 0, 0, 2}, 8, SoundEvents.ITEM_ARMOR_EQUIP_TURTLE, 0, ()->{return Ingredient.fromItems(Items.SCUTE.getItem());}, 0.0f);
+    LAVASHELL(AlchemistInfusion.MOD_ID + ":lavashell",  23, new int[] {2, 0, 0, 2}, 8, SoundEvents.ARMOR_EQUIP_TURTLE, 0, ()->{return Ingredient.of(Items.SCUTE.getDefaultInstance());}, 0.0f);
 
 
 
@@ -50,29 +50,29 @@ public enum ModArmor implements IArmorMaterial {
     }
 
     @Override
-    public int getDurability(EquipmentSlotType slotIn) {
+    public int getDurabilityForSlot(EquipmentSlot slotIn) {
         return MAX_DAMAGE_ARRAY[slotIn.getIndex()] * this.maxDamageFactor;
     }
 
     @Override
-    public int getDamageReductionAmount(EquipmentSlotType slotIn) {
+    public int getDefenseForSlot(EquipmentSlot slotIn) {
         return this.damageReductionAmountArray[slotIn.getIndex()];
     }
 
     @Override
-    public int getEnchantability() {
+    public int getEnchantmentValue() {
         return this.enchantability;
     }
 
 
     @Override
-    public SoundEvent getSoundEvent() {
+    public SoundEvent getEquipSound() {
         return this.soundEvent;
     }
 
 
     @Override
-    public Ingredient getRepairMaterial() {
+    public Ingredient getRepairIngredient() {
         return this.repairMaterial.get();
     }
 

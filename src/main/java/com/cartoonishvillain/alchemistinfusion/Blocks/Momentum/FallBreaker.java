@@ -2,11 +2,15 @@ package com.cartoonishvillain.alchemistinfusion.Blocks.Momentum;
 
 
 import com.cartoonishvillain.alchemistinfusion.AlchemistInfusion;
-import net.minecraft.block.Block;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.Level;
+
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+import net.minecraft.world.level.block.state.BlockState;
 
 public class FallBreaker extends Block {
 
@@ -16,10 +20,10 @@ public class FallBreaker extends Block {
 
 
     @Override
-    public void onFallenUpon(World world, BlockPos blockPos, Entity entity, float distanceFallen) {
+    public void fallOn(Level world, BlockState p_152427_, BlockPos blockPos, Entity entity, float distanceFallen) {
         if (entity instanceof LivingEntity && AlchemistInfusion.config.ENABLEFALLBREAKER.get()){
-            entity.onLivingFall(distanceFallen, 0.075f);
-            ((LivingEntity) entity).setMotion(entity.getMotion().x, (-entity.getMotion().y  * 2D), entity.getMotion().z);
-        }else entity.onLivingFall(distanceFallen, 1);
+            entity.causeFallDamage(distanceFallen, 0.075f, DamageSource.FALL);
+            ((LivingEntity) entity).setDeltaMovement(entity.getDeltaMovement().x, (-entity.getDeltaMovement().y  * 2D), entity.getDeltaMovement().z);
+        }else entity.causeFallDamage(distanceFallen, 1, DamageSource.FALL);
     }
 }
