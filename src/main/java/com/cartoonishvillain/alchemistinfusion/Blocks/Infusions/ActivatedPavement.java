@@ -24,13 +24,13 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraftforge.common.ToolType;
+
 
 import java.util.ArrayList;
 
 public class ActivatedPavement extends Block {
     public ActivatedPavement() {
-        super(Properties.of(Material.STONE).strength(1).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE).harvestLevel(0).requiresCorrectToolForDrops());
+        super(Properties.of(Material.STONE).strength(1).sound(SoundType.STONE).requiresCorrectToolForDrops());
     }
 
     @Override

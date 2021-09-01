@@ -20,7 +20,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.world.level.Level;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraftforge.common.ToolType;
+
 
 import java.util.ArrayList;
 
@@ -34,7 +34,7 @@ import net.minecraft.world.InteractionResult;
 
 public class AttunedPavement extends Block {
     public AttunedPavement() {
-        super(Properties.of(Material.STONE).strength(1).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE).harvestLevel(0).requiresCorrectToolForDrops());
+        super(Properties.of(Material.STONE).strength(1).sound(SoundType.STONE).requiresCorrectToolForDrops());
     }
 
     @Override
